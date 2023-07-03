@@ -1,6 +1,4 @@
 @charset "UTF-8";
-@import url("/css/slick/slick.css");
-@import url("/css/slick/slick-theme.css");
 @keyframes shake-horizontal {
   0%, 100% {
     transform: translateX(0);
