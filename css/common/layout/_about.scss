@@ -198,7 +198,7 @@ section[data-anchor="about"] {
             z-index: 2;
 
             &::before {
-                content: url(/images/about/prev_arrow_sm.svg);
+                content: url('../../../images/about/prev_arrow_sm.svg');
             }
         }
 
@@ -207,7 +207,7 @@ section[data-anchor="about"] {
             z-index: 2;
 
             &::before {
-                content: url(/images/about/next_arrow_sm.svg);
+                content: url('../../../images/about/next_arrow_sm.svg');
             }
         }
         
@@ -257,7 +257,7 @@ section[data-anchor="about"] {
                 left: 29%;
 
                 &::before {
-                    content: url(/images/about/prev_arrow.svg);
+                    content: url('../../../images/about/prev_arrow.svg');
                 }
             }
     
@@ -265,7 +265,7 @@ section[data-anchor="about"] {
                 right: 34%;
 
                 &::before {
-                    content: url(/images/about/next_arrow.svg);
+                    content: url('../../../images/about/next_arrow.svg');
                 }
             }
 

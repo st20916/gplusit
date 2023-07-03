@@ -15,7 +15,7 @@ section[data-anchor="certification"] {
         left: 0;
 
         &::before {
-            content: url(/images/certification/arrow_sm_left_back.svg);
+            content: url('../../../images/certification/arrow_sm_left_back.svg');
         }
     }
 
@@ -23,7 +23,7 @@ section[data-anchor="certification"] {
         right: 0;
 
         &::before {
-            content: url(/images/certification/arrow_sm_right_back.svg);
+            content: url('../../../images/certification/arrow_sm_right_back.svg');
         }
     }
 }
