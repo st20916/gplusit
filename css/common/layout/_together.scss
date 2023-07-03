@@ -78,7 +78,7 @@ section[data-anchor="together"] {
         left: -23px;
 
         &::before {
-            content: url(/images/together/prev_arrow.svg);
+            content: url('../../../images/together/prev_arrow.svg');
         }
     }
 
@@ -86,7 +86,7 @@ section[data-anchor="together"] {
         right: -23px;
 
         &::before {
-            content: url(/images/together/next_arrow.svg);
+            content: url('../../../images/together/next_arrow.svg');
         }
     }
 
@@ -180,7 +180,7 @@ section[data-anchor="together"] {
             left: 50%;
             transform: translateX(-50%);
             bottom: 0;
-            background-image: url(/images/together/culture_sm_together.png);
+            background-image: url('../../../images/together/culture_sm_together.png');
             background-repeat: no-repeat;
             background-size: 188px 115px;
             width: 188px;
@@ -193,7 +193,7 @@ section[data-anchor="together"] {
             left: 50%;
             transform: translateX(-50%);
             bottom: 0;
-            background-image: url(/images/together/think_md.png);
+            background-image: url('../../../images/together/think_md.png');
             background-repeat: no-repeat;
             background-size: 164px 101px;
             width: 164px;
@@ -281,14 +281,14 @@ section[data-anchor="together"] {
 
         &[data-image="culture"] {
             &::before {
-                background-image: url('/images/together/culture_together.png');
+                background-image: url('../../../images/together/culture_together.png');
                 background-size: cover;
             }
         }
 
         &[data-image="think"] {
             &::before {
-                background-image: url('/images/together/think.png');
+                background-image: url('../../../images/together/think.png');
                 background-size: cover;
             }
         }
@@ -335,7 +335,7 @@ section[data-anchor="together"] {
         &::before {
             right: 0;
             bottom: 0;
-            background-image: url(/images/together/soo_md.png);
+            background-image: url('../../../images/together/soo_md.png');
             background-repeat: no-repeat;
             background-size: 128px 101px;
             width: 128px;
@@ -393,7 +393,7 @@ section[data-anchor="together"] {
     .item--orange {
         .project__contents {
             &::before {
-                background-image: url('/images/together/soo.png');
+                background-image: url('../../../images/together/soo.png');
                 background-size: cover;
             }
         }

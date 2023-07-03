@@ -3029,13 +3029,13 @@ section[data-anchor=together] .inner {
   left: -23px;
 }
 .item__project .slick-prev::before {
-  content: url(/images/together/prev_arrow.svg);
+  content: url("../../../images/together/prev_arrow.svg");
 }
 .item__project .slick-next {
   right: -23px;
 }
 .item__project .slick-next::before {
-  content: url(/images/together/next_arrow.svg);
+  content: url("../../../images/together/next_arrow.svg");
 }
 .item__project .project__title {
   position: relative;
@@ -3111,7 +3111,7 @@ section[data-anchor=together] .inner {
   left: 50%;
   transform: translateX(-50%);
   bottom: 0;
-  background-image: url(/images/together/culture_sm_together.png);
+  background-image: url("../../../images/together/culture_sm_together.png");
   background-repeat: no-repeat;
   background-size: 188px 115px;
   width: 188px;
@@ -3121,7 +3121,7 @@ section[data-anchor=together] .inner {
   left: 50%;
   transform: translateX(-50%);
   bottom: 0;
-  background-image: url(/images/together/think_md.png);
+  background-image: url("../../../images/together/think_md.png");
   background-repeat: no-repeat;
   background-size: 164px 101px;
   width: 164px;
@@ -3190,11 +3190,11 @@ section[data-anchor=together] .inner {
     min-height: 234px;
   }
   .project__contents[data-image=culture]::before {
-    background-image: url("/images/together/culture_together.png");
+    background-image: url("../../../images/together/culture_together.png");
     background-size: cover;
   }
   .project__contents[data-image=think]::before {
-    background-image: url("/images/together/think.png");
+    background-image: url("../../../images/together/think.png");
     background-size: cover;
   }
 }
@@ -3224,7 +3224,7 @@ section[data-anchor=together] .inner {
 .item--orange .project__contents::before {
   right: 0;
   bottom: 0;
-  background-image: url(/images/together/soo_md.png);
+  background-image: url("../../../images/together/soo_md.png");
   background-repeat: no-repeat;
   background-size: 128px 101px;
   width: 128px;
@@ -3263,7 +3263,7 @@ section[data-anchor=together] .inner {
 }
 @media all and (min-width: 1025px) {
   .item--orange .project__contents::before {
-    background-image: url("/images/together/soo.png");
+    background-image: url("../../../images/together/soo.png");
     background-size: cover;
   }
 }
