@@ -1,0 +1,144 @@
+section[data-anchor="business"] {
+    background-color: #F9F9F9;
+
+    .sc,
+    .tc {
+        position: absolute;
+        display: none;
+    }
+
+    .inner {
+        min-height: auto;
+    }
+}
+
+@media all and (min-width: 1025px) {
+    section[data-anchor="business"] {
+        .sc,
+        .tc {
+            display: block;
+        }
+    }
+}
+
+@media all and (min-width: 1025px) and (max-height: 1199px) {
+    section[data-anchor="business"] {
+        .sc {
+            top: -65vh;
+            left: -43vh;
+        }
+
+        .tc {
+            top: -19vh;
+            left: 22vh;
+        }
+    }
+}
+
+@media all and (min-width: 1025px) and (min-height: 1200px) {
+    section[data-anchor="business"] {
+        .sc {
+            top: -25vh;
+            left: -25vh;
+        }
+
+        .tc {
+            top: -11vh;
+            left: 22vh;
+        }
+    }
+}
+
+@media all and (min-width: 1441px) and (min-height: 1200px) {
+    section[data-anchor="business"] {
+        .sc {
+            top: -30vh;
+            left: -2vh;
+        }
+
+        .tc {
+            top: -6vh;
+            left: 30vh;
+        }
+    }
+}
+
+.business__splide {
+    position: relative;
+
+    .slick__circle {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 212px;
+        height: 212px;
+        border-radius: 100%;
+        box-shadow: 0 3px 20px rgba(0, 0, 0, .4);
+
+        img {
+            max-width: 65px;
+        }
+
+        p {
+            position: relative;
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #FFFFFF;
+            word-break: keep-all;
+            text-align: center;
+            line-height: 22px;
+            margin: 3.07vw 0 0;
+            max-width: 136px;
+        }
+    }
+}
+
+@media all and (min-width: 768px) {
+    .business__splide {
+        .slick__circle {
+            width: 237px;
+            height: 237px;
+        }
+    }
+}
+
+@media all and (min-width: 1025px) {
+    .business__splide {
+        .slick__circle {
+            width: 288px;
+            height: 288px;
+
+            img {
+                max-width: 104px;
+            }
+
+            p {
+                max-width: 170px;
+                font-size: 1.375rem;
+                line-height: 27px;
+                margin: 2.1094vw 0 0;
+            }
+        }
+    }
+}
+
+@media all and (min-width: 1441px) {
+    .business__splide {
+        .slick__circle {
+            width: 320px;
+            height: 320px;
+
+            img {
+                max-width: 115px;
+            }
+
+            p {
+                font-size: 1.5rem;
+                line-height: 30px;
+                margin: 1.875vw 0 0;
+            }
+        }
+    }
+}

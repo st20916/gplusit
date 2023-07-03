@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="(주)지플러스">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="知Plus">
+    <meta property="og:title" content="知Plus">
+    <meta property="og:description" content="(주)지플러스">
+    <meta property="og:image" content="./images/main/logo_04_black.png">
+    <meta property="og:url" content="http://gplusit.co.kr/">
+
+    <title>(주)지플러스</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/common/common.css">
+    <!-- <link rel="stylesheet" href="css/fullPage/fullpage.min.css"> -->
+    <link rel="stylesheet" href="/css/fullPage/jquery.fullpage.css">
+    <link rel="stylesheet" href="/css/plugin/splide/splide.min.css">
+
+    <!-- JS -->
+    <script src="/js/jquery-3.6.4.min.js"></script>
+    <!-- <script src="js/fullPage/fullpage.js"></script> -->
+    <script src="/js/plugin/gsap/gsap.min.js"></script>
+    <script src="/js/plugin/gsap/ScrollMagic.min.js"></script>
+    <script src="/js/fullPage/jquery.fullpage.js"></script>
+    <script src="/js/slick/slick.js"></script>
+    <script src="/js/plugin/splide/splide.min.js"></script>
+    <script src="/js/plugin/splide/splide-extension-auto-scroll.min.js"></script>
+
+    <!-- 2022.08.26 카카오 key 변경-->
+    <!-- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=fe308caa8deac07c54341b42b78ba14d"></script>	-->
+    <!-- <script src="http://jsgetip.appspot.com" type="text/javascript"></script> -->
+
+</head>
+<body>
+    <div id="wrap" data-container>
+        <!-- Header -->
+        <header id="header">
+            <div class="header__wrap">
+                <div class="logo" data-event="click-main">
+                    <img src="./images/main/logo_04_white.png" alt="GPLUS" id="logoImg">
+                </div>
+                <div id="gnb">
+                    <ul>
+                        <li>
+                            <a href="#about">about</a>
+                        </li>
+                        <li>
+                            <a href="#business">business</a>
+                        </li>
+                        <li>
+                            <a href="#solution">solution</a>
+                        </li>
+                        <li>
+                            <a href="#certification">certification</a>
+                        </li>
+                        <li>
+                            <a href="#recruit">recruit</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header__util">
+                    <button type="button" class="util__bss" data-event="click-bss">BSS</button>
+                    <img src="./images/main/menu.svg" alt="menu" class="util__menu" id="menuImg" data-event="click-menu" data-target="#siteMap">
+                </div>
+            </div>
+        </header>
+        <!-- menu - Site map -->
+        <section class="hidden__menu" id="siteMap">
+            <div class="sc bg-circle-purple"></div>
+            <div class="sitemap__header">
+                <img src="./images/main/sitemap.svg" alt="logo" class="logo" data-event="click-main">
+                <img src="./images/main/x.svg" alt="close" class="sitemap__close" data-event="click-close" data-target="#siteMap">
+            </div>
+            <ul class="sitemap__list">
+                <li>
+                    <h6 class="list__subject">about</h6>
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0);">기업 개요</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">회사 연혁</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h6 class="list__subject">business</h6>
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0);">연구데이터 플랫폼 구축</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">NTIS 구축</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">인공지능 구축</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">BPR/ISP</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">학술 정보 구축</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">국가 R&D 성과물 구축</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">학회 Fulltext XML 구축</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">국립 중앙 도서관 OAK</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">한의학 OASIS <br> 전통의학정보 포털</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">기업부설 연구소 연구</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h6 class="list__subject">solution</h6>
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0);">AI-GLOVE 저작 도구</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">Journal Article Citation Center</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">G-XML Plus</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">계산과학 시뮬레이션 실행을 위한 <br> GUI 기반 네트워크 플로우 시스템</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h6 class="list__subject">certification</h6>
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0);">특허</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">프로그램 등록</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">대외인증</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">INNOBIZ</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">SP</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">ISO</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">가족친화기업인증</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h6 class="list__subject">recruit</h6>
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0);">복리후생</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">함께가기 프로젝트</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">수습제도 안내</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">입사 지원하기</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">회사 주소 및 약도</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h6 class="list__subject list--move" data-event="click-bss">bss</h6>
+                </li>
+            </ul>
+        </section>
+        <!-- Content -->
+        <div id="fullPage">
+            <section class="section scroll-spy" data-anchor="main">
+                <video autoplay loop muted>
+                    <source src="/images/main/mainbg.mp4" type="video/mp4">
+                </video>
+                <div class="inner__section">
+                    <div class="section__title__wrap custom-flex flex-wrap">
+                        <div data-area="left">
+                            <h6 class="title back-to-position to-top delay-0">
+                                <span>정보의</span>
+                                <strong>깊이</strong>와 <strong>가치</strong>를
+                                더합니다.
+                            </h6>
+                            <p class="back-to-position to-top delay-2">
+                                (주)지플러스는 지식정보사회 구축의 견인차로서 지식 데이터베이스 구축,
+                                데이터 수집 ・ 정보 융합 기술 개발에 매진하여 왔으며, 
+                                R&D사업을 통한 미래 IT 사회 구현을 위해 노력하고 있습니다.
+                            </p>
+                        </div>
+                        <div data-area="right">
+                            <div class="right__circle back-to-position to-right delay-2">
+                                <div class="right__main" data-number="1" data-event="click-load" data-target="#subAi">
+                                    <img src="./images/main/ai_glove.svg" alt="ai_glove">
+                                    <h6 class="right__title">AI-GLOVE 저작 도구</h6>
+                                </div>
+                                <div class="right__main" data-number="2" data-event="click-load" data-target="#journalArt">
+                                    <img src="./images/main/journal.svg" alt="journal">
+                                    <h6 class="right__title">Journal Article Citation Creator</h6>
+                                </div>
+                                <div class="right__main" data-number="3" data-event="click-load" data-target="#guiWorkflow">
+                                    <img src="./images/main/workflow.svg" alt="workflow">
+                                    <h6 class="right__title">Workflow System</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="news">
+                    <strong class="news__title">NEWSROOM</strong>
+                    <div class="news__util">
+                        <button type="button" id="newsPrev" class="util__prev"><img src="/images/main/caret-up.svg" alt=""></button>
+                        <button type="button" id="newsNext" class="util__next"><img src="/images/main/caret-down.svg" alt=""></button>
+                    </div>
+                    <div class="news__rolling" id="rolling">
+                        <ul>
+                            <li>
+                                <a href="javascript:void(0);">지플러스 홈페이지 개편</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">개편 테스트</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <!-- About Area -->
+            <section class="section scroll-spy" data-anchor="about">
+                <div class="fc bg-circle-face"></div>
+                <div class="inner">
+                    <h1 class="inner__title back-to-position to-bottom delay-0">about</h6>
+                    <div data-slick-wrap="about">
+                        <div class="about__wrap">
+                            <h6 class="inner__subtitle back-to-position to-bottom delay-1">기업정보</h6>
+                            <p class="inner__expl back-to-position to-bottom delay-3">
+                                (주)지플러스는 지식정보사회 구의 견인차로서 지식 데이터베이스 구축/데이터 수집・정보 융합 기술 개발에 매진하여 왔으며,
+                                R&D사업을 통한 미래 IT 사회 구현을 위해 노력하고 있습니다.
+                            </p>
+                            <div style="position: relative;" class="back-to-position to-top delay-5">
+                                <div class="custom-row flex-wrap">
+                                    <div class="col-lg-6">
+                                        <div class="about__item" data-event="click-detail" data-target="#firstAbout" style="background-image: url(/images/about/aboutbox01.jpg);">
+                                            <img src="/images/about/first_about.svg" alt="">
+                                            <p>(주)지플러스는 고객과 함께 성장합니다.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="about__item" data-event="click-detail" data-target="#scdAbout" style="background-image: url(/images/about/aboutbox02.jpg);">
+                                            <img src="/images/about/second_about.svg" alt="">
+                                            <p>(주)지플러스는 사람을 먼저 생각합니다.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="about__item lg-mb-none" data-event="click-detail" data-target="#tidAbout" style="background-image: url(/images/about/aboutbox03.jpg);">
+                                            <img src="/images/about/third_about.svg" alt="">
+                                            <p>(주)지플러스는 정보의 가치를 만들어 가는 
+                                                고객의 좋은 파트너 입니다.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="about__item custom-mb-0" data-event="click-detail" data-target="#furAbout" style="background-image: url(/images/about/aboutbox04.jpg);">
+                                            <img src="/images/about/fourth_about.svg" alt="">
+                                            <p>(주)지플러스는 보다 만족스러운 사회생활을
+                                                위해 사내문화 혁신 프로그램을 운영합니다.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- hover -->
+                                <div class="about__modal" id="firstAbout">
+                                    <span class="close" data-event="click-close" data-target="#firstAbout"><img src="/images/about/x.svg" alt="x"></span>
+                                    <div class="custom-row align-items-center">
+                                        <div class="col-lg-1">
+                                            <img src="/images/about/first_about.svg" alt="">
+                                        </div>
+                                        <div class="col-lg-11">
+                                            <h6 class="modal__main__title">(주)지플러스는 고객과 함께 성장합니다.</h6>
+                                            <p>
+                                                (주)지플러스는 2000년 창립 이래 지속적인 혁신을 거듭해 왔으며, 솔루션 개발, 데이터베이스 구축, 시스템 통합 분야에서 고객의 만족을 목표로 하여 
+                                                열정을 다해 노력해왔습니다. 또한 국내외 공공기관과의 연속적인 과제 수행을 바탕으로 다양한 정보통신 기술사업의 노하우를 보유하고 있으며, 
+                                                기술혁신형 중소기업(INNO-BIZ)확인, 소프트웨어프로세스 품질(SP인증), 벤처기업확인, ISO-9001인증 등 다양한 인증을 통해 내실있는 회사를 만드는데 
+                                                노력하고 있습니다. (주)지플러스는 축척된 기술과 Know-How를 바탕으로 창의와 도전정신을 가지고 고객과 함께 끊임없이 성장하는 기업이 되겠습니다.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="about__modal" id="scdAbout">
+                                    <span class="close" data-event="click-close" data-target="#scdAbout"><img src="/images/about/x.svg" alt="x"></span>
+                                    <div class="custom-row align-items-center">
+                                        <div class="col-lg-1">
+                                            <img src="/images/about/second_about.svg" alt="">
+                                        </div>
+                                        <div class="col-lg-11">
+                                            <h6 class="modal__main__title">(주)지플러스는 사람을 먼저 생각합니다.</h6>
+                                            <p>
+                                                (주)지플러스는 사람이 우선이라는 마인드로 직원의 자기개발과 복지를 생각합니다. 급속도로 변화와 혁신을 거듭하는 IT 세상에서 발빠르게 대응하고 
+                                                성장 할 수 있도록 직원의 자기개발 기회를 전폭적으로 지원하고 있으며, 매년 진행되는 워크샵을 통해 친목을 도모하고, 매월 진행되는 월례회와 체육행사는 
+                                                직원들에게 정보의 공유 및 문화적 소통의 기회를 제공합니다.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="about__modal" id="tidAbout">
+                                    <span class="close" data-event="click-close" data-target="#tidAbout"><img src="/images/about/x.svg" alt="x"></span>
+                                    <div class="custom-row align-items-center">
+                                        <div class="col-lg-1">
+                                            <img src="/images/about/third_about.svg" alt="">
+                                        </div>
+                                        <div class="col-lg-11">
+                                            <h6 class="modal__main__title">(주)지플러스는 정보의 가치를 만들어 가는 고객의 좋은 파트너 입니다.</h6>
+                                            <p>
+                                                (주)지플러스는 고객 비즈니스 환경의 입체적 이해를 바탕으로 공공기관 시스템 통합사업 등 국가 정보화 사업에 최선을 다하고 있습니다. 
+                                                또한 고객의 니즈를 한발 앞서 가는 기대 그 이상의 가치를 만들어 드리는 IT전문기업으로서 고객과 늘 함께하겠습니다.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="about__modal odd" id="furAbout">
+                                    <span class="close" data-event="click-close" data-target="#furAbout"><img src="/images/about/x.svg" alt="x"></span>
+                                    <div class="custom-row detail__flex">
+                                        <div class="detail__img">
+                                            <img src="/images/about/fourth_about.svg" alt="" style="max-height: 79px;">
+                                        </div>
+                                        <div class="modal__contents">
+                                            <h6 class="modal__main__title">(주)지플러스는 보다 만족스러운 사회생활을 위해 사내문화 혁신 프로그램을 운영합니다.</h6>
+                                            <div class="contents__flex">
+                                                <div class="contents__img">
+                                                    <img src="/images/about/culture.png" alt="culture">
+                                                </div>
+                                                <div class="contents__expl">
+                                                    <h6 class="expl__title">문화 · 체육의 날 운영( 매월 마지막 주 수요일 )</h6>
+                                                    <p>
+                                                        (주)지플러스는 매월 마지막 주 수요일에 문화 및 체육의 날을 운영합니다. <br>
+                                                        시즌에 따라 가벼운 산책이나 볼링, 영화감상 또는 가벼운 체육행사 등을 진행합니다. 
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="contents__flex">
+                                                <div class="contents__img">
+                                                    <img src="/images/about/proposal.png" alt="proposal">
+                                                </div>
+                                                <div class="contents__expl">
+                                                    <h6 class="expl__title">제안 및 건의함 운영</h6>
+                                                    <p>
+                                                        (주)지플러스인은 보다 만족스러운 회사생활을 위한 자유로운 제안과 건의를 할 수 있으며 
+                                                        우수한 제안에 관한 시상을 통하여 소통을 장려합니다. 
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="about__history">
+                            <section data-slick-wrap="box">
+                                <h6 class="inner__subtitle">회사 연혁</h6>
+                                <ul class="slide-for">
+                                    <li>2021 ~ 현재</li>
+                                    <li>2016 ~ 2020</li>
+                                    <li>2011 ~ 2015</li>
+                                    <li>2006 ~ 2010</li>
+                                    <li>2000 ~ 2005</li>
+                                </ul>
+                                <div class="slide-nav">
+                                    <!-- 2021 ~ 현재 -->
+                                    <div class="history__item" data-about-item>
+                                        <ul>
+                                            <li>
+                                                <strong>2021</strong>
+                                                <p>[특허출원] 인공지능 학습모델을 이용한 저자식별 시스템 및 그 방법(특허청)</p>
+                                            </li>
+                                            <li>
+                                                <strong>2021</strong>
+                                                <p>[프로그램등록] AI-GLOVE(에이아이글러브) 크라우드 AI학습데이터 저작도구</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- 2016 ~ 2020 -->
+                                    <div class="history__item" data-about-item>
+                                        <ul>
+                                            <li>
+                                                <strong>2020</strong>
+                                                <p>가족친화기업인증 (여성가족부장관)</p>
+                                            </li>
+                                            <li>
+                                                <strong>2018</strong>
+                                                <p>[프로그램 등록] G+ 전자문서 비텍스트 추출기(한국저작권위원회)</p>
+                                            </li>
+                                            <li>
+                                                <strong>2017</strong>
+                                                <p>[프로그램 등록] G+ 전자문서 메타데이터 자동추출 및 검증기(한국저작권위원회)</p>
+                                            </li>
+                                            <li>
+                                                <strong>2017</strong>
+                                                <p>[기술이전] 개방형 EDISON 플랫폼 활용 기술(특허2건 포함)</p>
+                                            </li>
+                                            <li>
+                                                <strong>2016</strong>
+                                                <p>[특허 등록] 웹 기반 실험 대상 물질의 정량적 구조 활성 관계 분석 시뮬레이션 시스템 및 그 제공 방법 (특허청)</p>
+                                            </li>
+                                            <li>
+                                                <strong>2016</strong>
+                                                <p>[특허 등록] 하나의 물리적 서버를 이용한 웹 기반 시뮬레이션 실행을 위한 독립플랫폼(특허청)</p>
+                                            </li>
+                                            <li>
+                                                <strong>2016</strong>
+                                                <p>[특허 등록] 유무선 전화 수신환경 설정시스템(특허청)</p>
+                                            </li>
+                                            <li>
+                                                <strong>2016</strong>
+                                                <p>벤처기업확인(기술보증기금)</p>
+                                            </li>
+                                            <li>
+                                                <strong>2016</strong>
+                                                <p>[프로그램 등록] Journal Article Citation Creator(학술논문 인용색인 크리에이터)(한국저작권등록위원회)</p>
+                                            </li>
+                                            <li>
+                                                <strong>2016</strong>
+                                                <p>[프로그램 등록] 웹인터페이스 기반 데이터 연계관리 환경(한국저작권등록위원회)</p>
+                                            </li>
+                                            <li>
+                                                <strong>2016</strong>
+                                                <p>[프로그램 등록] 계산과학 시뮬레이션 실행을 위한 그래픽유저인터페이스(GUI) 기반 워크플로우 시스템(한국저작권등록위원회)</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- 2011 ~ 2015 -->
+                                    <div class="history__item" data-about-item>
+                                        <ul>
+                                            <li>
+                                                <strong>2015</strong>
+                                                <p>[소프트웨어프로세스 품질인증 2등급(정보통신산업진흥원)</p>
+                                            </li>
+                                            <li>
+                                                <strong>2015</strong>
+                                                <p>ISO 9001:2008 인증(ROYAL CERT)</p>
+                                            </li>
+                                            <li>
+                                                <strong>2015</strong>
+                                                <p>IoT 관련 특허 등록(상황 설정 별 예약 실행 시스템 및 그 예약 실행 방법)</p>
+                                            </li>
+                                            <li>
+                                                <strong>2015</strong>
+                                                <p>스마트인증 관련 특허 등록(생체인식 중계 인증 시스템 및 그 방법)</p>
+                                            </li>
+                                            <li>
+                                                <strong>2014</strong>
+                                                <p>기술이전 4건(“시뮬레이션 SW 메타정보 관리 및 가상화 자원/작업관리기술” 외 3)</p>
+                                            </li>
+                                            <li>
+                                                <strong>2013</strong>
+                                                <p>지엑스멤엘플러스(G-XML Plus, 논문XML풀텍스트 구축시스템) 프로그램 등록</p>
+                                            </li>
+                                            <li>
+                                                <strong>2013</strong>
+                                                <p>하드웨어자산관리 시스템 프로그램 등록</p>
+                                            </li>
+                                            <li>
+                                                <strong>2012</strong>
+                                                <p>기업부설 연구소 인정</p>
+                                            </li>
+                                            <li>
+                                                <strong>2012</strong>
+                                                <p>소프트웨어프로세스 품질인증</p>
+                                            </li>
+                                            <li>
+                                                <strong>2011</strong>
+                                                <p>INNO-BIZ 인정</p>
+                                            </li>
+                                            <li>
+                                                <strong>2011</strong>
+                                                <p>정보통신공사업 등록</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- 2006 ~ 2010 -->
+                                    <div class="history__item" data-about-item>
+                                        <ul>
+                                            <li>
+                                                <strong>2010</strong>
+                                                <p>G-pipe 프로그램 등록</p>
+                                            </li>
+                                            <li>
+                                                <strong>2010</strong>
+                                                <p>ISO9001 인증</p>
+                                            </li>
+                                            <li>
+                                                <strong>2010</strong>
+                                                <p>테크컬렉션 프로그램 등록</p>
+                                            </li>
+                                            <li>
+                                                <strong>2010</strong>
+                                                <p>연구개발 전담부서 인정</p>
+                                            </li>
+                                            <li>
+                                                <strong>2009</strong>
+                                                <p>자본금 증자(3억)</p>
+                                            </li>
+                                            <li>
+                                                <strong>2008</strong>
+                                                <p>‘정보서비스 방법’ 특허 등록(등록번호 : 10-0808222)</p>
+                                            </li>
+                                            <li>
+                                                <strong>2007</strong>
+                                                <p>기술이전(USN기반 차량 검지 및 안전 운전 지원 서비스 시스템 기술 - 한국전자통신연구원)</p>
+                                            </li>
+                                            <li>
+                                                <strong>2006</strong>
+                                                <p>국가과학기술종합정보시스템(NTIS) 구축(투자 및 평가)</p>
+                                            </li>
+                                            <li>
+                                                <strong>2006</strong>
+                                                <p>과학기술 종합정보시스템 및 산업기술 기반 전문정보 DB구축</p>
+                                            </li>
+                                            <li>
+                                                <strong>2006</strong>
+                                                <p>제적부전산관리프로그램(대법원 표준) 프로그램 등록</p>
+                                            </li>
+                                            <li>
+                                                <strong>2006</strong>
+                                                <p>프로그램 등록(제적부 전산관리 프로그램 등록(대법원 표준))</p>
+                                            </li>
+                                            <li>
+                                                <strong>2006</strong>
+                                                <p>프로그램 등록(UTF-8과 EUC-KR을 지원하는 DualEntry System)</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- 2000 ~ 2005 -->
+                                    <div class="history__item" data-about-item>
+                                        <ul>
+                                            <li>
+                                                <strong>2005</strong>
+                                                <p>KRISTAL Session Manager</p>
+                                            </li>
+                                            <li>
+                                                <strong>2005</strong>
+                                                <p>업무지원시스템 개발</p>
+                                            </li>
+                                            <li>
+                                                <strong>2004</strong>
+                                                <p>지적재산관리 솔루션 개발</p>
+                                            </li>
+                                            <li>
+                                                <strong>2004</strong>
+                                                <p>STICS 솔루션 개발</p>
+                                            </li>
+                                            <li>
+                                                <strong>2003</strong>
+                                                <p>SimAct 프로그램 등록(3D 가상객체와 실사영상의 정합 프로그램)</p>
+                                            </li>
+                                            <li>
+                                                <strong>2003</strong>
+                                                <p>KRISTAL JAVA API 프로그램 등록(KRISTAL 검색엔진 API)</p>
+                                            </li>
+                                            <li>
+                                                <strong>2003</strong>
+                                                <p>전력선 모뎀을 이용한 자동판매기 원격 관리시스템 및 그 사용방법 특허 등록</p>
+                                            </li>
+                                            <li>
+                                                <strong>2003</strong>
+                                                <p>프로그램 등록(SimAct) - Simulation 소프트웨어</p>
+                                            </li>
+                                            <li>
+                                                <strong>2003</strong>
+                                                <p>프로그램 등록(KRISTAL JAVA API 용 프로그램)</p>
+                                            </li>
+                                            <li>
+                                                <strong>2002</strong>
+                                                <p>정보통신우수기술 지정(증강현실을 이용한 토목/건축 시뮬레이션 S/W 개발)</p>
+                                            </li>
+                                            <li>
+                                                <strong>2002</strong>
+                                                <p>지플러스㈜로 법인 전환(2002.01.24)</p>
+                                            </li>
+                                            <li>
+                                                <strong>2001</strong>
+                                                <p>실사와 가상 영상의 실시간 정합기술 기술이전</p>
+                                            </li>
+                                            <li>
+                                                <strong>2001</strong>
+                                                <p>정보검색시스템 KRISTA-II 버전 2.5 패키지기술 기술이전</p>
+                                            </li>
+                                            <li>
+                                                <strong>2000</strong>
+                                                <p>한국기술사회에 기술사 사무소 설립신고</p>
+                                            </li>
+                                            <li>
+                                                <strong>2000</strong>
+                                                <p>조언기술 설립(2000.01.12)</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Business Area -->
+            <section class="section scroll-spy" data-anchor="business">
+                <div class="sc bg-circle-purple"></div>
+                <div class="tc bg-circle-white"></div>
+                <div class="inner">
+                    <h1 class="inner__title back-to-position to-bottom delay-0">business</h6>
+                    <h6 class="inner__subtitle back-to-position to-bottom delay-1">사업 분야</h6>
+                    <p class="inner__expl back-to-position to-bottom delay-3">
+                        (주)지플러스는 과학기술정보 데이터 베이스 구축 등의 데이터베이스 구축과 지식정보시스템 및 메타데이터 통합 등 시스템 통합 분야의 사업을 수행해 오고 있습니다.
+                    </p>
+                    <div class="splide business__splide back-to-position to-left delay-5" data-wrap="business">
+                        <div class="splide__track">
+                            <div class="splide__list">
+                                <a href="javascript:void(0);" data-event="click-detail" data-target="#pfDetail" class="splide__slide" aria-controls="pfDetail">
+                                    <div class="slick__circle" style="background-image: url(/images/business/platform_bg.jpg);">
+                                        <img src="/images/business/platform.png" alt="platform">
+                                        <p>연구데이터 플랫폼 구축 사업</p>
+                                    </div>
+                                </a>
+                                <a href="javascript:void(0);" class="splide__slide">
+                                    <div class="slick__circle" style="background-image: url(/images/business/ntis_bg.jpg);">
+                                        <img src="/images/business/ntis.png" alt="ntis">
+                                        <p>NTIS 구축 사업</p>
+                                    </div>
+                                </a>
+                                <a href="javascript:void(0);" class="splide__slide">
+                                    <div class="slick__circle" style="background-image: url(/images/business/ai_bg.jpg);">
+                                        <img src="/images/business/ai.png" alt="ai">
+                                        <p>인공지능 구축 사업</p>
+                                    </div>
+                                </a>
+                                <a href="javascript:void(0);" class="splide__slide">
+                                    <div class="slick__circle" style="background-image: url(/images/business/ips_bg.jpg);">
+                                        <img src="/images/business/bps.png" alt="bpr/isp">
+                                        <p>BPR/ISP 사업</p>
+                                    </div>
+                                </a>
+                                <a href="javascript:void(0);" class="splide__slide">
+                                    <div class="slick__circle" style="background-image: url(/images/business/academic_bg.jpg);">
+                                        <img src="/images/business/academic.png" alt="academic">
+                                        <p>학술 정보 구축</p>
+                                    </div>
+                                </a>
+                                <a href="javascript:void(0);" class="splide__slide">
+                                    <div class="slick__circle" style="background-image: url(/images/business/r_d_bg.jpg);">
+                                        <img src="/images/business/r_d.png" alt="R&D">
+                                        <p>국가 R&D 성과물 구축</p>
+                                    </div>
+                                </a>
+                                <a href="javascript:void(0);" class="splide__slide">
+                                    <div class="slick__circle" style="background-image: url(/images/business/xml_bg.jpg);">
+                                        <img src="/images/business/xml.png" alt="XML">
+                                        <p>학회 Fulltext XML 구축</p>
+                                    </div>
+                                </a>
+                                <a href="javascript:void(0);" class="splide__slide">
+                                    <div class="slick__circle" style="background-image: url(/images/business/oak_bg.jpg);">
+                                        <img src="/images/business/oak.png" alt="OAK">
+                                        <p>국립 중앙 도서관 OAK</p>
+                                    </div>
+                                </a>
+                                <a href="javascript:void(0);" class="splide__slide">
+                                    <div class="slick__circle" style="background-image: url(/images/business/oasis_bg.jpg);">
+                                        <img src="/images/business/oasis.png" alt="OASIS">
+                                        <p>한의학 OASIS 전통의학정보 포털</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 상세보기 -->
+                        <div class="business__modal" id="pfDetail">
+                            <div class="modal__timg">
+                                <img src="/images/business/plaform_icon.png" alt="platform_icon">
+                                <h6 class="timg__title">연구데이터 플랫폼 구축 사업</h6>
+                            </div>
+                            <div class="modal__contents">
+                                <ul>
+                                    <li>계산화학/나노물리 분야 포털 구축 및 고급 콘텐츠 개발 ( 2012 한국과학기술정보연구원 )</li>
+                                    <li>슈퍼컴퓨팅 서비스 플랫폼 기반 사용자 응용환경 원형 개발 ( 2013 한국과학기술정보연구원 ) </li>
+                                    <li>열유체 포털 마이그레이션 및 EDISON 웹 포털 프레임워크 기능개선 ( 2014 한국과학기술정보연구원 )</li>
+                                    <li>EDISON 서비스를 위한 통합 웹 포털 프레임워크 개발 ( 2014 한국과학기술정보연구원 )</li>
+                                    <li>EDISON 웹 포털 프레임워크 요소 컴포넌트 포틀릿 개발 ( 2016 한국과학기술정보연구원)</li>
+                                </ul>
+                            </div>
+                            <button class="modal__close" data-event="click-close" data-target="#pfDetail" aria-label="닫기">
+                                <img src="/images/business/x.png" alt="X">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Solution Area -->
+            <section class="section scroll-spy" data-anchor="solution">
+                <span class="fc bg-circle-purple"></span>
+                <div class="inner">
+                    <h1 class="inner__title back-to-position to-bottom delay-0">solution</h6>
+                    <h6 class="inner__subtitle back-to-position to-bottom delay-1">솔루션</h6>
+                    <p class="inner__expl back-to-position to-bottom delay-3">(주)지플러스는 AI_GLOVE 저작도구, Journal Article Citation Creator, G-XML Plus, GUI기반 워크플로우 시스템 솔루션을 보유하고 있습니다. </p>
+                    <div class="solution__wrap">
+                        <div class="solution__flex">
+                            <div class="item__wrap back-to-position to-top delay-3">
+                                <div class="item__block">
+                                    <h6 class="item__title">AI-GLOVE 저작도구</h6>
+                                    <div class="circle" data-event="click-load" data-target="#subAi"><img src="./images/main/arrow_sm.png" alt="arrow"></div>
+                                    <p class="item__content">
+                                        크라우드 소싱 기반의 AI 데이터 
+                                        저작도구로 다수의 사용자가 접속
+                                        하여 이미지, 동영상에 대한 
+                                        상황/객체 레이블링 작업을 할 수 
+                                        있는 프로그램
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="item__wrap back-to-position to-top delay-4">
+                                <div class="item__block">
+                                    <h6 class="item__title">Journal Article Citation Creator</h6>
+                                    <div class="circle" data-event="click-load" data-target="#journalArt"><img src="./images/main/arrow_sm.png" alt="arrow"></div>
+                                    <p class="item__content">
+                                        학술논문의 참고문헌에 해당하는 
+                                        피인용문헌을 검색하는 프로그램으로, 
+                                        식별자(DOI 등)를 통한 인용관계 
+                                        자동생성 기능과, 수동 인용관계 
+                                        생성 기능, 인용관계 검증 기능을 제공
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="item__wrap back-to-position to-top delay-5">
+                                <div class="item__block">
+                                    <h6 class="item__title">G-XML Plus</h6>
+                                    <div class="circle" data-event="click-load" data-target="#gxml"><img src="./images/main/arrow_sm.png" alt="arrow"></div>
+                                    <p class="item__content">
+                                        웹기반에서 학술지의 권호 단위로 
+                                        입력자에게 입력할 논문을 할당하고, 
+                                        해당 권호의 논문에 대한 Full-Text를 
+                                        입력받아 입력된 논문 정보를 
+                                        PMC XML규격으로 변환하는 시스템
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="item__wrap back-to-position to-top delay-6">
+                                <div class="item__block">
+                                    <h6 class="item__title">GUI기반 워크플로우 시스템</h6>
+                                    <div class="circle" data-event="click-load" data-target="#guiWorkflow"><img src="./images/main/arrow_sm.png" alt="arrow"></div>
+                                    <p class="item__content">
+                                        웹 서비스를 이용해 계산과학을 위한 
+                                        분야별 전문 SW정보를 조회하고 
+                                        여러 개의 시뮬레이션 SW를 연결하는 
+                                        GUI를 이용해 워크플로우를 구성하여 
+                                        실행하는 프로그램
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <span class="sc bg-circle-small-white"></span>
+                <span class="tc bg-circle-sky"></span>
+            </section>
+            <!-- Certification Area -->
+            <section class="section scroll-spy" data-anchor="certification">
+                <div class="inner">
+                    <h1 class="inner__title back-to-position to-bottom delay-0">certification</h6>
+                    <h6 class="inner__subtitle back-to-position to-bottom delay-1">특허 및 대외 인증</h6>
+                    <p class="inner__expl back-to-position to-bottom delay-3">(주)지플러스는 IT분야 특허 5건 및 등록 프로그램 16건을 보유하고 있으며, 가족친화기업, ISO-9001, INNO-BIZ등의 인증을 받은 신뢰할 수 있는 기업입니다.</p>
+                    <div data-slick-wrap="cert" class="back-to-position to-top delay-5">
+                        <div class="cert__item">
+                            <h6 class="cert__title">가족친화기업</h6>
+                            <img src="/images/certification/family.png" alt="가족친화기업">
+                            <span class="cert__circle"></span>
+                        </div>
+                        <div class="cert__item">
+                            <h6 class="cert__title">ISO-9001 인증서</h6>
+                            <img src="/images/certification/iso9001.png" alt="ISO-9001 인증서">
+                            <span class="cert__circle"></span>
+                        </div>
+                        <div class="cert__item">
+                            <h6 class="cert__title">INNO-BIZ</h6>
+                            <img src="/images/certification/innobiz.png" alt="INNO-BIZ" height="296">
+                            <span class="cert__circle"></span>
+                        </div>
+                        <div class="cert__item">
+                            <h6 class="cert__title">연구개발 서비스업 신고</h6>
+                            <img src="/images/certification/service.png" alt="연구개발 서비스업 신고">
+                            <span class="cert__circle"></span>  
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Recruit Area -->
+            <section class="section scroll-spy" data-anchor="recruit">
+                <div class="inner">
+                    <h1 class="inner__title back-to-position to-bottom delay-0">recruit</h6>
+                    <h6 class="inner__subtitle back-to-position to-bottom delay-1">채용 정보</h6>
+                    <p class="inner__expl back-to-position to-bottom delay-3">
+                        (주)지플러스는 사람이 우선이라는 마인드로 직원의 자기개발과 복지를 생각합니다.
+                        급속도로 변화와 혁신을 거듭하는 IT 세상에서 발빠르게 대응하고 성장 할 수 있도록 직원의 자기개발 기회를 전폭적으로 지원하고 있으며,
+                        매년 진행되는 워크샵을 통해 친목을 도모하고, 매월 진행되는 월례회와 체육행사는 직원들에게 정보의 공유 및 문화적 소통의 기회를 제공합니다.
+                    </p>
+                    <div class="welfare">
+                        <span class="welfare__circle back-to-position to-bottom delay-4"></span>
+                        <h6 class="welfare__title back-to-position to-bottom delay-4">복리후생</h6>
+                        <div class="welfare__wrap">
+                            <div class="welfare__item back-to-position to-top delay-5">
+                                <div class="item__wrap">
+                                    <div class="item__head">
+                                        <img src="./images/main/insurance.svg" alt="insurance">
+                                        <h6>연금 · 보험</h6>
+                                    </div>
+                                    <div class="item__content">
+                                        <p class="custom-text-center">
+                                            국민연금, 고용보험, 산재보험
+                                            건강보험, 퇴직연금, 상해보험
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="welfare__item back-to-position to-top delay-6">
+                                <div class="item__wrap">
+                                    <div class="item__head" data-name="rest">
+                                        <img src="./images/main/um.svg" alt="um">
+                                        <h6>휴무 · 휴가 · 행사</h6>
+                                    </div>
+                                    <div class="item__content">
+                                        <p>
+                                            주5일근무, 시차출퇴근제, 
+                                            연차, 경조휴가, 반차, 육아휴직,
+                                            산전/산후 휴가, 남성출산휴가, 
+                                            노동절휴무, 워크샵/MT, 
+                                            문화/체육의날(매월)
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="welfare__item back-to-position to-top delay-7">
+                                <div class="item__wrap">
+                                    <div class="item__head" data-name="money">
+                                        <img src="./images/main/money.svg" alt="money">
+                                        <h6>보상 · 수당 지원</h6>
+                                    </div>
+                                    <div class="item__content">
+                                        <p class="custom-text-center">
+                                            우수사원 포상,
+                                            도서구입 지원,
+                                            성과급
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="welfare__item back-to-position to-top delay-8">
+                                <div class="item__wrap">
+                                    <div class="item__head" data-name="education">
+                                        <img src="./images/main/edu.svg" alt="education">
+                                        <h6>교육 · 연수</h6>
+                                    </div>
+                                    <div class="item__content">
+                                        <p class="custom-text-center">
+                                            신입직원 멘토링제 운영,
+                                            직무능력향상 교육
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="welfare__item back-to-position to-top delay-9">
+                                <div class="item__wrap">
+                                    <div class="item__head" data-name="company">
+                                        <img src="./images/main/company.svg" alt="company">
+                                        <h6>사내시설</h6>
+                                    </div>
+                                    <div class="item__content">
+                                        <p class="custom-text-center">
+                                            사내식당, 주차장
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Together Area -->
+            <section class="section scroll-spy" data-anchor="together">
+                <div class="inner">
+                    <div class="together__row">
+                        <div class="together__item">
+                            <div class="item__project">
+                                <h6 class="project__title">함께가기 프로젝트</h6>
+                                <div data-slick-wrap="project">
+                                    <div class="project__contents" data-image="culture">
+                                        <ul>
+                                            <li>
+                                                <strong>문화 · 체육의 날</strong>
+                                                <span>[ 매 월 마지막 주 수요일의 문화 및 체육활동 ]</span>
+                                            </li>
+                                            <li>
+                                                <strong>징검다리 모임</strong>
+                                                <span> [ 체육의 날에 일부 소그룹별 행사 ]</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="project__contents" data-image="think">
+                                        <ul>
+                                            <li>
+                                                <strong>제안 및 건의함 운영</strong>
+                                                <span>[ 우수제안 시상 ]</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="together__item">
+                            <div class="item__project item--orange">
+                                <h6 class="project__title">수습사원 운영방침</h6>
+                                <div class="project__contents">
+                                    <ul>
+                                        <li>
+                                            <strong>수습 기간</strong>
+                                            <span>[ 3개월 ]</span>
+                                        </li>
+                                        <li>
+                                            <strong>수습 기간 지원</strong>
+                                            <span>[ 멘토 선임 및 멘토링 맞춤교육 운영 ]</span>
+                                        </li>
+                                        <li>
+                                            <strong>수습 월간 평가</strong>
+                                            <span>[ 수습 기간 중 월 단위 과업 평가 3회 실시 ]</span>
+                                        </li>
+                                        <li>
+                                            <strong>수습 근로 규칙</strong>
+                                            <span>[ 수습 기간 중 추가 근로 금지 ]</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Together footer -->
+                <div class="together__footer">
+                    <div class="together__footer__wrap">
+                        <img src="/images/together/toge_bg.jpg" alt="" class="footer__main__img">
+                        <div class="inner">
+                            <h6 class="together__description">"지플러스는 함께 비상할 인재를 기다리고 있습니다."</h6>
+                            <a type="button" href="/file/company_application.hwp" class="together__btn" download="company_application.hwp">
+                                <svg id="그룹_7688" data-name="그룹 7688" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="52.433" viewBox="0 0 50 52.433">
+                                  <defs>
+                                    <clipPath id="clip-path">
+                                      <rect id="사각형_3404" data-name="사각형 3404" width="50" height="52.433" fill="#362f2f"/>
+                                    </clipPath>
+                                  </defs>
+                                  <g id="그룹_7687" data-name="그룹 7687" clip-path="url(#clip-path)">
+                                    <g id="그룹_7686" data-name="그룹 7686">
+                                      <g id="그룹_7685" data-name="그룹 7685" clip-path="url(#clip-path)">
+                                        <path id="패스_8479" data-name="패스 8479" d="M53.223,15.524a1.481,1.481,0,0,1,1.483,1.484v1.44h4.4a1.413,1.413,0,0,1,1.408,1.407V52.592A1.414,1.414,0,0,1,59.107,54H30.976a1.413,1.413,0,0,1-1.408-1.408V19.855a1.412,1.412,0,0,1,1.408-1.407h4.4v-1.44a1.483,1.483,0,1,1,2.966,0v1.44h5.217v-1.44a1.483,1.483,0,1,1,2.966,0v1.44h5.215v-1.44a1.483,1.483,0,0,1,1.484-1.484m0-2.426a3.917,3.917,0,0,0-3.784,2.923h-.615a3.909,3.909,0,0,0-7.566,0h-.617a3.91,3.91,0,0,0-7.566,0h-2.1a3.838,3.838,0,0,0-3.834,3.834V52.592a3.838,3.838,0,0,0,3.834,3.834H59.107a3.838,3.838,0,0,0,3.835-3.834V19.855a3.838,3.838,0,0,0-3.835-3.834h-2.1A3.916,3.916,0,0,0,53.223,13.1" transform="translate(-19.208 -9.269)" fill="#362f2f"/>
+                                        <path id="패스_8480" data-name="패스 8480" d="M72.319,109.771a1.213,1.213,0,0,1-1.213-1.213v-3.566a8.019,8.019,0,0,0-16.037,0v3.566a1.213,1.213,0,1,1-2.426,0v-3.566a10.445,10.445,0,0,1,20.89,0v3.566a1.213,1.213,0,0,1-1.213,1.213" transform="translate(-37.254 -66.908)" fill="#362f2f"/>
+                                        <path id="패스_8481" data-name="패스 8481" d="M68.814,63.735a8.078,8.078,0,1,1,8.079-8.078,8.087,8.087,0,0,1-8.079,8.078m0-13.731a5.652,5.652,0,1,0,5.653,5.653A5.659,5.659,0,0,0,68.814,50" transform="translate(-42.981 -33.669)" fill="#362f2f"/>
+                                        <path id="패스_8482" data-name="패스 8482" d="M85.433,104.334a1.213,1.213,0,0,1-1.213-1.213V95.76a1.213,1.213,0,1,1,2.426,0v7.361a1.213,1.213,0,0,1-1.213,1.213" transform="translate(-59.6 -66.908)" fill="#362f2f"/>
+                                      </g>
+                                    </g>
+                                  </g>
+                                </svg>
+                                입사 지원하기
+                                <svg xmlns="http://www.w3.org/2000/svg" width="36.356" height="10.755" viewBox="0 0 36.356 10.755" class="arrow">
+                                    <g id="그룹_7691" data-name="그룹 7691" transform="translate(-1050.5 -1407.086)">
+                                      <line id="선_80" data-name="선 80" x2="33.941" transform="translate(1051.5 1416.427)" fill="none" stroke="#362F2F" stroke-linecap="round" stroke-width="2"/>
+                                      <line id="선_81" data-name="선 81" x2="7.927" y2="7.927" transform="translate(1077.515 1408.5)" fill="none" stroke="#362F2F" stroke-linecap="round" stroke-width="2"/>
+                                    </g>
+                                </svg>                                  
+                            </a>
+                            <div class="together__contact">
+                                <ul>
+                                    <li>
+                                        <img src="/images/together/person.svg" alt="person">
+                                        <span>채용 담당자 정보</span>
+                                    </li>
+                                    <li>
+                                        <img src="/images/together/telephone.svg" alt="telephone">
+                                        <span>042-823-0038</span>
+                                    </li>
+                                    <li>
+                                        <img src="/images/together/envelope.svg" alt="envelope">
+                                        <span><a href="mailto:gplus@gplusit.co.kr">gplus@gplusit.co.kr</a></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Contact Area -->
+            <section class="section scroll-spy" data-anchor="contact">
+                <span class="fc bg-circle-lg-sky"></span>
+                <div class="inner">
+                    <h1 class="inner__title back-to-position to-bottom delay-0">contact us</h6>
+                    <div class="contact__content back-to-position to-top delay-1">
+                        <ul>
+                            <li class="custom-mb-17">
+                                <strong>address</strong>
+                                <span>대전광역시 유성구 장대로 95, 3층 ( 장대동, KT유성지점 )</span>
+                            </li>
+                            <li>
+                                <strong>tel</strong>
+                                <span class="tel">042.823.0038</span>
+                                <strong class="contact__fax">fax</strong>
+                                <span class="tel">042.823.3188</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- TODO : 임시 지도 .. 실서버 적용 시, API로 지도 받아 옴. -->
+                    <div class="contact__map back-to-position to-top delay-3">
+                        <img src="/images/contact/map.png" alt="map">
+                    </div>
+                </div>
+            </section>
+            <section class="section fp-auto-height" id="footer">
+                <div class="footer__wrap">
+                    <div class="inner">
+                        <a href="#main" class="logo">
+                            <img src="/images/footer/logo_04_c.png" alt="logo">
+                        </a>
+                        <div class="footer__copyright">
+                            <ul>
+                                <li><span>대전광역시 유성구 장대로 95, 3층 (장대동, KT유성사옥)</span>
+                                    <span>TEL : 042.823.0038  ｜  FAX : 042.823.3188</span></li>
+                                <li><span>Copyright 2023 知Plus Co. , Ltd. All Rights Reserved.</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- hidden page -->
+        <div class="hidden__page" id="subAi">
+            <div class="sub__wrap">
+                <button class="sub__close" data-event="click-close" data-target="#subAi">
+                    <img src="images/main/arrow-left.svg" alt="arrow-left">
+                </button>
+                <h6 class="sub__title">solution. 01</h6>
+                <div class="sub__container">
+                    <div class="sub__container__title">
+                        <div class="title__circle">
+                            <img src="images/main/ai_glove.svg" alt="ai_glove">
+                        </div>
+                        <div class="title__contents">
+                            <h1 class="contents__title">AI-GLOVE 저작 도구</h1>
+                            <div class="contents__divd"></div>
+                            <p class="contents__expl">
+                                AL-GLOVE 저작도구는 크라우드 소싱 기반의 AI 데이터 저작도구로 다수의 사용자가 접속하여 이미지, 동영상에 대한 
+                                상황/객체 레이블링 작업을 할 수 있는 프로그램 입니다. 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="sub__container__imgs">
+                        <div class="imgs">
+                            <div class="imgs__item"><img src="/images/hidden/ai_1.png" alt="ai"></div>
+                            <div class="imgs__item"><img src="/images/hidden/ai_2.png" alt="ai"></div>
+                            <div class="imgs__item"><img src="/images/hidden/ai_3.png" alt="ai"></div>
+                        </div>
+                    </div>
+                    <div class="sub__container__char">
+                        <h6 class="char__title">주요 특징</h6>
+                        <div class="char__row">
+                            <div class="char__item__wrap">
+                                <div class="char__item">
+                                    <h6 class="char__item__title">크라우드 소싱</h6>
+                                    <ul>
+                                        <li>직업 환경에 대한 장소, 시간적 제약이 없습니다.</li>
+                                        <li>데이터 구축 비용 절감이 가능합니다.</li>
+                                        <li>교차 입력, 교차 검수 기능을 지원합니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="char__item__wrap">
+                                <div class="char__item">
+                                    <h6 class="char__item__title">다양한 기능 기원</h6>
+                                    <ul>
+                                        <li>텍스트 이외에도 동영상 및 이미지에 대한 레이블링이 가능합니다.</li>
+                                        <li>AI 학습에 필요한 데이터 구축을 지원합니다.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sub__footer">
+                    <p>
+                        <span>궁금한 사항은 문의해 주세요.</span>
+                        <img src="/images/hidden/phone.png" alt="phone">
+                        <strong>042.823.0038</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="hidden__page" id="journalArt">
+            <div class="sub__wrap">
+                <button class="sub__close" data-event="click-close" data-target="#journalArt">
+                    <img src="images/main/arrow-left.svg" alt="arrow-left">
+                </button>
+                <h6 class="sub__title">solution. 02</h6>
+                <div class="sub__container">
+                    <div class="sub__container__title">
+                        <div class="title__circle">
+                            <img src="images/hidden/database.svg" alt="database">
+                        </div>
+                        <div class="title__contents">
+                            <h1 class="contents__title">데이터베이스(Journal Article Citation Creator)</h1>
+                            <div class="contents__divd"></div>
+                            <p class="contents__expl">
+                                학술논문의 참고문헌에 해당하는 피인용문헌을 검색하는 프로그램으로, 식별자(DOI 등)를 통한 인용관계 자동생성 기능과, 
+                                수동 인용관계 생성 기능, 인용관계 검증 기능을 제공합니다.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="sub__container__imgs">
+                        <div class="imgs">
+                            <div class="imgs__item"><img src="/images/hidden/db_1.png" alt="db"></div>
+                            <div class="imgs__item"><img src="/images/hidden/db_2.png" alt="db"></div>
+                            <div class="imgs__item"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sub__footer">
+                    <p>
+                        <span>궁금한 사항은 문의해 주세요.</span>
+                        <img src="/images/hidden/phone.png" alt="phone">
+                        <strong>042.823.0038</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="hidden__page" id="gxml">
+            <div class="sub__wrap">
+                <button class="sub__close" data-event="click-close" data-target="#gxml">
+                    <img src="images/main/arrow-left.svg" alt="arrow-left">
+                </button>
+                <h6 class="sub__title">solution. 03</h6>
+                <div class="sub__container">
+                    <div class="sub__container__title">
+                        <div class="title__circle">
+                            <img src="images/hidden/gxml.svg" alt="gxml">
+                        </div>
+                        <div class="title__contents">
+                            <h1 class="contents__title">G-XML Plus</h1>
+                            <div class="contents__divd"></div>
+                            <p class="contents__expl">
+                                웹기반에서 학술지의 권호 단위로 입력자에게 입력할 논문을 할당하고, 해당 권호의 논문에 대한 Full-Text를 입력받아 
+                                입력된 논문 정보를 PMC XML규격으로 변환하는 시스템으로, XML 저작툴의 메뉴(기능)에 대한 등록 및 수정이 가능하며, 
+                                이용자 권한관리를 지원함. 관리자와 입력자 간 구축 프로세스를 지원하며, 시스템 이식 용이성 및 DB 확장성을 제공합니다.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="sub__container__imgs">
+                        <div class="imgs">
+                            <div class="imgs__item"><img src="/images/hidden/gxml_1.png" alt="gxml"></div>
+                            <div class="imgs__item"><img src="/images/hidden/gxml_2.png" alt="gxml"></div>
+                            <div class="imgs__item"><img src="/images/hidden/gxml_2.png" alt="gxml"></div>
+                        </div>
+                    </div>
+                    <div class="sub__container__char">
+                        <h6 class="char__title">G-XML Plus 부가서비스</h6>
+                        <div class="char__row gxml">
+                            <div class="char__item__wrap">
+                                <div class="char__item">
+                                    <h6 class="char__item__title">PubReader HTML 생성</h6>
+                                    <img src="/images/hidden/pub_img.png" alt="PubReader HTML">
+                                </div>
+                            </div>
+                            <div class="char__item__wrap">
+                                <div class="char__item">
+                                    <h6 class="char__item__title">웹 화면 예시 (저널 페이지, PubReader)</h6>
+                                    <img src="/images/hidden/journal_img.png" alt="Journal Page">
+                                </div>
+                            </div>
+                            <div class="char__item__wrap">
+                                <div class="char__item">
+                                    <h6 class="char__item__title">ePub 활용</h6>
+                                    <ul>
+                                        <li>ePub과 같이 여러가지 포멧으로 재활용이 용이함</li>
+                                        <li>ePub으로 재활용 함으로써 이용하는 단말기의 크기에 맞춰 자동으로 최적화 </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sub__footer">
+                    <p>
+                        <span>궁금한 사항은 문의해 주세요.</span>
+                        <img src="/images/hidden/phone.png" alt="phone">
+                        <strong>042.823.0038</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="hidden__page" id="guiWorkflow">
+            <div class="sub__wrap">
+                <button class="sub__close" data-event="click-close" data-target="#guiWorkflow">
+                    <img src="images/main/arrow-left.svg" alt="arrow-left">
+                </button>
+                <h6 class="sub__title">solution. 04</h6>
+                <div class="sub__container">
+                    <div class="sub__container__title">
+                        <div class="title__circle">
+                            <img src="images/hidden/gxml.svg" alt="gxml">
+                        </div>
+                        <div class="title__contents">
+                            <h1 class="contents__title">Workflow System</h1>
+                            <div class="contents__divd"></div>
+                            <p class="contents__expl">
+                                웹 서비스를 이용해 계산과학을 위한 분야별 전문 SW정보를 조회하고 여러 개의 시뮬레이션 SW를 연결하는 GUI를 이용해 
+                                워크플로우를 구성하여 실행하는 프로그램으로 주요 기능으로는 시뮬레이션 SW조회, 드래그&드롭을 지원하는 
+                                워크플로우 작성 GUI, 시뮬레이션 실행, 시뮬레이션 모니터링이 있습니다.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="sub__container__imgs">
+                        <div class="imgs">
+                            <div class="imgs__item"><img src="/images/hidden/ws_1.png" alt="Workflow"></div>
+                            <div class="imgs__item"><img src="/images/hidden/ws_2.png" alt="Workflow"></div>
+                            <div class="imgs__item"><img src="/images/hidden/ws_3.png" alt="Workflow"></div>
+                            <div class="imgs__item"><img src="/images/hidden/ws_4.png" alt="Workflow"></div>
+                            <div class="imgs__item"><img src="/images/hidden/ws_5.png" alt="Workflow"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sub__footer">
+                    <p>
+                        <span>궁금한 사항은 문의해 주세요.</span>
+                        <img src="/images/hidden/phone.png" alt="phone">
+                        <strong>042.823.0038</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <button type="button" class="top__btn" data-event="click-top">
+            <img src="/images/main/arrow-up.svg" alt="up">
+            <span>TOP</span>
+        </button>
+    </div>
+    <!-- Script -->
+    <script src="js/main.js"></script>
+</body>
+</html>
