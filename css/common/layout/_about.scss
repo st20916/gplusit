@@ -267,6 +267,18 @@ section[data-anchor="about"] {
                 font-size: 1.75rem;
             }
         }
+
+        .slide-nav {
+            .slick-slide {
+                div {
+                    padding: 10px;
+
+                    .history__item {
+                        padding: 30px 40px;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -279,11 +291,29 @@ section[data-anchor="about"] {
             }
 
             .slick-prev {
-                left: 36%;
+                left: 490px;
+                
+                &::before {
+                    display: inline-block;
+                    content: '';
+                    background-image: url('../../../images/about/prev_arrow.svg');
+                    background-size: 60px 26px;
+                    width: 60px;
+                    height: 26px;
+                }
             }
     
             .slick-next {
-                right: 40%;
+                right: 530px;
+
+                &::before {
+                    display: inline-block;
+                    content: '';
+                    background-image: url('../../../images/about/next_arrow.svg');
+                    background-size: 60px 26px;
+                    width: 60px;
+                    height: 26px;
+                }
             }
 
             li {

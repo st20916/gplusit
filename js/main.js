@@ -251,12 +251,12 @@ $(function() {
         cssEase: 'linear',
         slidesToShow: 1,
         slidesToScroll: 1,
+        draggable: true,
         responsive: [
             {
                 breakpoint: 1025,
                 settings: {
-                    arrows: false,
-                    draggable: true
+                    arrows: false
                 }
             }
         ]
@@ -341,7 +341,7 @@ $(function() {
         arrows : false,
         perPage: 4,
         autoScroll: {
-            speed: 2,
+            speed: 1,
         },
         breakpoints: {
             1281: {
@@ -349,12 +349,12 @@ $(function() {
             },
             885: {
                 perPage: 2,
-                autoScroll: {
-                    speed: 1,
-                }
             },
             481: {
                 perPage: 1,
+                autoScroll: {
+                    speed: 2,
+                }
             }
         }
     });
