@@ -295,11 +295,8 @@ section[data-anchor="together"] {
     }
 }
 
-@media all and (min-width: 1441px) and (min-height: 1200px) {
+@media all and (min-width: 1441px) {
     .project__contents {
-        height: 350px;
-        padding: 44px;
-
         &[data-image="culture"] {
             &::before {
                 width: 399px;
@@ -314,18 +311,25 @@ section[data-anchor="together"] {
             }
         }
 
-        li {
-            &:first-child {
-                padding: 0 0 10px;
-            }
-        }
-
         strong {
             font-size: 1.375rem;
         }
 
         span {
             font-size: 1.125rem;
+        }
+    }
+}
+
+@media all and (min-width: 1441px) and (min-height: 1200px) {
+    .project__contents {
+        height: 350px;
+        padding: 44px;
+
+        li {
+            &:first-child {
+                padding: 0 0 10px;
+            }
         }
     }
 }
@@ -507,6 +511,10 @@ section[data-anchor="together"] {
     .together__footer__wrap {
         height: 260px;
         padding: 60px 0 0;
+
+        .inner {
+            height: auto !important;
+        }
     }
 
     .together__description {
@@ -607,11 +615,16 @@ section[data-anchor="together"] {
 
 @media all and (min-width: 1441px) {
     .together__btn {
+        max-width: 374px;
+        height: 87px;
+        font-size: 1.5rem;
+
         svg {
-            margin: 0 10px 0 0;
+            max-width: 50px;
+            margin: 0 15px 0 0;
 
             &.arrow {
-                margin: 0 0 0 10px;
+                margin: 0 0 0 15px;
             }
         }
     }

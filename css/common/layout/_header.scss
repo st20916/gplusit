@@ -191,13 +191,19 @@
 
 @media all and (min-width: 1441px) {
     #gnb {
-        max-width: 1200px;
-
+        max-width: 800px;
+        
         ul {
             a {
                 font-size: 1.25rem;
             }
         }
+    }
+}
+
+@media all and (min-width: 1920px) {
+    #gnb {
+        max-width: 1200px;
     }
 }
 

@@ -431,7 +431,7 @@ body {
     max-width: 996px;
     margin: 24px auto 56px;
     font-size: 1.0625rem;
-    line-height: 30px;
+    line-height: 1.6;
   }
 }
 @media all and (min-width: 1920px) {
@@ -694,10 +694,15 @@ body {
 }
 @media all and (min-width: 1441px) {
   #gnb {
-    max-width: 1200px;
+    max-width: 800px;
   }
   #gnb ul a {
     font-size: 1.25rem;
+  }
+}
+@media all and (min-width: 1920px) {
+  #gnb {
+    max-width: 1200px;
   }
 }
 /* #################### Site Map */
@@ -1936,10 +1941,17 @@ video {
 @media all and (min-width: 1441px) {
   .about__modal .modal__main__title {
     margin: 16px 0;
+    font-size: 1.5rem;
+  }
+  .about__modal p {
+    font-size: 1rem;
   }
   .about__modal .close {
     top: 28px;
     right: 52px;
+  }
+  .about__modal .close img {
+    max-width: 25px;
   }
 }
 /* ######################### Business Layer Modal */
@@ -2717,7 +2729,15 @@ section[data-anchor=solution] .bg-circle-purple {
     align-items: center;
     justify-content: center;
     height: 400px;
-    padding: 20px 63px;
+    padding: 20px 55px;
+  }
+  .item__block .item__title {
+    height: 70px;
+    font-size: 1.625rem;
+  }
+  .item__block .item__content {
+    height: 144px;
+    font-size: 0.9375rem;
   }
   .item__block .circle {
     width: 66px;
@@ -3196,11 +3216,7 @@ section[data-anchor=together] .inner {
     background-size: cover;
   }
 }
-@media all and (min-width: 1441px) and (min-height: 1200px) {
-  .project__contents {
-    height: 350px;
-    padding: 44px;
-  }
+@media all and (min-width: 1441px) {
   .project__contents[data-image=culture]::before {
     width: 399px;
     height: 244px;
@@ -3209,14 +3225,20 @@ section[data-anchor=together] .inner {
     width: 319px;
     height: 195px;
   }
-  .project__contents li:first-child {
-    padding: 0 0 10px;
-  }
   .project__contents strong {
     font-size: 1.375rem;
   }
   .project__contents span {
     font-size: 1.125rem;
+  }
+}
+@media all and (min-width: 1441px) and (min-height: 1200px) {
+  .project__contents {
+    height: 350px;
+    padding: 44px;
+  }
+  .project__contents li:first-child {
+    padding: 0 0 10px;
   }
 }
 .item--orange .project__contents::before {
@@ -3355,6 +3377,9 @@ section[data-anchor=together] .inner {
     height: 260px;
     padding: 60px 0 0;
   }
+  .together__footer__wrap .inner {
+    height: auto !important;
+  }
   .together__description {
     font-size: 1.75rem;
   }
@@ -3437,11 +3462,17 @@ section[data-anchor=together] .inner {
   }
 }
 @media all and (min-width: 1441px) {
+  .together__btn {
+    max-width: 374px;
+    height: 87px;
+    font-size: 1.5rem;
+  }
   .together__btn svg {
-    margin: 0 10px 0 0;
+    max-width: 50px;
+    margin: 0 15px 0 0;
   }
   .together__btn svg.arrow {
-    margin: 0 0 0 10px;
+    margin: 0 0 0 15px;
   }
   .together__contact li span,
   .together__contact li a {

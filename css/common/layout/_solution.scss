@@ -234,7 +234,17 @@ section[data-anchor="solution"] {
         align-items: center;
         justify-content: center;
         height: 400px;
-        padding: 20px 63px;
+        padding: 20px 55px;
+
+        .item__title {
+            height: 70px;
+            font-size: 1.625rem;
+        }
+
+        .item__content {
+            height: 144px;
+            font-size: .9375rem;
+        }
 
         .circle {
             width: 66px;
