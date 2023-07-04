@@ -2222,7 +2222,53 @@ section[data-anchor=about] .inner {
   margin: 0 0 0 3.05vw;
 }
 
+/* Custom Arrow */
+.about__prev,
+.about__next,
+.history__prev,
+.history__next {
+  position: absolute;
+  display: none;
+  cursor: pointer;
+  z-index: 5;
+}
+.about__prev.slick-disabled,
+.about__next.slick-disabled,
+.history__prev.slick-disabled,
+.history__next.slick-disabled {
+  opacity: 0.2;
+  cursor: not-allowed;
+}
+
 @media all and (min-width: 768px) {
+  .about__prev,
+  .about__next,
+  .history__prev,
+  .history__next {
+    display: inline-block;
+  }
+  .about__prev,
+  .about__next {
+    top: 58%;
+    transform: translateY(-55%);
+  }
+  .about__prev {
+    left: 9px;
+  }
+  .about__next {
+    right: 9px;
+  }
+  .history__prev,
+  .history__next {
+    top: 110px;
+    max-width: 45px;
+  }
+  .history__prev {
+    left: 853px;
+  }
+  .history__next {
+    right: 187px;
+  }
   .about__item {
     padding: 0 8vw;
     min-height: 125px;
@@ -2236,6 +2282,27 @@ section[data-anchor=about] .inner {
   }
 }
 @media all and (min-width: 1025px) {
+  .about__prev,
+  .about__next {
+    top: 70%;
+    transform: translateY(-70%);
+  }
+  .about__prev {
+    left: -60px;
+  }
+  .about__next {
+    right: -60px;
+  }
+  .history__prev,
+  .history__next {
+    top: 124px;
+  }
+  .history__prev {
+    left: 1480px;
+  }
+  .history__next {
+    right: 381px;
+  }
   .about__item {
     padding: 0 50px;
     height: 150px;
@@ -2244,6 +2311,23 @@ section[data-anchor=about] .inner {
   }
 }
 @media all and (min-width: 1441px) {
+  .about__prev,
+  .about__next {
+    top: auto;
+    transform: none;
+    bottom: 176px;
+  }
+  .history__prev,
+  .history__next {
+    top: 134px;
+    max-width: 56px;
+  }
+  .history__prev {
+    left: 1895px;
+  }
+  .history__next {
+    right: 494px;
+  }
   .about__item {
     margin: 0 0 33px;
   }
@@ -3106,7 +3190,7 @@ section[data-anchor=together] .inner {
 }
 .item__project {
   position: relative;
-  padding: 30px 35px;
+  padding: 30px 25px;
   background-color: #1B91BF;
   border-radius: 15px 15px 7px 7px;
   margin: 0 0 10px;

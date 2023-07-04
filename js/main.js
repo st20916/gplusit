@@ -259,7 +259,9 @@ $(function() {
                     arrows: false
                 }
             }
-        ]
+        ],
+        nextArrow: $('.about__next'),
+        prevArrow: $('.about__prev'),
     });
 
     $('[data-slick-wrap="cert"]').slick({
@@ -317,7 +319,9 @@ $(function() {
             draggable: false,
             cssEase: 'linear',
             arrows: true,
-            asNavFor: slickNav
+            asNavFor: slickNav,
+            prevArrow: $('.history__prev'),
+            nextArrow: $('.history__next')
         });
 
         slickNav.slick({
