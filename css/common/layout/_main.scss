@@ -150,6 +150,7 @@ video {
             left: -2vw;
             background-size: 122px 522px;
             height: 522px;
+            animation: slide-in-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
         }
     }
 }

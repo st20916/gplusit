@@ -225,6 +225,10 @@ body {
 
         .inner__expl {
             margin: 22px 0 51px;
+
+            &.history__expl {
+                margin: 24px auto 10px;
+            }
         }
     }
 }
@@ -246,6 +250,10 @@ body {
             margin: 24px auto 56px;
             font-size: 1.0625rem;
             line-height: 1.6;
+
+            &.history__expl {
+                margin: 24px auto 20px;
+            }
         }
     }
 }

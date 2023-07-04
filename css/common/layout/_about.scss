@@ -120,6 +120,7 @@ section[data-anchor="about"] {
 
         p {
             margin: 0 0 0 1vw;
+            font-size: 1.5rem;
         }
     }
 }
@@ -217,7 +218,7 @@ section[data-anchor="about"] {
 
         li {
             font-size: 1.625rem;
-            font-weight: 400;
+            font-weight: 600;
             color: #8DA4DC;
             text-align: center;
             margin: 5.9vw 0;
@@ -250,28 +251,44 @@ section[data-anchor="about"] {
         .slide-for {
             .slick-prev,
             .slick-next {
-                top: 55%;
+                top: 49%;
             }
 
             .slick-prev {
-                left: 29%;
-
-                &::before {
-                    content: url('../../../images/about/prev_arrow.svg');
-                }
+                left: 34%;
             }
     
             .slick-next {
-                right: 34%;
+                right: 35%;
+            }
 
-                &::before {
-                    content: url('../../../images/about/next_arrow.svg');
-                }
+            li {
+                max-width: 250px;
+                font-size: 1.75rem;
+            }
+        }
+    }
+}
+
+@media all and (min-width: 1441px) {
+    .about__history {
+        .slide-for {
+            .slick-prev,
+            .slick-next {
+                top: 50%;
+            }
+
+            .slick-prev {
+                left: 36%;
+            }
+    
+            .slick-next {
+                right: 40%;
             }
 
             li {
                 max-width: 300px;
-                font-size: 2.8125rem;
+                font-size: 2rem;
             }
         }
     }
@@ -368,6 +385,8 @@ section[data-anchor="about"] {
         }
 
         li {
+            margin: 0 0 15px;
+            
             strong {
                 display: inline-block;
             }
