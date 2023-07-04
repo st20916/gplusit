@@ -192,7 +192,7 @@
 @media all and (min-width: 1441px) {
     #gnb {
         max-width: 800px;
-        
+
         ul {
             a {
                 font-size: 1.25rem;
@@ -219,12 +219,11 @@
     background-color: #FFFFFF;
     width: 100%;
     height: 0;
-    visibility: hidden;
     transition: all .35s linear;
+    overflow-x: hidden;
 
     &.on {
         height: 100vh;
-        visibility: visible;
         overflow-y: auto;
     }
 
@@ -423,12 +422,18 @@
 
 @media all and (min-width: 1441px) {
     .sitemap__list {
-        max-width: 1920px;
+        max-width: 1440px;
         margin: 84px auto 0;
         padding: 0;
 
         li {
             max-width: 16.66667%;
         }
+    }
+}
+
+@media all and (min-width: 1920px) {
+    .sitemap__list {
+        max-width: 1920px;
     }
 }

@@ -276,19 +276,19 @@ video {
 
             &[data-number="1"] {
                 left: -141px;
-                animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.2s both;
+                animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) .9s both;
             }
 
             &[data-number="2"] {
                 left: 95px;
-                animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.2s both;
+                animation: slide-in-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) .9s both;
             }
 
             &[data-number="3"] {
                 top: 93px;
                 left: -23px;
                 transform: none;
-                animation: slide-in-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1.2s both;
+                animation: slide-in-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) .9s both;
             }
         }
     }

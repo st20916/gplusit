@@ -716,12 +716,11 @@ body {
   background-color: #FFFFFF;
   width: 100%;
   height: 0;
-  visibility: hidden;
   transition: all 0.35s linear;
+  overflow-x: hidden;
 }
 #siteMap.on {
   height: 100vh;
-  visibility: visible;
   overflow-y: auto;
 }
 #siteMap .sc {
@@ -877,12 +876,17 @@ body {
 }
 @media all and (min-width: 1441px) {
   .sitemap__list {
-    max-width: 1920px;
+    max-width: 1440px;
     margin: 84px auto 0;
     padding: 0;
   }
   .sitemap__list li {
     max-width: 16.66667%;
+  }
+}
+@media all and (min-width: 1920px) {
+  .sitemap__list {
+    max-width: 1920px;
   }
 }
 /**
@@ -1215,17 +1219,17 @@ video {
   }
   .right__circle .right__main[data-number="1"] {
     left: -141px;
-    animation: slide-in-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.2s both;
+    animation: slide-in-left 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.9s both;
   }
   .right__circle .right__main[data-number="2"] {
     left: 95px;
-    animation: slide-in-right 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.2s both;
+    animation: slide-in-right 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.9s both;
   }
   .right__circle .right__main[data-number="3"] {
     top: 93px;
     left: -23px;
     transform: none;
-    animation: slide-in-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.2s both;
+    animation: slide-in-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.9s both;
   }
 }
 @media all and (min-width: 1441px) {
