@@ -389,6 +389,10 @@
             padding: 3.75vmin;
             border-bottom: 1px solid #DBDBDB;
             word-break: keep-all;
+
+            &:last-child {
+                border-bottom: 0;
+            }
         }
     }
 }

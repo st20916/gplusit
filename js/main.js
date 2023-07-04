@@ -341,7 +341,7 @@ $(function() {
         arrows : false,
         perPage: 4,
         autoScroll: {
-            speed: 1,
+            speed: 2,
         },
         breakpoints: {
             1281: {
@@ -349,6 +349,9 @@ $(function() {
             },
             885: {
                 perPage: 2,
+                autoScroll: {
+                    speed: 1,
+                }
             },
             481: {
                 perPage: 1,

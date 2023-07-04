@@ -387,7 +387,7 @@ body {
   color: #555555;
   text-align: center;
   margin: 5.833vmin 0;
-  line-height: 24px;
+  line-height: 1.5;
 }
 
 @media all and (min-width: 768px) {
@@ -432,7 +432,6 @@ body {
     font-size: 1.5rem;
   }
   .inner .inner__expl {
-    max-width: 996px;
     margin: 24px auto 56px;
     font-size: 1.0625rem;
     line-height: 1.6;
@@ -683,7 +682,7 @@ body {
     transform: translateX(-50%);
     display: block;
     width: 100%;
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
   }
   #gnb ul {
@@ -1028,12 +1027,12 @@ video {
 }
 .inner__section p {
   position: relative;
-  font-size: 0.625rem;
+  font-size: 0.875rem;
   color: #D5E2FF;
   text-align: center;
-  padding: 0 2.5vw;
-  margin: 3.521vmax 0;
-  line-height: 1.75;
+  padding: 0 20px;
+  margin: 30px 0;
+  line-height: 1.5;
   word-break: keep-all;
 }
 
@@ -1086,7 +1085,7 @@ video {
 
 @media all and (min-width: 360px) {
   .section__title__wrap {
-    top: 12vh;
+    top: 4vh;
   }
 }
 @media all and (min-width: 768px) {
@@ -1299,7 +1298,7 @@ video {
   background-color: rgba(51, 51, 51, 0.68);
   min-height: 23.125vmin;
   max-height: 74px;
-  padding: 2.05vmin 8.125vw;
+  padding: 16px 8.125vw;
   overflow: hidden;
   z-index: 1;
 }
@@ -1342,7 +1341,7 @@ video {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: 80px;
+  right: 48px;
   width: 14px;
 }
 .news__util .util__prev,
@@ -1739,6 +1738,9 @@ video {
   padding: 3.75vmin;
   border-bottom: 1px solid #DBDBDB;
   word-break: keep-all;
+}
+.char__item ul > li:last-child {
+  border-bottom: 0;
 }
 
 @media all and (min-width: 1025px) {
@@ -2317,7 +2319,7 @@ section[data-anchor=about] .inner {
   font-weight: 600;
   color: #8DA4DC;
   text-align: center;
-  margin: 5.9vw 0;
+  margin: 10px 0;
 }
 
 @media all and (min-width: 768px) {
@@ -2510,8 +2512,8 @@ section[data-anchor=business] .inner {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 212px;
-  height: 212px;
+  width: 220px;
+  height: 220px;
   border-radius: 100%;
   box-shadow: 0 3px 20px rgba(0, 0, 0, 0.4);
 }
@@ -3064,7 +3066,7 @@ section[data-anchor=together] .inner {
 }
 .item__project {
   position: relative;
-  padding: 6.41vw;
+  padding: 30px 35px;
   background-color: #1B91BF;
   border-radius: 15px 15px 7px 7px;
   margin: 0 0 10px;
@@ -3087,7 +3089,7 @@ section[data-anchor=together] .inner {
 }
 .item__project .project__title {
   position: relative;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-weight: 600;
   color: #F6F6F6;
   text-align: center;
@@ -3112,7 +3114,7 @@ section[data-anchor=together] .inner {
 @media all and (min-width: 1025px) {
   .item__project {
     margin: 0;
-    padding: 30px;
+    padding: 30px 35px;
   }
   .item__project .slick-prev {
     left: -27px;
@@ -3247,6 +3249,10 @@ section[data-anchor=together] .inner {
   }
 }
 @media all and (min-width: 1441px) {
+  .project__contents {
+    height: 330px;
+    padding: 44px;
+  }
   .project__contents[data-image=culture]::before {
     width: 399px;
     height: 244px;
@@ -3263,10 +3269,6 @@ section[data-anchor=together] .inner {
   }
 }
 @media all and (min-width: 1441px) and (min-height: 1200px) {
-  .project__contents {
-    height: 350px;
-    padding: 44px;
-  }
   .project__contents li:first-child {
     padding: 0 0 10px;
   }
@@ -3317,11 +3319,13 @@ section[data-anchor=together] .inner {
     background-size: cover;
   }
 }
-@media all and (min-width: 1441px) and (min-height: 1200px) {
+@media all and (min-width: 1441px) {
   .item--orange .project__contents::before {
     width: 208px;
-    height: 167px;
+    height: 145px;
   }
+}
+@media all and (min-width: 1441px) and (min-height: 1200px) {
   .item--orange .project__contents li {
     padding: 17px 0;
   }
@@ -3392,7 +3396,7 @@ section[data-anchor=together] .inner {
     top: 0;
     left: 0;
     max-height: 100%;
-    max-width: none;
+    max-width: 500px;
   }
   .together__description {
     margin: 0 0 29px;
@@ -3409,6 +3413,9 @@ section[data-anchor=together] .inner {
   }
   .together__footer__wrap .inner {
     height: auto !important;
+  }
+  .together__footer__wrap .footer__main__img {
+    max-width: none;
   }
   .together__description {
     font-size: 1.75rem;
@@ -3488,7 +3495,8 @@ section[data-anchor=together] .inner {
     top: 0;
     right: 0;
     margin: 0;
-    padding: 25px;
+    padding: 25px 45px;
+    max-width: none;
   }
 }
 @media all and (min-width: 1441px) {
@@ -3503,6 +3511,9 @@ section[data-anchor=together] .inner {
   }
   .together__btn svg.arrow {
     margin: 0 0 0 15px;
+  }
+  .together__contact li {
+    margin: 0 0 14px;
   }
   .together__contact li span,
   .together__contact li a {
