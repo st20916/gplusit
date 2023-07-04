@@ -224,6 +224,18 @@ section[data-anchor="about"] {
             margin: 10px 0;
         }
     }
+
+    .slide-nav {
+        .slick-slide {
+            div {
+                padding: 10px;
+
+                .history__item {
+                    padding: 8vw;
+                }
+            }
+        }
+    }
 }
 
 @media all and (min-width: 768px) {
@@ -241,6 +253,16 @@ section[data-anchor="about"] {
                 font-size: 1.875rem;
                 margin: 17px 0;
                 max-width: 200px;
+            }
+        }
+
+        .slide-nav {
+            .slick-slide {
+                div {
+                    .history__item {
+                        padding: 53px;
+                    }
+                }
             }
         }
     }
@@ -271,8 +293,6 @@ section[data-anchor="about"] {
         .slide-nav {
             .slick-slide {
                 div {
-                    padding: 10px;
-
                     .history__item {
                         padding: 30px 40px;
                     }

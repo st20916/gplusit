@@ -2333,6 +2333,12 @@ section[data-anchor=about] .inner {
   text-align: center;
   margin: 10px 0;
 }
+.about__history .slide-nav .slick-slide div {
+  padding: 10px;
+}
+.about__history .slide-nav .slick-slide div .history__item {
+  padding: 8vw;
+}
 
 @media all and (min-width: 768px) {
   .about__history .slide-for .slick-prev {
@@ -2345,6 +2351,9 @@ section[data-anchor=about] .inner {
     font-size: 1.875rem;
     margin: 17px 0;
     max-width: 200px;
+  }
+  .about__history .slide-nav .slick-slide div .history__item {
+    padding: 53px;
   }
 }
 @media all and (min-width: 1025px) {
@@ -2361,9 +2370,6 @@ section[data-anchor=about] .inner {
   .about__history .slide-for li {
     max-width: 250px;
     font-size: 1.75rem;
-  }
-  .about__history .slide-nav .slick-slide div {
-    padding: 10px;
   }
   .about__history .slide-nav .slick-slide div .history__item {
     padding: 30px 40px;
@@ -3486,6 +3492,10 @@ section[data-anchor=together] .inner {
 }
 .together__btn svg {
   max-width: 31px;
+  margin: 0 15px 0 0;
+}
+.together__btn svg.arrow {
+  margin: 0 0 0 15px;
 }
 
 .together__contact {

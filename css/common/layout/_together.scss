@@ -570,6 +570,11 @@ section[data-anchor="together"] {
 
     svg {
         max-width: 31px;
+        margin: 0 15px 0 0;
+
+        &.arrow {
+            margin: 0 0 0 15px;
+        }
     }
 }
 
