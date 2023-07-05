@@ -91,50 +91,101 @@
 }
 
 /* ######################## 배경 타원 */
-@media all and (min-width: 1025px) {
+@media all and (min-width: 768px) {
     .bg-circle-face {
-        width: 648px;
-        height: 648px;
+        width: 584px;
+        height: 584px;
         border-radius: 100%;
         background-color: #F4EBE4;
         opacity: .7;
     }
 
     .bg-circle-purple {
-        width: 648px;
-        height: 648px;
+        width: 584px;
+        height: 584px;
         border-radius: 100%;
         background-color: #C8E0FF;
         opacity: .7;
     }
 
     .bg-circle-white {
-        width: 354px;
-        height: 354px;
+        width: 319px;
+        height: 319px;
         border-radius: 100%;
         background-color: #fafbfb;
         opacity: .54;
     }
 
     .bg-circle-lg-dwhite {
-        width: 523px;
-        height: 523px;
+        width: 471px;
+        height: 471px;
         border-radius: 100%;
         background-color: #F2F4F9;
     }
 
     .bg-circle-small-white {
-        width: 224px;
-        height: 224px;
+        width: 202px;
+        height: 202px;
         border-radius: 100%;
         background-color: #FDFEFF;
     }
 
     .bg-circle-sky {
-        width: 89px;
-        height: 89px;
+        width: 81px;
+        height: 81px;
         border-radius: 100%;
         background-color: #C0D4EE;
+
+        &.size-lg {
+            width: 202px;
+            height: 202px;
+        }
+    }
+
+    .bg-circle-sm-sky {
+        width: 202px;
+        height: 202px;
+        border-radius: 100%;
+        background-color: #EBF2F9;
+    }
+
+    .bg-circle-lg-sky {
+        width: 266px;
+        height: 266px;
+        border-radius: 100%;
+        background-color: #C8E0FF;
+    }
+}
+
+@media all and (min-width: 1025px) {
+    .bg-circle-face {
+        width: 648px;
+        height: 648px;
+    }
+
+    .bg-circle-purple {
+        width: 648px;
+        height: 648px;
+    }
+
+    .bg-circle-white {
+        width: 354px;
+        height: 354px;
+    }
+
+    .bg-circle-lg-dwhite {
+        width: 523px;
+        height: 523px;
+    }
+
+    .bg-circle-small-white {
+        width: 224px;
+        height: 224px;
+    }
+
+    .bg-circle-sky {
+        width: 89px;
+        height: 89px;
 
         &.size-lg {
             width: 224px;
@@ -145,15 +196,11 @@
     .bg-circle-sm-sky {
         width: 224px;
         height: 224px;
-        border-radius: 100%;
-        background-color: #EBF2F9;
     }
 
     .bg-circle-lg-sky {
         width: 295px;
         height: 295px;
-        border-radius: 100%;
-        background-color: #C8E0FF;
     }
 }
 

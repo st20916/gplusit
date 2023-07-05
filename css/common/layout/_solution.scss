@@ -4,10 +4,6 @@ section[data-anchor="solution"] {
     .inner {
         padding: 40px 5.13vw;
     }
-
-    .bg-circle-purple {
-        opacity: .3;
-    }
 }
 
 @media all and (min-width: 768px) {
@@ -16,6 +12,30 @@ section[data-anchor="solution"] {
             min-height: auto;
             padding: 40px 6.77vw;
         }
+
+        .fc,
+        .sc,
+        .tc {
+            position: absolute;
+        }
+
+        .bg-circle-purple {
+            opacity: .3;
+        }
+
+        .fc {
+            top: -250px;
+            right: -300px;
+        }
+
+        .sc {
+            left: -50px;
+            bottom: 200px;
+        }
+
+        .tc {
+            display: none;
+        }
     }
 }
 
@@ -23,13 +43,6 @@ section[data-anchor="solution"] {
     section[data-anchor="solution"] {
         .inner {
             padding: 0;
-        }
-
-        .fc,
-        .sc,
-        .tc {
-            position: absolute;
-            display: block;
         }
     }
 }

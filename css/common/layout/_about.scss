@@ -20,6 +20,16 @@ section[data-anchor="about"] {
         .inner {
             padding: 0 6.77vw;
         }
+
+        .fc {
+            display: block;
+            z-index: 0;
+        }
+
+        .fc {
+            top: -400px;
+            right: -300px;
+        }
     }
 }
 
@@ -27,11 +37,6 @@ section[data-anchor="about"] {
     section[data-anchor="about"] {
         .inner {
             padding: 0;
-        }
-
-        .fc {
-            display: block;
-            z-index: 0;
         }
 
         .fc {

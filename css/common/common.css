@@ -363,19 +363,20 @@ body {
   max-width: 100%;
   min-height: 100vh;
   padding: 0 5.13vw;
+  z-index: 5;
 }
 .inner .inner__title {
   position: relative;
   font-size: 1.75rem;
   font-weight: 600;
-  color: #333333;
+  color: #000000;
   text-transform: uppercase;
   text-align: center;
 }
 .inner .inner__subtitle {
   position: relative;
   font-size: 1.25rem;
-  font-weight: 400;
+  font-weight: 500;
   color: #333333;
   text-align: center;
 }
@@ -384,7 +385,7 @@ body {
   font-size: 0.875rem;
   font-weight: 300;
   word-break: keep-all;
-  color: #555555;
+  color: #333333;
   text-align: center;
   margin: 5.833vmin 0;
   line-height: 1.5;
@@ -415,7 +416,6 @@ body {
     max-width: 1100px;
     margin: 0 auto;
     top: 5vh;
-    z-index: 5;
   }
   .inner .inner__title {
     font-size: 2.5rem;
@@ -435,7 +435,8 @@ body {
     font-size: 3.125rem;
   }
   .inner .inner__subtitle {
-    font-size: 1.5rem;
+    font-size: 1.5625rem;
+    margin: 10px 0 0;
   }
   .inner .inner__expl {
     margin: 24px auto 56px;
@@ -1029,7 +1030,7 @@ video {
   line-height: 1.2;
 }
 .inner__section .title strong {
-  font-weight: 600;
+  font-weight: 500;
 }
 .inner__section p {
   position: relative;
@@ -2168,14 +2169,18 @@ section[data-anchor=about] .inner {
   section[data-anchor=about] .inner {
     padding: 0 6.77vw;
   }
+  section[data-anchor=about] .fc {
+    display: block;
+    z-index: 0;
+  }
+  section[data-anchor=about] .fc {
+    top: -400px;
+    right: -300px;
+  }
 }
 @media all and (min-width: 1025px) {
   section[data-anchor=about] .inner {
     padding: 0;
-  }
-  section[data-anchor=about] .fc {
-    display: block;
-    z-index: 0;
   }
   section[data-anchor=about] .fc {
     top: -65%;
@@ -2599,19 +2604,21 @@ section[data-anchor=about] .inner {
 section[data-anchor=business] {
   background-color: #F9F9F9;
 }
-section[data-anchor=business] .sc,
-section[data-anchor=business] .tc {
-  position: absolute;
-  display: none;
-}
 section[data-anchor=business] .inner {
   min-height: auto;
 }
 
-@media all and (min-width: 1025px) {
+@media all and (min-width: 768px) {
   section[data-anchor=business] .sc,
   section[data-anchor=business] .tc {
-    display: block;
+    position: absolute;
+  }
+  section[data-anchor=business] .sc {
+    top: -300px;
+    left: -300px;
+  }
+  section[data-anchor=business] .tc {
+    display: none;
   }
 }
 @media all and (min-width: 1025px) and (max-height: 1199px) {
@@ -2714,25 +2721,35 @@ section[data-anchor=solution] {
 section[data-anchor=solution] .inner {
   padding: 40px 5.13vw;
 }
-section[data-anchor=solution] .bg-circle-purple {
-  opacity: 0.3;
-}
 
 @media all and (min-width: 768px) {
   section[data-anchor=solution] .inner {
     min-height: auto;
     padding: 40px 6.77vw;
   }
-}
-@media all and (min-width: 1025px) {
-  section[data-anchor=solution] .inner {
-    padding: 0;
-  }
   section[data-anchor=solution] .fc,
   section[data-anchor=solution] .sc,
   section[data-anchor=solution] .tc {
     position: absolute;
-    display: block;
+  }
+  section[data-anchor=solution] .bg-circle-purple {
+    opacity: 0.3;
+  }
+  section[data-anchor=solution] .fc {
+    top: -250px;
+    right: -300px;
+  }
+  section[data-anchor=solution] .sc {
+    left: -50px;
+    bottom: 200px;
+  }
+  section[data-anchor=solution] .tc {
+    display: none;
+  }
+}
+@media all and (min-width: 1025px) {
+  section[data-anchor=solution] .inner {
+    padding: 0;
   }
 }
 @media all and (min-width: 1025px) and (max-height: 1199px) {
@@ -3532,8 +3549,8 @@ section[data-anchor=together] .inner {
 }
 @media all and (min-width: 1441px) {
   .item--orange .project__contents::before {
-    width: 208px;
-    height: 145px;
+    width: 190px;
+    height: 130px;
   }
 }
 @media all and (min-width: 1441px) and (min-height: 1200px) {
@@ -15120,45 +15137,87 @@ section[data-anchor=contact] .inner {
 }
 
 /* ######################## 배경 타원 */
-@media all and (min-width: 1025px) {
+@media all and (min-width: 768px) {
   .bg-circle-face {
-    width: 648px;
-    height: 648px;
+    width: 584px;
+    height: 584px;
     border-radius: 100%;
     background-color: #F4EBE4;
     opacity: 0.7;
   }
   .bg-circle-purple {
-    width: 648px;
-    height: 648px;
+    width: 584px;
+    height: 584px;
     border-radius: 100%;
     background-color: #C8E0FF;
     opacity: 0.7;
   }
   .bg-circle-white {
-    width: 354px;
-    height: 354px;
+    width: 319px;
+    height: 319px;
     border-radius: 100%;
     background-color: #fafbfb;
     opacity: 0.54;
   }
   .bg-circle-lg-dwhite {
-    width: 523px;
-    height: 523px;
+    width: 471px;
+    height: 471px;
     border-radius: 100%;
     background-color: #F2F4F9;
   }
   .bg-circle-small-white {
-    width: 224px;
-    height: 224px;
+    width: 202px;
+    height: 202px;
     border-radius: 100%;
     background-color: #FDFEFF;
   }
   .bg-circle-sky {
-    width: 89px;
-    height: 89px;
+    width: 81px;
+    height: 81px;
     border-radius: 100%;
     background-color: #C0D4EE;
+  }
+  .bg-circle-sky.size-lg {
+    width: 202px;
+    height: 202px;
+  }
+  .bg-circle-sm-sky {
+    width: 202px;
+    height: 202px;
+    border-radius: 100%;
+    background-color: #EBF2F9;
+  }
+  .bg-circle-lg-sky {
+    width: 266px;
+    height: 266px;
+    border-radius: 100%;
+    background-color: #C8E0FF;
+  }
+}
+@media all and (min-width: 1025px) {
+  .bg-circle-face {
+    width: 648px;
+    height: 648px;
+  }
+  .bg-circle-purple {
+    width: 648px;
+    height: 648px;
+  }
+  .bg-circle-white {
+    width: 354px;
+    height: 354px;
+  }
+  .bg-circle-lg-dwhite {
+    width: 523px;
+    height: 523px;
+  }
+  .bg-circle-small-white {
+    width: 224px;
+    height: 224px;
+  }
+  .bg-circle-sky {
+    width: 89px;
+    height: 89px;
   }
   .bg-circle-sky.size-lg {
     width: 224px;
@@ -15167,14 +15226,10 @@ section[data-anchor=contact] .inner {
   .bg-circle-sm-sky {
     width: 224px;
     height: 224px;
-    border-radius: 100%;
-    background-color: #EBF2F9;
   }
   .bg-circle-lg-sky {
     width: 295px;
     height: 295px;
-    border-radius: 100%;
-    background-color: #C8E0FF;
   }
 }
 @media all and (min-width: 1441px) {
