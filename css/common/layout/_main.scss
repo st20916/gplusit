@@ -90,9 +90,10 @@ video {
         }
 
         p {
-            font-size: 1.125rem;
             max-width: 550px;
             margin: 69px 0 0;
+            font-size: 1.125rem;
+            font-weight: 300;
         }
     }
 }
@@ -413,7 +414,7 @@ video {
 
 @media all and (min-width: 1441px) {
     .news {
-        max-width: 77vw;
+        max-width: 80vw;
     }
 }
 

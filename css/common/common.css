@@ -436,10 +436,10 @@ body {
   }
   .inner .inner__subtitle {
     font-size: 1.5625rem;
-    margin: 10px 0 0;
+    margin: 5px 0 0;
   }
   .inner .inner__expl {
-    margin: 24px auto 56px;
+    margin: 15px auto 86px;
     font-size: 1.0625rem;
     line-height: 1.6;
   }
@@ -1078,9 +1078,10 @@ video {
     font-size: 5rem;
   }
   .inner__section p {
-    font-size: 1.125rem;
     max-width: 550px;
     margin: 69px 0 0;
+    font-size: 1.125rem;
+    font-weight: 300;
   }
 }
 /* #################### Inner Title Wrap */
@@ -1341,7 +1342,7 @@ video {
 }
 @media all and (min-width: 1441px) {
   .news {
-    max-width: 77vw;
+    max-width: 80vw;
   }
 }
 .news__util {
@@ -2474,7 +2475,7 @@ section[data-anchor=about] .inner {
     font-size: 1.75rem;
   }
   .about__history .slide-nav .slick-slide div {
-    padding: 25px 30px 30px;
+    padding: 20px 30px 30px;
   }
   .about__history .slide-nav .slick-slide div .history__item {
     padding: 30px 40px;
