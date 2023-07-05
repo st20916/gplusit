@@ -2469,6 +2469,9 @@ section[data-anchor=about] .inner {
     max-width: 250px;
     font-size: 1.75rem;
   }
+  .about__history .slide-nav .slick-slide div {
+    padding: 50px;
+  }
   .about__history .slide-nav .slick-slide div .history__item {
     padding: 30px 40px;
   }
