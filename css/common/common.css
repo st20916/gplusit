@@ -2240,6 +2240,20 @@ section[data-anchor=about] .inner {
   cursor: not-allowed;
 }
 
+.history__prev,
+.history__next {
+  top: 90px;
+  max-width: 45px;
+}
+
+.history__prev {
+  left: 420px;
+}
+
+.history__next {
+  right: 30px;
+}
+
 @media all and (min-width: 768px) {
   .about__prev,
   .about__next,
