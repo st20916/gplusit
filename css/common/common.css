@@ -2333,12 +2333,12 @@ section[data-anchor=about] .inner {
 @media all and (min-width: 1441px) {
   .about__prev,
   .about__next {
-    top: 350px;
+    top: 380px;
     transform: none;
   }
   .history__prev,
   .history__next {
-    top: 110px;
+    top: 120px;
     max-width: 56px;
   }
   .history__prev {
