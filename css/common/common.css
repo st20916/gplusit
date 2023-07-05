@@ -444,7 +444,7 @@ body {
     line-height: 1.6;
   }
   .inner .inner__expl.history__expl {
-    margin: 24px auto 20px;
+    margin: 15px auto 40px;
   }
 }
 @media all and (min-width: 1920px) {
@@ -2338,7 +2338,7 @@ section[data-anchor=about] .inner {
   }
   .history__prev,
   .history__next {
-    top: 120px;
+    top: 130px;
     max-width: 56px;
   }
   .history__prev {
