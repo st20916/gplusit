@@ -18,14 +18,46 @@ section[data-anchor="together"] {
             top: 0;
             padding: 19vh 0 0;
         }
+
+        .fc,
+        .sc,
+        .tc {
+            position: absolute;
+        }
+
+        .fc {
+            top: -75px;
+            right: 70px;
+            opacity: .5;
+        }
+
+        .sc {
+            left: 20px;
+            bottom: 90px;
+        }
+
+        .tc {
+            left: 285px;
+            bottom: 185px;
+        }
     }
 }
 
 @media all and (min-width: 1441px) {
     section[data-anchor="together"] {
         .inner {
-            padding: 101px 0 260px;
+            padding: 101px 0 275px;
             height: 100vh;
+        }
+
+        .sc {
+            left: 30px;
+            bottom: 150px;
+        }
+
+        .tc {
+            left: 350px;
+            bottom: 255px;
         }
     }
 }
@@ -516,7 +548,7 @@ section[data-anchor="together"] {
     }
 
     .together__footer__wrap {
-        height: 260px;
+        height: 275px;
         padding: 60px 0 0;
 
         .inner {

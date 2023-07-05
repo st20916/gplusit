@@ -415,7 +415,7 @@ body {
     max-width: 1100px;
     margin: 0 auto;
     top: 5vh;
-    z-index: 2;
+    z-index: 5;
   }
   .inner .inner__title {
     font-size: 2.5rem;
@@ -2327,13 +2327,12 @@ section[data-anchor=about] .inner {
 @media all and (min-width: 1441px) {
   .about__prev,
   .about__next {
-    top: auto;
+    top: 350px;
     transform: none;
-    bottom: 176px;
   }
   .history__prev,
   .history__next {
-    top: 134px;
+    top: 110px;
     max-width: 56px;
   }
   .history__prev {
@@ -2470,7 +2469,7 @@ section[data-anchor=about] .inner {
     font-size: 1.75rem;
   }
   .about__history .slide-nav .slick-slide div {
-    padding: 50px;
+    padding: 25px 30px 30px;
   }
   .about__history .slide-nav .slick-slide div .history__item {
     padding: 30px 40px;
@@ -2506,6 +2505,7 @@ section[data-anchor=about] .inner {
   .about__history .slide-for li {
     max-width: 300px;
     font-size: 2rem;
+    margin: -10px 0 0;
   }
 }
 /* ######################### History Item */
@@ -2715,8 +2715,7 @@ section[data-anchor=solution] .inner {
   padding: 40px 5.13vw;
 }
 section[data-anchor=solution] .bg-circle-purple {
-  background-color: #E9ECF9;
-  opacity: 0.57;
+  opacity: 0.3;
 }
 
 @media all and (min-width: 768px) {
@@ -2973,6 +2972,31 @@ section[data-anchor=certification] .slick-next::before {
   border-radius: 50%;
 }
 
+@media all and (min-width: 1025px) {
+  section[data-anchor=certification] .fc,
+  section[data-anchor=certification] .sc {
+    position: absolute;
+    z-index: 2;
+  }
+  section[data-anchor=certification] .fc {
+    top: -200px;
+    right: -200px;
+  }
+  section[data-anchor=certification] .sc {
+    left: -200px;
+    bottom: -320px;
+  }
+}
+@media all and (min-width: 1441px) {
+  section[data-anchor=certification] .fc {
+    top: -285px;
+    right: -200px;
+  }
+  section[data-anchor=certification] .sc {
+    left: -200px;
+    bottom: -285px;
+  }
+}
 /* ####################### recruit */
 section[data-anchor=recruit] {
   background-color: #FFFFFC;
@@ -2996,10 +3020,30 @@ section[data-anchor=recruit] .inner {
   section[data-anchor=recruit] .inner .inner__expl {
     margin: 30px 0 25px;
   }
+  section[data-anchor=recruit] .fc,
+  section[data-anchor=recruit] .sc {
+    position: absolute;
+  }
+  section[data-anchor=recruit] .fc {
+    top: 165px;
+    right: -60px;
+    opacity: 0.48;
+  }
+  section[data-anchor=recruit] .sc {
+    top: 142px;
+    right: 200px;
+  }
 }
 @media all and (min-width: 1441px) {
   section[data-anchor=recruit] .inner .inner__expl {
     margin: 33px auto 20px;
+  }
+  section[data-anchor=recruit] .fc {
+    top: 183px;
+  }
+  section[data-anchor=recruit] .sc {
+    top: 157px;
+    right: 250px;
   }
 }
 .welfare__circle {
@@ -3169,11 +3213,37 @@ section[data-anchor=together] .inner {
     top: 0;
     padding: 19vh 0 0;
   }
+  section[data-anchor=together] .fc,
+  section[data-anchor=together] .sc,
+  section[data-anchor=together] .tc {
+    position: absolute;
+  }
+  section[data-anchor=together] .fc {
+    top: -75px;
+    right: 70px;
+    opacity: 0.5;
+  }
+  section[data-anchor=together] .sc {
+    left: 20px;
+    bottom: 90px;
+  }
+  section[data-anchor=together] .tc {
+    left: 285px;
+    bottom: 185px;
+  }
 }
 @media all and (min-width: 1441px) {
   section[data-anchor=together] .inner {
-    padding: 101px 0 260px;
+    padding: 101px 0 275px;
     height: 100vh;
+  }
+  section[data-anchor=together] .sc {
+    left: 30px;
+    bottom: 150px;
+  }
+  section[data-anchor=together] .tc {
+    left: 350px;
+    bottom: 255px;
   }
 }
 .together__row {
@@ -3549,7 +3619,7 @@ section[data-anchor=together] .inner {
     bottom: 0;
   }
   .together__footer__wrap {
-    height: 260px;
+    height: 275px;
     padding: 60px 0 0;
   }
   .together__footer__wrap .inner {
@@ -15050,51 +15120,101 @@ section[data-anchor=contact] .inner {
 }
 
 /* ######################## 배경 타원 */
-.bg-circle-face {
-  width: 719px;
-  height: 719px;
-  border-radius: 100%;
-  background-color: #F4EBE4;
-  opacity: 0.7;
+@media all and (min-width: 1025px) {
+  .bg-circle-face {
+    width: 648px;
+    height: 648px;
+    border-radius: 100%;
+    background-color: #F4EBE4;
+    opacity: 0.7;
+  }
+  .bg-circle-purple {
+    width: 648px;
+    height: 648px;
+    border-radius: 100%;
+    background-color: #C8E0FF;
+    opacity: 0.7;
+  }
+  .bg-circle-white {
+    width: 354px;
+    height: 354px;
+    border-radius: 100%;
+    background-color: #fafbfb;
+    opacity: 0.54;
+  }
+  .bg-circle-lg-dwhite {
+    width: 523px;
+    height: 523px;
+    border-radius: 100%;
+    background-color: #F2F4F9;
+  }
+  .bg-circle-small-white {
+    width: 224px;
+    height: 224px;
+    border-radius: 100%;
+    background-color: #FDFEFF;
+  }
+  .bg-circle-sky {
+    width: 89px;
+    height: 89px;
+    border-radius: 100%;
+    background-color: #C0D4EE;
+  }
+  .bg-circle-sky.size-lg {
+    width: 224px;
+    height: 224px;
+  }
+  .bg-circle-sm-sky {
+    width: 224px;
+    height: 224px;
+    border-radius: 100%;
+    background-color: #EBF2F9;
+  }
+  .bg-circle-lg-sky {
+    width: 295px;
+    height: 295px;
+    border-radius: 100%;
+    background-color: #C8E0FF;
+  }
 }
-
-.bg-circle-purple {
-  width: 719px;
-  height: 719px;
-  border-radius: 100%;
-  background-color: #C8E0FF;
-  opacity: 0.7;
+@media all and (min-width: 1441px) {
+  .bg-circle-face {
+    width: 719px;
+    height: 719px;
+  }
+  .bg-circle-purple {
+    width: 719px;
+    height: 719px;
+  }
+  .bg-circle-white {
+    width: 393px;
+    height: 393px;
+  }
+  .bg-circle-lg-dwhite {
+    width: 581px;
+    height: 581px;
+  }
+  .bg-circle-small-white {
+    width: 248px;
+    height: 248px;
+  }
+  .bg-circle-sky {
+    width: 98px;
+    height: 98px;
+  }
+  .bg-circle-sky.size-lg {
+    width: 248px;
+    height: 248px;
+  }
+  .bg-circle-sm-sky {
+    width: 248px;
+    height: 248px;
+  }
+  .bg-circle-lg-sky {
+    width: 327px;
+    height: 327px;
+  }
 }
-
-.bg-circle-white {
-  width: 393px;
-  height: 393px;
-  border-radius: 100%;
-  background-color: #fafbfb;
-  opacity: 0.54;
-}
-
-.bg-circle-small-white {
-  width: 248px;
-  height: 248px;
-  border-radius: 100%;
-  background-color: #FDFEFF;
-}
-
-.bg-circle-sky {
-  width: 98px;
-  height: 98px;
-  border-radius: 100%;
-  background-color: #C0D4EE;
-}
-
-.bg-circle-lg-sky {
-  width: 327px;
-  height: 327px;
-  border-radius: 100%;
-  background-color: #C8E0FF;
-}
-
 .custom-row {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;

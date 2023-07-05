@@ -209,14 +209,13 @@ section[data-anchor="about"] {
 @media all and (min-width: 1441px) {
     .about__prev,
     .about__next {
-        top: auto;
+        top: 350px;
         transform: none;
-        bottom: 176px;
     }
 
     .history__prev,
     .history__next {
-        top: 134px;
+        top: 110px;
         max-width: 56px;
     }
 
@@ -406,7 +405,7 @@ section[data-anchor="about"] {
         .slide-nav {
             .slick-slide {
                 div {
-                    padding: 50px;
+                    padding: 25px 30px 30px;
                     
                     .history__item {
                         padding: 30px 40px;
@@ -454,6 +453,7 @@ section[data-anchor="about"] {
             li {
                 max-width: 300px;
                 font-size: 2rem;
+                margin: -10px 0 0;
             }
         }
     }

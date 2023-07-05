@@ -91,49 +91,117 @@
 }
 
 /* ######################## 배경 타원 */
-.bg-circle-face {
-    width: 719px;
-    height: 719px;
-    border-radius: 100%;
-    background-color: #F4EBE4;
-    opacity: .7;
+@media all and (min-width: 1025px) {
+    .bg-circle-face {
+        width: 648px;
+        height: 648px;
+        border-radius: 100%;
+        background-color: #F4EBE4;
+        opacity: .7;
+    }
+
+    .bg-circle-purple {
+        width: 648px;
+        height: 648px;
+        border-radius: 100%;
+        background-color: #C8E0FF;
+        opacity: .7;
+    }
+
+    .bg-circle-white {
+        width: 354px;
+        height: 354px;
+        border-radius: 100%;
+        background-color: #fafbfb;
+        opacity: .54;
+    }
+
+    .bg-circle-lg-dwhite {
+        width: 523px;
+        height: 523px;
+        border-radius: 100%;
+        background-color: #F2F4F9;
+    }
+
+    .bg-circle-small-white {
+        width: 224px;
+        height: 224px;
+        border-radius: 100%;
+        background-color: #FDFEFF;
+    }
+
+    .bg-circle-sky {
+        width: 89px;
+        height: 89px;
+        border-radius: 100%;
+        background-color: #C0D4EE;
+
+        &.size-lg {
+            width: 224px;
+            height: 224px;
+        }
+    }
+
+    .bg-circle-sm-sky {
+        width: 224px;
+        height: 224px;
+        border-radius: 100%;
+        background-color: #EBF2F9;
+    }
+
+    .bg-circle-lg-sky {
+        width: 295px;
+        height: 295px;
+        border-radius: 100%;
+        background-color: #C8E0FF;
+    }
 }
 
-.bg-circle-purple {
-    width: 719px;
-    height: 719px;
-    border-radius: 100%;
-    background-color: #C8E0FF;
-    opacity: .7;
-}
+@media all and (min-width: 1441px) {
+    .bg-circle-face {
+        width: 719px;
+        height: 719px;
+    }
 
-.bg-circle-white {
-    width: 393px;
-    height: 393px;
-    border-radius: 100%;
-    background-color: #fafbfb;
-    opacity: .54;
-}
+    .bg-circle-purple {
+        width: 719px;
+        height: 719px;
+    }
 
-.bg-circle-small-white {
-    width: 248px;
-    height: 248px;
-    border-radius: 100%;
-    background-color: #FDFEFF;
-}
+    .bg-circle-white {
+        width: 393px;
+        height: 393px;
+    }
 
-.bg-circle-sky {
-    width: 98px;
-    height: 98px;
-    border-radius: 100%;
-    background-color: #C0D4EE;
-}
+    .bg-circle-lg-dwhite {
+        width: 581px;
+        height: 581px;
+    }
 
-.bg-circle-lg-sky {
-    width: 327px;
-    height: 327px;
-    border-radius: 100%;
-    background-color: #C8E0FF;
+    .bg-circle-small-white {
+        width: 248px;
+        height: 248px;
+    }
+
+    .bg-circle-sky {
+        width: 98px;
+        height: 98px;
+
+        &.size-lg {
+            width: 248px;
+            height: 248px;
+        }
+    }
+
+    .bg-circle-sm-sky {
+        width: 248px;
+        height: 248px;
+    }
+
+    .bg-circle-lg-sky {
+        width: 327px;
+        height: 327px;
+    }
 }
 
 .custom-row {

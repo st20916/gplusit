@@ -57,6 +57,40 @@ section[data-anchor="certification"] {
     border-radius: 50%;
 }
 
+@media all and (min-width: 1025px) {
+    section[data-anchor="certification"] {
+        .fc,
+        .sc {
+            position: absolute;
+            z-index: 2;
+        }
+
+        .fc {
+            top: -200px;
+            right: -200px;
+        }
+
+        .sc {
+            left: -200px;
+            bottom: -320px;
+        }
+    }
+}
+
+@media all and (min-width: 1441px) {
+    section[data-anchor="certification"] {
+        .fc {
+            top: -285px;
+            right: -200px;
+        }
+
+        .sc {
+            left: -200px;
+            bottom: -285px;
+        }
+    }
+}
+
 /* ####################### recruit */
 section[data-anchor="recruit"] {
     background-color: #FFFFFC;
@@ -87,6 +121,22 @@ section[data-anchor="recruit"] {
                 margin: 30px 0 25px;
             }
         }
+
+        .fc,
+        .sc {
+            position: absolute;
+        }
+
+        .fc {
+            top: 165px;
+            right: -60px;
+            opacity: .48;
+        }
+
+        .sc {
+            top: 142px;
+            right: 200px;
+        }
     }
 }
 
@@ -96,6 +146,15 @@ section[data-anchor="recruit"] {
             .inner__expl {
                 margin: 33px auto 20px;
             }
+        }
+
+        .fc {
+            top: 183px;
+        }
+
+        .sc {
+            top: 157px;
+            right: 250px;
         }
     }
 }
