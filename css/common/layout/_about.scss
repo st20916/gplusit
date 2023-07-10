@@ -211,6 +211,13 @@ section[data-anchor="about"] {
     }
 }
 
+@media all and (min-width: 1025px) and (max-height: 900px) {
+    .about__prev, 
+    .about__next {
+        top: 60%;
+    }
+}
+
 @media all and (min-width: 1441px) {
     .about__prev,
     .about__next {

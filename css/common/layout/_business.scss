@@ -145,3 +145,79 @@ section[data-anchor="business"] {
         }
     }
 }
+
+
+.business {
+    position: relative;
+
+    .swiper-prev,
+    .swiper-next {
+        display: none;
+        position: absolute;
+        align-items: center;
+        justify-content: center;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 3;
+    }
+
+    .swiper-prev {
+        left: 0;
+    }
+
+    .swiper-next {
+        right: 0;
+    }
+}
+
+.perform__head {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ul {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+
+        li {
+            &:first-child {
+                a {
+                    margin-left: 0;
+                }
+            }
+
+            &.active {
+                a {
+                    background-color: #F1870E;
+                    border-color: #F1870E;
+                    color: #fff;
+                }
+            }
+        }
+
+        a {
+            position: relative;
+            display: block;
+            width: 80px;
+            height: 30px;
+            line-height: 30px;
+            border-radius: 20px;
+            background-color: transparent;
+            border: 1px solid transparent;
+            font-size: .875rem;
+            color: #333;
+            text-align: center;
+            margin-left: 20px;
+            transition: all .3s;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #F1870E;
+                border-color: #F1870E;
+                color: #fff;
+            }
+        }
+    }
+}

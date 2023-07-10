@@ -137,19 +137,6 @@ $(function() {
         }
     });
 
-    /**
-     * 공지사항 롤링 배너
-     */
-    new Swiper('.news .swiper', {
-        direction: 'vertical',
-        autoplay: true,
-        loop: true,
-        navigation: {
-            nextEl: '.news .swiper-next',
-            prevEl: '.news .swiper-prev',
-        }
-    });
-
     /* #################  */
     $('[data-about-item]').on('mouseover', function() {
         if ($(window).outerWidth() >= 1026) {
@@ -294,3 +281,48 @@ $(function() {
 
     splide.mount(window.splide.Extensions);
 });
+
+/**
+ *  공지사항
+ * 
+ */
+new Swiper('.news .swiper', {
+    direction: 'vertical',
+    autoplay: true,
+    loop: true,
+    navigation: {
+        nextEl: '.news .swiper-next',
+        prevEl: '.news .swiper-prev',
+    }
+});
+
+/**
+ *  Business
+ * 
+ */
+new Swiper('.business .swiper', {
+    keyboard: {
+        enabled: true,
+    },
+    navigation: {
+        nextEl: '.business .swiper-next',
+        prevEl: '.business .swiper-prev',
+    }
+});
+
+/**
+ *  Tab 구현
+ * 
+ */
+const performHeadEls = document.querySelectorAll('.perform__head li');
+
+for (let i = 0; i < performHeadEls.length; i++) {    
+    performHeadEls[i].querySelector('.head__tab').addEventListener('click', function(e) {
+        e.preventDefault();
+
+        for(let j = 0; j < performHeadEls.length; j++){
+            performHeadEls[j].classList.remove('active');
+        }
+        this.parentNode.classList.add('active');
+    });
+}
