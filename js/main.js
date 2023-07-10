@@ -140,86 +140,15 @@ $(function() {
     /**
      * 공지사항 롤링 배너
      */
-    var $panel = $('#rolling').find('ul'),
-        itemWidth = $panel.children().outerWidth(),
-        itemHeight = $panel.children().outerHeight(),
-        itemLength = $panel.children().length,
-        rollingId;
-
-    auto();
-
-    // 배너 마우스 Over
-    $panel.on('mouseover', function() {
-        clearInterval(rollingId);
+    new Swiper('.news .swiper', {
+        direction: 'vertical',
+        autoplay: true,
+        loop: true,
+        navigation: {
+            nextEl: '.news .swiper-next',
+            prevEl: '.news .swiper-prev',
+        }
     });
-    // 배너 마우스 Leave
-    $panel.on('mouseleave', function() {
-        auto();
-    });
-    // 이전 이벤트
-    $('#newsPrev').on('click', function() {
-        prev();
-    });
-
-    $('#newsPrev').on('mouseover', function(e) {
-        clearInterval(rollingId);
-    });
-
-    $('#newsPrev').on('mouseleave', function() {
-        auto();
-    });
-    // 다음 이벤트
-    $('#newsNext').on('click', function() {
-        next();
-    });
-
-    $('#newsNext').on('mouseover', function(e) {
-        clearInterval(rollingId);
-    });
-
-    $('#newsNext').on('mouseleave', function() {
-        auto();
-    });
-
-    // auto 함수
-    function auto() {
-        //
-        rollingId = setInterval(function() {
-            start();
-        }, 5000);
-    }
-    // 시작 이벤트 실행
-    function start() {
-        $panel.css("height", itemHeight * itemLength);
-        $panel.animate({"top": - itemHeight + "px"}, function() {
-            // 첫번째 아이템을 마지막에 추가하기
-            $(this).append("<li>" + $(this).find("li:first").html() + "</li>");
-            // 첫번째 아이템을 삭제하기
-            $(this).find("li:first").remove();
-            // 좌측 패널 수치 초기화
-            $(this).css("top", 0);
-        });
-    }
-    // 이전 이벤트 실행
-    function prev(e) {
-        $panel.css("top", - itemHeight);
-        $panel.prepend("<li>" + $panel.find("li:last").html() + "</li>");
-        $panel.animate({
-            "top": "0"
-        }, function() {
-            $(this).find("li:last").remove();
-        });
-    }
-    // 다음 이벤트 실행
-    function next(e) {
-        $panel.animate({
-            "top": - itemHeight + "px"
-        }, function() {
-            $(this).append("<li>" + $(this).find("li:first").html() + "</li>");
-            $(this).find("li:first").remove();
-            $(this).css("top", 0);
-        });
-    }
 
     /* #################  */
     $('[data-about-item]').on('mouseover', function() {

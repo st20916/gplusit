@@ -23,9 +23,10 @@
     <!-- <link rel="stylesheet" href="css/fullPage/fullpage.min.css"> -->
     <link rel="stylesheet" href="./css/fullPage/jquery.fullpage.css">
     <link rel="stylesheet" href="./css/plugin/splide/splide.min.css">
-
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel="stylesheet" href="./css/slick/slick.css" />
     <link rel="stylesheet" href="./css/slick/slick-theme.css" />
+    <link rel="stylesheet" href="./css/plugin/swiper/swiper-bundle.min.css" />
 
     <!-- JS -->
     <script defer src="./js/jquery-3.6.4.min.js"></script>
@@ -36,6 +37,7 @@
     <script defer src="./js/slick/slick.js"></script>
     <script defer src="./js/plugin/splide/splide.min.js"></script>
     <script defer src="./js/plugin/splide/splide-extension-auto-scroll.min.js"></script>
+    <script defer src="./js/plugin/swiper/swiper-bundle.min.js"></script>
     <!-- Script -->
     <script defer src="./js/main.js"></script>
 
@@ -239,19 +241,17 @@
                 </div>
                 <div class="news">
                     <strong class="news__title">NEWSROOM</strong>
-                    <div class="news__util">
-                        <button type="button" id="newsPrev" class="util__prev"><img src="./images/main/caret-up.svg" alt=""></button>
-                        <button type="button" id="newsNext" class="util__next"><img src="./images/main/caret-down.svg" alt=""></button>
-                    </div>
-                    <div class="news__rolling" id="rolling">
-                        <ul>
-                            <li>
-                                <a href="javascript:void(0);">지플러스 홈페이지 개편</a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0);">개편 테스트</a>
-                            </li>
-                        </ul>
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><a href="javascipt:void(0);">지플러스 홈페이지 개선</a></div>
+                            <div class="swiper-slide"><a href="javascipt:void(0);">리스트 테스트</a></div>
+                        </div>
+                        <div class="swiper-prev">
+                            <span class="material-icons">arrow_drop_up</span>
+                        </div>
+                        <div class="swiper-next">
+                            <span class="material-icons">arrow_drop_down</span>
+                        </div>
                     </div>
                 </div>
             </section>
