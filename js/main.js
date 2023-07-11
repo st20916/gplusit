@@ -314,15 +314,26 @@ new Swiper('.business .swiper', {
  *  Tab 구현
  * 
  */
-const performHeadEls = document.querySelectorAll('.perform__head li');
+const tabList = document.querySelectorAll('.perform__head li');
 
-for (let i = 0; i < performHeadEls.length; i++) {    
-    performHeadEls[i].querySelector('.head__tab').addEventListener('click', function(e) {
+Array.prototype.forEach.call(tabList, function(list) {
+    list.children[0].addEventListener('click', function(e) {
         e.preventDefault();
 
-        for(let j = 0; j < performHeadEls.length; j++){
-            performHeadEls[j].classList.remove('active');
+        const tabContent = document.querySelectorAll('.perform__content');
+        const tabNum = this.parentElement.getAttribute('data-tabnum');
+
+        Array.prototype.forEach.call(tabContent, function(cont, i) {
+            cont.style.display = 'none';
+            tabList[i].className = 'head__tab';
+        });
+        tabContent[tabNum].style.display = 'block';
+
+        if (list.className.indexOf('selected') == -1) {
+            list.className = 'head__tab selected';
         }
-        this.parentNode.classList.add('active');
     });
-}
+});
+
+const bodyEl = document.getElementsByTagName('body'),
+      contentEl = document.querySelector('.perform__content');

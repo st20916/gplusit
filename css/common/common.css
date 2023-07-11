@@ -2973,6 +2973,8 @@ section[data-anchor=business] .inner {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 0 22px;
+  border-bottom: 1px solid #313131;
 }
 .perform__head ul {
   position: relative;
@@ -2982,7 +2984,7 @@ section[data-anchor=business] .inner {
 .perform__head ul li:first-child a {
   margin-left: 0;
 }
-.perform__head ul li.active a {
+.perform__head ul li.selected a {
   background-color: #F1870E;
   border-color: #F1870E;
   color: #fff;
@@ -3009,6 +3011,103 @@ section[data-anchor=business] .inner {
   color: #fff;
 }
 
+@media all and (min-width: 768px) {
+  .perform__head ul a {
+    width: 122px;
+    font-size: 1rem;
+  }
+}
+@media all and (min-width: 1025px) {
+  .perform__head {
+    justify-content: flex-start;
+    padding: 0 0 38px;
+  }
+}
+.perform__content {
+  position: relative;
+  display: none;
+}
+.perform__content:first-child {
+  display: block;
+}
+.perform__content > li {
+  display: flex;
+  padding: 10px 0;
+  border-bottom: 1px solid #DDDDDD;
+  column-gap: 10px;
+}
+.perform__content > li:last-child {
+  border-bottom: 0;
+}
+.perform__content .content__tag {
+  position: relative;
+  width: 74px;
+  height: 26px;
+  text-align: center;
+  line-height: 26px;
+  background-color: #fff;
+  border: 1px solid #F1870E;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #666;
+}
+.perform__content .content__date {
+  position: relative;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #666;
+}
+.perform__content .content {
+  position: relative;
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #000;
+  word-break: keep-all;
+}
+.perform__content .content__org {
+  position: relative;
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 200;
+  color: #777777;
+}
+
+@media all and (min-width: 768px) {
+  .perform__content > li {
+    padding: 27px 0;
+  }
+  .perform__content .content__tag {
+    font-size: 0.8125rem;
+  }
+  .perform__content .content,
+  .perform__content .content__date,
+  .perform__content .content__org {
+    font-size: 0.9375rem;
+  }
+}
+@media all and (min-width: 1025px) {
+  .perform__content {
+    max-height: 242px;
+    overflow-y: auto;
+  }
+  .perform__content > li {
+    column-gap: 22px;
+  }
+  .perform__content .content__tag {
+    font-size: 0.9375rem;
+  }
+  .perform__content .content,
+  .perform__content .content__date,
+  .perform__content .content__org {
+    font-size: 1.0625rem;
+  }
+  .perform__content .content,
+  .perform__content .content__org {
+    margin-left: 10px;
+  }
+}
 section[data-anchor=solution] {
   background-color: #E4F0FF;
 }
