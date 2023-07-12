@@ -149,27 +149,100 @@ section[data-anchor="business"] {
 
 .business {
     position: relative;
+}
 
-    .swiper-prev,
-    .swiper-next {
-        display: none;
-        position: absolute;
-        align-items: center;
-        justify-content: center;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 3;
+.business__model {
+    position: relative;
+    max-width: 300px;
+    margin: 20px auto;
+    border: none;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+
+    &::before {
+        display: table;
+        content: '';
     }
 
-    .swiper-prev {
-        left: 0;
-    }
+    > li {
+        position: relative;
+        display: inline-block;
+        float: none;
+        text-align: center;
+        width: 25%;
 
-    .swiper-next {
-        right: 0;
+        &.active {
+            i {
+                background-color: #F99B2E;
+                transform: rotate(90deg);
+            }
+        }
+
+        &::after {
+            position: absolute;
+            content: '';
+            top: 37px;
+            right: -30px;
+            display: block;
+            margin: auto;
+            width: 85%;
+            height: 1px;
+            z-index: -1;
+            background-color: #CCCCCC;
+        }
+
+        &:last-child {
+            &::after {
+                width: 0;
+            }
+        }
+
+        a,
+        span {
+            display: block;
+        }
+
+        span {
+            margin-bottom: 6px;
+            font-size: .875rem;
+            font-weight: 400;
+            color: #333333;
+        }
+
+        i {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            margin: 0 auto;
+            background-color: #fff;
+            border: 1px solid #F9E581;
+            border-radius: 100%;
+            font-size: 1rem;
+            color: #000000;
+            transform: rotate(0);
+            transition: all .25s;
+        }
     }
 }
 
+.tab-content {
+    .tab-pane {
+        position: relative;
+        display: none;
+
+        &:first-child {
+            display: block;
+        }
+    }
+}
+
+/**
+*   수행 실적
+*
+*/
 .perform__head {
     position: relative;
     display: flex;
@@ -341,5 +414,11 @@ section[data-anchor="business"] {
         .content__org {
             margin-left: 10px;
         }
+    }
+}
+
+@media all and (min-width: 1441px) {
+    .perform__content {
+        max-height: 323px;
     }
 }

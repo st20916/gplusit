@@ -530,3 +530,46 @@
           opacity: 1;
         }
 }
+
+@keyframes scroll_1 {
+        0% { 
+                transform: translateY(0); 
+        }
+
+        25% { 
+                transform: translateY(-0.6em); 
+        }
+
+        50% { 
+                transform: translateY(0); 
+        }
+
+        75% { 
+                transform: translateY(0.6em); 
+        }
+
+        100% { 
+                transform: translateY(0); 
+        }
+}
+
+@keyframes scroll_2 {
+        0% { 
+                transform: translateY(0); 
+                opacity: 1; 
+        }
+
+        25% { 
+                opacity: 1; 
+        }
+
+        75% { 
+                transform: translateY(.75em); 
+                opacity: 0;
+        }
+        
+        100% { 
+                transform: translateY(0); 
+                opacity: 0; 
+        }
+}

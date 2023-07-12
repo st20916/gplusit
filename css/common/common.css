@@ -448,6 +448,40 @@
     opacity: 1;
   }
 }
+@keyframes scroll_1 {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-0.6em);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(0.6em);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes scroll_2 {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  25% {
+    opacity: 1;
+  }
+  75% {
+    transform: translateY(0.75em);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
 @font-face {
   font-family: "Noto Sans KR";
   font-style: normal;
@@ -799,6 +833,71 @@ body {
 }
 .show .back-to-position.delay-9 {
   transition-delay: 2.3s;
+}
+
+/** Scroll Icon */
+.scroll {
+  position: absolute;
+  left: 50%;
+  bottom: 5rem;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 5;
+}
+.scroll h2 {
+  font-size: 0.875rem;
+  font-weight: 200;
+  color: #999;
+}
+
+.scroll-icon__wheel-outer {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 0.6em;
+  height: 1em;
+  width: 0.4em;
+  margin-left: -0.2em;
+  border-radius: 0.4em;
+  overflow: hidden;
+}
+
+.scroll-icon__wheel-inner {
+  display: block;
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  background: #999;
+  animation: scroll_1 2.75s ease-in-out infinite;
+}
+
+.scroll-icon__dot {
+  position: absolute;
+  display: block;
+  top: 0.6em;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #999;
+  height: 0.5em;
+  width: 0.5em;
+  margin-left: -0.25em;
+  border-radius: 50%;
+  transform-origin: top center;
+  backface-visibility: hidden;
+  animation: scroll_2 2s ease-out infinite;
+}
+
+.scroll-icon {
+  display: block;
+  position: relative;
+  height: 3em;
+  width: 1.5em;
+  border: 0.25em solid #999;
+  border-radius: 1em;
+  z-index: 5;
 }
 
 /*
@@ -2951,23 +3050,84 @@ section[data-anchor=business] .inner {
 .business {
   position: relative;
 }
-.business .swiper-prev,
-.business .swiper-next {
-  display: none;
+
+.business__model {
+  position: relative;
+  max-width: 300px;
+  margin: 20px auto;
+  border: none;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+.business__model::before {
+  display: table;
+  content: "";
+}
+.business__model > li {
+  position: relative;
+  display: inline-block;
+  float: none;
+  text-align: center;
+  width: 25%;
+}
+.business__model > li.active i {
+  background-color: #F99B2E;
+  transform: rotate(90deg);
+}
+.business__model > li::after {
   position: absolute;
+  content: "";
+  top: 37px;
+  right: -30px;
+  display: block;
+  margin: auto;
+  width: 85%;
+  height: 1px;
+  z-index: -1;
+  background-color: #CCCCCC;
+}
+.business__model > li:last-child::after {
+  width: 0;
+}
+.business__model > li a,
+.business__model > li span {
+  display: block;
+}
+.business__model > li span {
+  margin-bottom: 6px;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #333333;
+}
+.business__model > li i {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 3;
-}
-.business .swiper-prev {
-  left: 0;
-}
-.business .swiper-next {
-  right: 0;
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid #F9E581;
+  border-radius: 100%;
+  font-size: 1rem;
+  color: #000000;
+  transform: rotate(0);
+  transition: all 0.25s;
 }
 
+.tab-content .tab-pane {
+  position: relative;
+  display: none;
+}
+.tab-content .tab-pane:first-child {
+  display: block;
+}
+
+/**
+*   수행 실적
+*
+*/
 .perform__head {
   position: relative;
   display: flex;
@@ -3106,6 +3266,11 @@ section[data-anchor=business] .inner {
   .perform__content .content,
   .perform__content .content__org {
     margin-left: 10px;
+  }
+}
+@media all and (min-width: 1441px) {
+  .perform__content {
+    max-height: 323px;
   }
 }
 section[data-anchor=solution] {

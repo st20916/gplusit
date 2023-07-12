@@ -43,10 +43,31 @@
 
     <!-- 2022.08.26 카카오 key 변경-->
     <!-- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=fe308caa8deac07c54341b42b78ba14d"></script>	-->
-    <!-- <script src="http://jsgetip.appspot.com" type="text/javascript"></script> -->
+    <!-- <script defer src="http://jsgetip.appspot.com" type="text/javascript"></script> -->
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=fe308caa8deac07c54341b42b78ba14d"></script>
 
 </head>
 <body>
+    <script>
+        var container = document.getElementById('locationMap');
+        var options = {
+            center: new kakao.maps.LatLng(36.3629163, 127.333786),
+            level: 3
+        };
+        
+        var map = new kakao.maps.Map(container, options);
+        
+        // 마커가 표시될 위치입니다 
+        var markerPosition  = new kakao.maps.LatLng(36.3629163, 127.333786); 
+
+        // 마커를 생성합니다
+        var marker = new kakao.maps.Marker({
+            position: markerPosition
+        });
+        
+        // 마커가 지도 위에 표시되도록 설정합니다
+        marker.setMap(map);
+    </script>
     <div id="wrap" data-container>
         <!-- Header -->
         <header id="header">
@@ -56,21 +77,13 @@
                 </div>
                 <div id="gnb">
                     <ul>
-                        <li>
-                            <a href="#about">about</a>
-                        </li>
-                        <li>
-                            <a href="#business">business</a>
-                        </li>
-                        <li>
-                            <a href="#solution">solution</a>
-                        </li>
-                        <li>
-                            <a href="#certification">certification</a>
-                        </li>
-                        <li>
-                            <a href="#recruit">recruit</a>
-                        </li>
+                        <li><a href="#about">about</a></li>
+                        <li><a href="#business">business</a></li>
+                        <li><a href="#solution">solution</a></li>
+                        <li><a href="#certification">certification</a></li>
+                        <li><a href="#recruit">recruit</a></li>
+                        <li><a href="#together">together</a></li>
+                        <li><a href="#contact">contact</a></li>
                     </ul>
                 </div>
                 <div class="header__util">
@@ -207,6 +220,11 @@
                 <video autoplay loop muted>
                     <source src="./images/main/mainbg.mp4" type="video/mp4">
                 </video>
+                <div class="scroll">
+                    <span class="scroll-icon">
+                        <span class="scroll-icon__dot"></span>
+                    </span>
+                </div>
                 <div class="inner__section">
                     <div class="section__title__wrap custom-flex flex-wrap">
                         <div data-area="left">
@@ -632,184 +650,199 @@
                         </div>
                     </div>
                 </div>
+                <div class="scroll">
+                    <span class="scroll-icon">
+                        <span class="scroll-icon__wheel-outer">
+                            <span class="scroll-icon__wheel-inner"></span>
+                        </span>
+                    </span>
+                </div>
             </section>
             <!-- Business Area -->
             <section class="section scroll-spy" data-anchor="business">
                 <div class="sc bg-circle-purple"></div>
                 <div class="tc bg-circle-white"></div>
-                <div class="business">
-                    <div class="swiper">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="inner">
-                                    <h1 class="inner__title back-to-position to-bottom delay-0">business</h6>
-                                    <h6 class="inner__subtitle back-to-position to-bottom delay-1">사업 분야</h6>
-                                    <p class="inner__expl back-to-position to-bottom delay-3">
-                                        (주)지플러스는 과학기술정보 데이터 베이스 구축 등의 데이터베이스 구축과 지식정보시스템 및 메타데이터 통합 등 시스템 통합 분야의 사업을 수행해 오고 있습니다.
-                                    </p>
-                                    <div class="splide business__splide back-to-position to-top delay-3" data-wrap="business">
-                                        <div class="splide__track">
-                                            <div class="splide__list">
-                                                <a href="javascript:void(0);" data-event="click-detail" data-target="#pfDetail" class="splide__slide" aria-controls="pfDetail">
-                                                    <div class="slick__circle" style="background-image: url('./images/business/platform_bg.jpg');">
-                                                        <img src="./images/business/platform.png" alt="platform">
-                                                        <p>연구데이터 플랫폼 구축 사업</p>
-                                                    </div>
-                                                </a>
-                                                <a href="javascript:void(0);" class="splide__slide">
-                                                    <div class="slick__circle" style="background-image: url('./images/business/ntis_bg.jpg');">
-                                                        <img src="./images/business/ntis.png" alt="ntis">
-                                                        <p>NTIS 구축 사업</p>
-                                                    </div>
-                                                </a>
-                                                <a href="javascript:void(0);" class="splide__slide">
-                                                    <div class="slick__circle" style="background-image: url('./images/business/ai_bg.jpg');">
-                                                        <img src="./images/business/ai.png" alt="ai">
-                                                        <p>인공지능 구축 사업</p>
-                                                    </div>
-                                                </a>
-                                                <a href="javascript:void(0);" class="splide__slide">
-                                                    <div class="slick__circle" style="background-image: url('./images/business/ips_bg.jpg');">
-                                                        <img src="./images/business/bps.png" alt="bpr/isp">
-                                                        <p>BPR/ISP 사업</p>
-                                                    </div>
-                                                </a>
-                                                <a href="javascript:void(0);" class="splide__slide">
-                                                    <div class="slick__circle" style="background-image: url('./images/business/academic_bg.jpg');">
-                                                        <img src="./images/business/academic.png" alt="academic">
-                                                        <p>학술 정보 구축</p>
-                                                    </div>
-                                                </a>
-                                                <a href="javascript:void(0);" class="splide__slide">
-                                                    <div class="slick__circle" style="background-image: url('./images/business/r_d_bg.jpg');">
-                                                        <img src="./images/business/r_d.png" alt="R&D">
-                                                        <p>국가 R&D 성과물 구축</p>
-                                                    </div>
-                                                </a>
-                                                <a href="javascript:void(0);" class="splide__slide">
-                                                    <div class="slick__circle" style="background-image: url('./images/business/xml_bg.jpg');">
-                                                        <img src="./images/business/xml.png" alt="XML">
-                                                        <p>학회 Fulltext XML 구축</p>
-                                                    </div>
-                                                </a>
-                                                <a href="javascript:void(0);" class="splide__slide">
-                                                    <div class="slick__circle" style="background-image: url('./images/business/oak_bg.jpg');">
-                                                        <img src="./images/business/oak.png" alt="OAK">
-                                                        <p>국립 중앙 도서관 OAK</p>
-                                                    </div>
-                                                </a>
-                                                <a href="javascript:void(0);" class="splide__slide">
-                                                    <div class="slick__circle" style="background-image: url('./images/business/oasis_bg.jpg');">
-                                                        <img src="./images/business/oasis.png" alt="OASIS">
-                                                        <p>한의학 OASIS 전통의학정보 포털</p>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <!-- 상세보기 -->
-                                        <div class="business__modal" id="pfDetail">
-                                            <div class="modal__timg">
-                                                <img src="./images/business/plaform_icon.png" alt="platform_icon">
-                                                <h6 class="timg__title">연구데이터 플랫폼 구축 사업</h6>
-                                            </div>
-                                            <div class="modal__contents">
-                                                <ul>
-                                                    <li>계산화학/나노물리 분야 포털 구축 및 고급 콘텐츠 개발 ( 2012 한국과학기술정보연구원 )</li>
-                                                    <li>슈퍼컴퓨팅 서비스 플랫폼 기반 사용자 응용환경 원형 개발 ( 2013 한국과학기술정보연구원 ) </li>
-                                                    <li>열유체 포털 마이그레이션 및 EDISON 웹 포털 프레임워크 기능개선 ( 2014 한국과학기술정보연구원 )</li>
-                                                    <li>EDISON 서비스를 위한 통합 웹 포털 프레임워크 개발 ( 2014 한국과학기술정보연구원 )</li>
-                                                    <li>EDISON 웹 포털 프레임워크 요소 컴포넌트 포틀릿 개발 ( 2016 한국과학기술정보연구원)</li>
-                                                </ul>
-                                            </div>
-                                            <button class="modal__close" data-event="click-close" data-target="#pfDetail" aria-label="닫기">
-                                                <img src="./images/business/x.png" alt="X">
-                                            </button>
+                <div class="inner">
+                    <h1 class="inner__title back-to-position to-bottom delay-0">business</h6>
+                    <div class="business">
+                        <ul class="nav business__model" role="tablist">
+                            <li class="active" role="presentation" data-tabnum="0">
+                                <a class="model__tab" href="#field" aria-controls="field" role="tab" aria-expanded="true">
+                                    <span>사업 수행</span>
+                                    <i class="material-icons">arrow_right</i>
+                                </a>
+                            </li>
+                            <li role="presentation" data-tabnum="1">
+                                <a class="model__tab" href="#performance" aria-controls="performance" role="tab" aria-expanded="false">
+                                    <span>수행 실적</span>
+                                    <i class="material-icons">arrow_right</i>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane" role="tabpanel">
+                                <p class="inner__expl back-to-position to-bottom delay-3">
+                                    (주)지플러스는 과학기술정보 데이터 베이스 구축 등의 데이터베이스 구축과 지식정보시스템 및 메타데이터 통합 등 시스템 통합 분야의 사업을 수행해 오고 있습니다.
+                                </p>
+                                <div class="splide business__splide back-to-position to-top delay-3" data-wrap="business">
+                                    <div class="splide__track">
+                                        <div class="splide__list">
+                                            <a href="javascript:void(0);" data-event="click-detail" data-target="#pfDetail" class="splide__slide" aria-controls="pfDetail">
+                                                <div class="slick__circle" style="background-image: url('./images/business/platform_bg.jpg');">
+                                                    <img src="./images/business/platform.png" alt="platform">
+                                                    <p>연구데이터 플랫폼 구축 사업</p>
+                                                </div>
+                                            </a>
+                                            <a href="javascript:void(0);" class="splide__slide">
+                                                <div class="slick__circle" style="background-image: url('./images/business/ntis_bg.jpg');">
+                                                    <img src="./images/business/ntis.png" alt="ntis">
+                                                    <p>NTIS 구축 사업</p>
+                                                </div>
+                                            </a>
+                                            <a href="javascript:void(0);" class="splide__slide">
+                                                <div class="slick__circle" style="background-image: url('./images/business/ai_bg.jpg');">
+                                                    <img src="./images/business/ai.png" alt="ai">
+                                                    <p>인공지능 구축 사업</p>
+                                                </div>
+                                            </a>
+                                            <a href="javascript:void(0);" class="splide__slide">
+                                                <div class="slick__circle" style="background-image: url('./images/business/ips_bg.jpg');">
+                                                    <img src="./images/business/bps.png" alt="bpr/isp">
+                                                    <p>BPR/ISP 사업</p>
+                                                </div>
+                                            </a>
+                                            <a href="javascript:void(0);" class="splide__slide">
+                                                <div class="slick__circle" style="background-image: url('./images/business/academic_bg.jpg');">
+                                                    <img src="./images/business/academic.png" alt="academic">
+                                                    <p>학술 정보 구축</p>
+                                                </div>
+                                            </a>
+                                            <a href="javascript:void(0);" class="splide__slide">
+                                                <div class="slick__circle" style="background-image: url('./images/business/r_d_bg.jpg');">
+                                                    <img src="./images/business/r_d.png" alt="R&D">
+                                                    <p>국가 R&D 성과물 구축</p>
+                                                </div>
+                                            </a>
+                                            <a href="javascript:void(0);" class="splide__slide">
+                                                <div class="slick__circle" style="background-image: url('./images/business/xml_bg.jpg');">
+                                                    <img src="./images/business/xml.png" alt="XML">
+                                                    <p>학회 Fulltext XML 구축</p>
+                                                </div>
+                                            </a>
+                                            <a href="javascript:void(0);" class="splide__slide">
+                                                <div class="slick__circle" style="background-image: url('./images/business/oak_bg.jpg');">
+                                                    <img src="./images/business/oak.png" alt="OAK">
+                                                    <p>국립 중앙 도서관 OAK</p>
+                                                </div>
+                                            </a>
+                                            <a href="javascript:void(0);" class="splide__slide">
+                                                <div class="slick__circle" style="background-image: url('./images/business/oasis_bg.jpg');">
+                                                    <img src="./images/business/oasis.png" alt="OASIS">
+                                                    <p>한의학 OASIS 전통의학정보 포털</p>
+                                                </div>
+                                            </a>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="inner">
-                                    <h1 class="inner__title back-to-position to-bottom delay-0">business</h6>
-                                    <h6 class="inner__subtitle back-to-position to-bottom delay-1">수행 실적</h6>
-                                    <p class="inner__expl back-to-position to-bottom delay-3">
-                                        (주)지플러스는 과학기술정보 데이터 베이스 구축 등의 데이터베이스 구축과 지식정보시스템 및 메타데이터 통합 등 시스템 통합 분야의 사업을 수행해 오고 있습니다.
-                                    </p>
-                                    <div class="business__perform">
-                                        <div class="perform__head">
+                                    <!-- 상세보기 -->
+                                    <div class="business__modal" id="pfDetail">
+                                        <div class="modal__timg">
+                                            <img src="./images/business/plaform_icon.png" alt="platform_icon">
+                                            <h6 class="timg__title">연구데이터 플랫폼 구축 사업</h6>
+                                        </div>
+                                        <div class="modal__contents">
                                             <ul>
-                                                <li class="selected" aria-selected="true" data-tabnum="0"><a href="javascript:void(0);" class="head__tab" role="button">All</a></li>
-                                                <li aria-selected="false" data-tabnum="1"><a href="javascript:void(0);" class="head__tab" role="button">SI</a></li>
-                                                <li aria-selected="false" data-tabnum="2"><a href="javascript:void(0);" class="head__tab" role="button">DB구축</a></li>
+                                                <li>계산화학/나노물리 분야 포털 구축 및 고급 콘텐츠 개발 ( 2012 한국과학기술정보연구원 )</li>
+                                                <li>슈퍼컴퓨팅 서비스 플랫폼 기반 사용자 응용환경 원형 개발 ( 2013 한국과학기술정보연구원 ) </li>
+                                                <li>열유체 포털 마이그레이션 및 EDISON 웹 포털 프레임워크 기능개선 ( 2014 한국과학기술정보연구원 )</li>
+                                                <li>EDISON 서비스를 위한 통합 웹 포털 프레임워크 개발 ( 2014 한국과학기술정보연구원 )</li>
+                                                <li>EDISON 웹 포털 프레임워크 요소 컴포넌트 포틀릿 개발 ( 2016 한국과학기술정보연구원)</li>
                                             </ul>
                                         </div>
-                                        <div class="perform__contents">
-                                            <ul class="perform__content">
-                                                <li>
-                                                    <span class="content__tag">SI</span>
-                                                    <div>
-                                                        <strong class="content__date">2021.09</strong>
-                                                        <span class="content">지능형 과학·기술·산업 위기대응 시스템 개발</span>
-                                                        <span class="content__org">[한국과학기술정보연구원]</span>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <span class="content__tag">DB구축</span>
-                                                    <div>
-                                                        <strong class="content__date">2021.05</strong>
-                                                        <span class="content">전통의학 정보포털(OASIS) 학술DB 구축 및 유지보수</span>
-                                                        <span class="content__org">[한국한의학연구원]</span>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <span class="content__tag">SI</span>
-                                                    <div>
-                                                        <strong class="content__date">2021.09</strong>
-                                                        <span class="content">지능형 과학·기술·산업 위기대응 시스템 개발</span>
-                                                        <span class="content__org">[한국과학기술정보연구원]</span>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <span class="content__tag">DB구축</span>
-                                                    <div>
-                                                        <strong class="content__date">2021.05</strong>
-                                                        <span class="content">전통의학 정보포털(OASIS) 학술DB 구축 및 유지보수</span>
-                                                        <span class="content__org">[한국한의학연구원]</span>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                            <ul class="perform__content">
-                                                <li>
-                                                    <span class="content__tag">SI</span>
-                                                    <div>
-                                                        <strong class="content__date">2021.09</strong>
-                                                        <span class="content">지능형 과학·기술·산업 위기대응 시스템 개발</span>
-                                                        <span class="content__org">[한국과학기술정보연구원]</span>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                            <ul class="perform__content">
-                                                <li>
-                                                    <span class="content__tag">DB구축</span>
-                                                    <div>
-                                                        <strong class="content__date">2021.05</strong>
-                                                        <span class="content">전통의학 정보포털(OASIS) 학술DB 구축 및 유지보수</span>
-                                                        <span class="content__org">[한국한의학연구원]</span>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
+                                        <button class="modal__close" data-event="click-close" data-target="#pfDetail" aria-label="닫기">
+                                            <img src="./images/business/x.png" alt="X">
+                                        </button>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="swiper-prev">
-                            <span class="material-icons">arrow_back_ios</span>
-                        </div>
-                        <div class="swiper-next">
-                            <span class="material-icons">arrow_forward_ios</span>
+                            <div class="tab-pane" role="tabpanel">
+                                <p class="inner__expl back-to-position to-bottom delay-3">
+                                    (주)지플러스는 과학기술정보 데이터 베이스 구축 등의 데이터베이스 구축과 지식정보시스템 및 메타데이터 통합 등 시스템 통합 분야의 사업을 수행해 오고 있습니다.
+                                </p>
+                                <div class="business__perform">
+                                    <div class="perform__head">
+                                        <ul>
+                                            <li class="selected" aria-selected="true" data-tabnum="0"><a href="javascript:void(0);" class="head__tab" role="button">All</a></li>
+                                            <li aria-selected="false" data-tabnum="1"><a href="javascript:void(0);" class="head__tab" role="button">SI</a></li>
+                                            <li aria-selected="false" data-tabnum="2"><a href="javascript:void(0);" class="head__tab" role="button">DB구축</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="perform__contents">
+                                        <ul class="perform__content">
+                                            <li>
+                                                <span class="content__tag">SI</span>
+                                                <div>
+                                                    <strong class="content__date">2021.09</strong>
+                                                    <span class="content">지능형 과학·기술·산업 위기대응 시스템 개발</span>
+                                                    <span class="content__org">[한국과학기술정보연구원]</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="content__tag">DB구축</span>
+                                                <div>
+                                                    <strong class="content__date">2021.05</strong>
+                                                    <span class="content">전통의학 정보포털(OASIS) 학술DB 구축 및 유지보수</span>
+                                                    <span class="content__org">[한국한의학연구원]</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="content__tag">SI</span>
+                                                <div>
+                                                    <strong class="content__date">2021.09</strong>
+                                                    <span class="content">지능형 과학·기술·산업 위기대응 시스템 개발</span>
+                                                    <span class="content__org">[한국과학기술정보연구원]</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <span class="content__tag">DB구축</span>
+                                                <div>
+                                                    <strong class="content__date">2021.05</strong>
+                                                    <span class="content">전통의학 정보포털(OASIS) 학술DB 구축 및 유지보수</span>
+                                                    <span class="content__org">[한국한의학연구원]</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul class="perform__content">
+                                            <li>
+                                                <span class="content__tag">SI</span>
+                                                <div>
+                                                    <strong class="content__date">2021.09</strong>
+                                                    <span class="content">지능형 과학·기술·산업 위기대응 시스템 개발</span>
+                                                    <span class="content__org">[한국과학기술정보연구원]</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <ul class="perform__content">
+                                            <li>
+                                                <span class="content__tag">DB구축</span>
+                                                <div>
+                                                    <strong class="content__date">2021.05</strong>
+                                                    <span class="content">전통의학 정보포털(OASIS) 학술DB 구축 및 유지보수</span>
+                                                    <span class="content__org">[한국한의학연구원]</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                </div>
+                <div class="scroll">
+                    <span class="scroll-icon">
+                        <span class="scroll-icon__wheel-outer">
+                            <span class="scroll-icon__wheel-inner"></span>
+                        </span>
+                    </span>
                 </div>
             </section>
             <!-- Solution Area -->
@@ -878,6 +911,13 @@
                 </div>
                 <span class="sc bg-circle-small-white"></span>
                 <span class="tc bg-circle-sky"></span>
+                <div class="scroll">
+                    <span class="scroll-icon">
+                        <span class="scroll-icon__wheel-outer">
+                            <span class="scroll-icon__wheel-inner"></span>
+                        </span>
+                    </span>
+                </div>
             </section>
             <!-- Certification Area -->
             <section class="section scroll-spy" data-anchor="certification">
@@ -910,6 +950,13 @@
                     </div>
                 </div>
                 <span class="sc bg-circle-lg-dwhite"></span>
+                <div class="scroll">
+                    <span class="scroll-icon">
+                        <span class="scroll-icon__wheel-outer">
+                            <span class="scroll-icon__wheel-inner"></span>
+                        </span>
+                    </span>
+                </div>
             </section>
             <!-- Recruit Area -->
             <section class="section scroll-spy" data-anchor="recruit">
@@ -1002,6 +1049,13 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="scroll">
+                    <span class="scroll-icon">
+                        <span class="scroll-icon__wheel-outer">
+                            <span class="scroll-icon__wheel-inner"></span>
+                        </span>
+                    </span>
                 </div>
             </section>
             <!-- Together Area -->
@@ -1138,8 +1192,16 @@
                     </div>
                     <!-- TODO : 임시 지도 .. 실서버 적용 시, API로 지도 받아 옴. -->
                     <div class="contact__map back-to-position to-top delay-3">
-                        <img src="./images/contact/map.png" alt="map">
+                        <!-- <img src="./images/contact/map.png" alt="map"> -->
+                        <div id="locationMap"></div>
                     </div>
+                </div>
+                <div class="scroll">
+                    <span class="scroll-icon">
+                        <span class="scroll-icon__wheel-outer">
+                            <span class="scroll-icon__wheel-inner"></span>
+                        </span>
+                    </span>
                 </div>
             </section>
             <section class="section fp-auto-height" id="footer">

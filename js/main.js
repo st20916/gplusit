@@ -157,6 +157,26 @@ $(function() {
         $('body').off('scroll touchmove mousewheel');
     });
 
+
+    $('.perform__content').on('mouseover', function() {
+        if ($(window).outerWidth() >= 1026) {
+            // Full Page로 열릴 시, Body Scroll 금지
+            $('body').on('scroll touchmove mousewheel', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                return false;
+            });
+            
+        } else if ($(window).outerWidth() < 1026) {
+            $('body').off('scroll touchmove mousewheel');
+        }
+    });
+
+    $('.perform__content').on('mouseleave', function() {
+        $('body').off('scroll touchmove mousewheel');
+    });
+
     /**
      * Slick
      * 
@@ -296,19 +316,28 @@ new Swiper('.news .swiper', {
     }
 });
 
-/**
- *  Business
- * 
- */
-new Swiper('.business .swiper', {
-    keyboard: {
-        enabled: true,
-    },
-    navigation: {
-        nextEl: '.business .swiper-next',
-        prevEl: '.business .swiper-prev',
-    }
+const businessTabList = document.querySelectorAll('.business__model li'); 
+
+Array.prototype.forEach.call(businessTabList, function(listEl) {
+    listEl.children[0].addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const tabContent = document.querySelectorAll('.tab-pane');
+        const tabNum = this.parentElement.getAttribute('data-tabnum');
+
+        Array.prototype.forEach.call(tabContent, function(cont, i) {
+            cont.style.display = 'none';
+            businessTabList[i].className = '';
+        });
+
+        tabContent[tabNum].style.display = 'block';
+
+        if (listEl.className.indexOf('active') == -1) {
+            listEl.className = 'active';
+        }
+    });
 });
+
 
 /**
  *  Tab 구현
@@ -327,6 +356,7 @@ Array.prototype.forEach.call(tabList, function(list) {
             cont.style.display = 'none';
             tabList[i].className = 'head__tab';
         });
+
         tabContent[tabNum].style.display = 'block';
 
         if (list.className.indexOf('selected') == -1) {
@@ -334,6 +364,3 @@ Array.prototype.forEach.call(tabList, function(list) {
         }
     });
 });
-
-const bodyEl = document.getElementsByTagName('body'),
-      contentEl = document.querySelector('.perform__content');
