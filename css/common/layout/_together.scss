@@ -181,14 +181,14 @@ section[data-anchor="together"] {
         }
 
         .project__title {
-            font-size: 2rem;
+            font-size: 1.875rem;
         }
     }
 }
 
 @media all and (min-width: 1441px) and (min-height: 1200px) {
     .item__project {
-        height: 482px;
+        height: auto;
     }
 }
 
@@ -327,8 +327,8 @@ section[data-anchor="together"] {
 
 @media all and (min-width: 1441px) {
     .project__contents {
-        height: 330px;
-        padding: 44px;
+        height: 280px;
+        padding: 30px;
 
         &[data-image="culture"] {
             &::before {
@@ -345,7 +345,7 @@ section[data-anchor="together"] {
         }
 
         strong {
-            font-size: 1.375rem;
+            font-size: 1.25rem;
         }
 
         span {
@@ -469,6 +469,7 @@ section[data-anchor="together"] {
     position: relative;
     width: 100%;
     background-color: #003F9C;
+    border-radius: 22px;
 }
 
 .together__footer__wrap {
@@ -481,6 +482,7 @@ section[data-anchor="together"] {
     padding: 9.23vw 0;
 
     .inner {
+        min-height: auto;
         padding: 0 !important;
     }
 
@@ -541,8 +543,9 @@ section[data-anchor="together"] {
 
 @media all and (min-width: 1441px) {
     .together__footer__wrap {
-        height: 275px;
-        padding: 60px 0 0;
+        height: 176px;
+        min-height: auto;
+        padding: 29px 0 0;
 
         .inner {
             height: auto !important;
@@ -550,11 +553,8 @@ section[data-anchor="together"] {
 
         .footer__main__img {
             max-width: none;
+            border-radius: 22px 0 0 22px;
         }
-    }
-
-    .together__description {
-        font-size: 1.75rem;
     }
 }
 
@@ -578,6 +578,7 @@ section[data-anchor="together"] {
     color: #362F2F;
     letter-spacing: -1px;
     transition: all .3s;
+    z-index: 5;
 
     &:hover {
         background-color: #14CC8D;
@@ -605,10 +606,10 @@ section[data-anchor="together"] {
 
 .together__contact {
     position: relative;
-    border-radius: 20px;
-    border: 1px solid #C8E0FF;
     padding: 8.97vmin;
     margin: 9.23vmin 0 0;
+    border: 1px solid #C8E0FF;
+    border-radius: 26px;
 
     li {
         display: flex;
@@ -646,23 +647,21 @@ section[data-anchor="together"] {
 
 @media all and (min-width: 1025px) {
     .together__contact {
-        position: absolute;
-        top: 0;
-        right: 0;
-        margin: 0;
-        padding: 25px 45px;
-        max-width: none;
+        padding: 11px 43px;
     }
 }
 
 @media all and (min-width: 1441px) {
     .together__btn {
-        max-width: 374px;
-        height: 87px;
+        position: absolute;
+        bottom: 35px;
+        right: 40px;
+        max-width: 284px;
+        height: 76px;
         font-size: 1.5rem;
 
         svg {
-            max-width: 50px;
+            max-width: 40px;
             margin: 0 15px 0 0;
 
             &.arrow {
@@ -672,8 +671,17 @@ section[data-anchor="together"] {
     }
     
     .together__contact {
+        max-width: 684px;
+        
+        ul {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
         li {
-            margin: 0 0 14px;
+            margin: 0;
 
             span,
             a {

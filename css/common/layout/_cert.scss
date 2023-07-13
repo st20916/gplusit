@@ -339,3 +339,157 @@ section[data-anchor="recruit"] {
         }
     }
 }
+
+/* 채용 정보 */
+.recruit__info {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    z-index: 3;
+
+    .info {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+        border-radius: 100%;
+        background: linear-gradient(to bottom, #20CC8D, #24926A);
+        font-size: .875rem;
+        font-weight: 600;
+        color: #fff;
+        cursor: default;
+
+        &::after {
+            position: absolute;
+            display: block;
+            content: '';
+            left: 50%;
+            bottom: -10px;
+            transform: translateX(-50%);
+            width: 35px;
+            height: 5px;
+            border-radius: 50% / 50%;
+            background-color: #CFCDCD;
+        }
+
+        &:hover {
+            + .info__box {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+}
+
+.info__box {
+    position: absolute;
+    top: 0;
+    left: -220px;
+    width: 200px;
+    padding: 8px;
+    background-color: #fff;
+    border: 1px solid #CCCCCC;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    font-size: .8375rem;
+    font-weight: 600;
+    color: #8493A7;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s, visibility .5s;
+
+    &::after {
+        position: absolute;
+        content: '';
+        top: 50%;
+        transform: translateY(-50%);
+        right: -12px;
+        width: 0;
+        height: 0;
+        border: 6px solid transparent;
+        border-left-color: #ccc;
+    }
+}
+
+@media all and (min-width: 768px) {
+    .recruit__info {
+        right: 170px;
+
+        .info {
+            width: 80px;
+            height: 80px;
+
+            &::after {
+                bottom: -15px;
+                width: 45px;
+                height: 8px;
+            }
+        }
+    }
+
+    .info__box {
+        top: 50%;
+        left: -55vw;
+        transform: translateY(-50%);
+        width: 400px;
+        padding: 15px;
+        font-size: 1rem;
+    }
+}
+
+@media all and (min-width: 1025px) {
+    .recruit__info {
+        top: 0;
+        right: 250px;
+
+        .info {
+            width: 98px;
+            height: 98px;
+            font-size: 1rem;
+
+            &::after {
+                bottom: -15px;
+                width: 58px;
+                height: 10px;
+            }
+        }
+    }
+
+    .info__box {
+        left: -33vw;
+    }
+}
+
+@media all and (min-width: 1441px) {
+    .recruit__info {
+        right: 400px;
+
+        .info {
+            font-size: 1.25rem;
+        }
+    }
+
+    .info__box {
+        left: auto;
+        right: -500px;
+        width: 468px;
+        height: 115px;
+        padding: 0;
+        border-radius: 21px;
+        font-size: 1.25rem;
+        text-align: center;
+        line-height: 115px;
+
+        &::after {
+            left: -20px;
+            right: auto;
+            border-width: 10px;
+            border-left-color: transparent;
+            border-right-color: #ccc;
+        }
+    }
+}

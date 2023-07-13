@@ -571,6 +571,8 @@ body {
 
 @media all and (min-width: 1441px) {
     .common__model {
+        margin: 20px auto 37px;
+        
         > li {
             &::after {
                 top: 47px;
