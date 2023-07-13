@@ -493,7 +493,7 @@ body {
         display: inline-block;
         float: none;
         text-align: center;
-        width: 25%;
+        width: 18%;
 
         &.active {
             i {
@@ -559,7 +559,7 @@ body {
             &::after {
                 width: 100%;
                 top: 46px;
-                right: -77px;
+                right: -55px;
             }
 
             span {
@@ -572,11 +572,11 @@ body {
 @media all and (min-width: 1441px) {
     .common__model {
         margin: 20px auto 37px;
-        
+
         > li {
             &::after {
                 top: 47px;
-                right: -76px;
+                right: -55px;
             }
             
             span {
@@ -584,7 +584,7 @@ body {
             }
 
             i {
-                font-size: 1.25rem;
+                font-size: 1.375rem;
             }
         }
     }

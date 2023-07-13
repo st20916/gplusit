@@ -933,7 +933,7 @@ body {
   display: inline-block;
   float: none;
   text-align: center;
-  width: 25%;
+  width: 18%;
 }
 .common__model > li.active i {
   background-color: #F99B2E;
@@ -987,7 +987,7 @@ body {
   .common__model > li::after {
     width: 100%;
     top: 46px;
-    right: -77px;
+    right: -55px;
   }
   .common__model > li span {
     font-size: 1.25rem;
@@ -999,13 +999,13 @@ body {
   }
   .common__model > li::after {
     top: 47px;
-    right: -76px;
+    right: -55px;
   }
   .common__model > li span {
     font-size: 1.375rem;
   }
   .common__model > li i {
-    font-size: 1.25rem;
+    font-size: 1.375rem;
   }
 }
 .tab-content .tab-pane {
@@ -3176,6 +3176,7 @@ section[data-anchor=business] .inner {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   padding: 0 0 22px;
   border-bottom: 1px solid #313131;
 }
@@ -3223,6 +3224,7 @@ section[data-anchor=business] .inner {
 @media all and (min-width: 1025px) {
   .perform__head {
     justify-content: flex-start;
+    flex-direction: row;
     padding: 0 0 38px;
   }
 }
@@ -3240,9 +3242,6 @@ section[data-anchor=business] .inner {
   padding: 10px 0;
   border-bottom: 1px solid #DDDDDD;
   column-gap: 10px;
-}
-.perform__content > li:last-child {
-  border-bottom: 0;
 }
 .perform__content .content__tag {
   position: relative;
@@ -3315,6 +3314,77 @@ section[data-anchor=business] .inner {
 @media all and (min-width: 1441px) {
   .perform__content {
     max-height: 323px;
+  }
+}
+.search {
+  position: relative;
+  display: flex;
+  margin-top: 10px;
+}
+.search .search__box {
+  position: relative;
+  height: 34px;
+}
+.search .search__box input {
+  width: 40px;
+  height: 34px;
+  outline: none;
+  border: 0;
+  border-bottom: 1px solid #CCCCCC;
+  background-color: transparent;
+  font-size: 0.8125rem;
+  color: #BBB9B8;
+  transition: width 0.4s;
+}
+.search .search__box input::placeholder {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s;
+  font-family: "Noto Sans KR", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #BBB9B8;
+}
+.search .search__box input:focus {
+  width: 190px;
+  border-color: #BBB9B8;
+}
+.search .search__box input:focus::placeholder {
+  opacity: 1;
+  visibility: visible;
+}
+.search .search__box i {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  bottom: 0;
+  height: 24px;
+  transition: all 0.4s;
+}
+.search select {
+  display: inline-block;
+  width: 120px;
+  height: 34px;
+  border-radius: 17px;
+  border: 1px solid #F1870E;
+  margin-left: 5px;
+  padding: 0 10px;
+  font-family: "Noto Sans KR", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+@media all and (min-width: 1025px) {
+  .search {
+    margin-top: 0;
+    margin-left: auto;
+  }
+  .search .search__box input {
+    width: 50px;
+    font-size: 0.9375rem;
+  }
+  .search .search__box input:focus {
+    width: 331px;
+  }
+  .search select {
+    width: 159px;
+    font-size: 0.9375rem;
   }
 }
 section[data-anchor=solution] {
@@ -3927,7 +3997,8 @@ section[data-anchor=recruit] .inner {
 }
 @media all and (min-width: 1441px) {
   .recruit__info {
-    right: 400px;
+    top: 18px;
+    right: 450px;
   }
   .recruit__info .info {
     font-size: 1.25rem;
@@ -4142,14 +4213,16 @@ section[data-anchor=together] .inner {
   width: 164px;
   height: 101px;
 }
+.project__contents ul {
+  position: relative;
+  z-index: 6;
+}
 .project__contents li {
   padding: 2vmin 0;
+  border-bottom: 1px solid #DBDBDB;
 }
 .project__contents li:first-child {
   padding: 0 0 2vmin;
-}
-.project__contents li:last-child {
-  padding: 0;
 }
 .project__contents strong {
   position: relative;
@@ -4219,8 +4292,8 @@ section[data-anchor=together] .inner {
     padding: 30px;
   }
   .project__contents[data-image=culture]::before {
-    width: 399px;
-    height: 244px;
+    width: 339px;
+    height: 207px;
   }
   .project__contents[data-image=think]::before {
     width: 319px;
@@ -4258,14 +4331,6 @@ section[data-anchor=together] .inner {
 .item--orange .project__contents span {
   padding: 0 0 0 15px;
 }
-.item--orange .project__contents strong::before {
-  position: absolute;
-  content: "▶";
-  top: 4px;
-  left: 0;
-  font-size: 0.25rem;
-  color: #F26F0B;
-}
 
 @media all and (min-width: 768px) {
   .item--orange .project__contents li {
@@ -4292,13 +4357,13 @@ section[data-anchor=together] .inner {
 }
 @media all and (min-width: 1441px) and (min-height: 1200px) {
   .item--orange .project__contents li {
-    padding: 17px 0;
+    padding: 10px 0;
   }
   .item--orange .project__contents li:first-child {
-    padding: 0 0 17px;
+    padding: 0 0 10px;
   }
   .item--orange .project__contents strong {
-    padding: 0 0 0 25px;
+    padding: 0 0 0 15px;
   }
 }
 /* ############################# Together footer */
@@ -4329,7 +4394,7 @@ section[data-anchor=together] .inner {
 .together__description {
   position: relative;
   font-size: 1.25rem;
-  font-weight: 400;
+  font-weight: 200;
   color: #E3EEF9;
   text-align: center;
   margin: 22px 0;
