@@ -3834,6 +3834,7 @@ section[data-anchor=recruit] .inner {
   font-weight: 600;
   color: #fff;
   cursor: default;
+  /* box-shadow: 2px 2px 8px rgba(0, 0, 0, .5); */
 }
 .recruit__info .info::after {
   position: absolute;
@@ -3845,7 +3846,7 @@ section[data-anchor=recruit] .inner {
   width: 35px;
   height: 5px;
   border-radius: 50%/50%;
-  background-color: #CFCDCD;
+  background-color: #E9E9E9;
 }
 .recruit__info .info:hover + .info__box {
   opacity: 1;
@@ -3916,7 +3917,7 @@ section[data-anchor=recruit] .inner {
     font-size: 1rem;
   }
   .recruit__info .info::after {
-    bottom: -15px;
+    bottom: -18px;
     width: 58px;
     height: 10px;
   }

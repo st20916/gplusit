@@ -360,6 +360,7 @@ section[data-anchor="recruit"] {
         font-weight: 600;
         color: #fff;
         cursor: default;
+        /* box-shadow: 2px 2px 8px rgba(0, 0, 0, .5); */
 
         &::after {
             position: absolute;
@@ -371,7 +372,7 @@ section[data-anchor="recruit"] {
             width: 35px;
             height: 5px;
             border-radius: 50% / 50%;
-            background-color: #CFCDCD;
+            background-color: #E9E9E9;
         }
 
         &:hover {
@@ -452,7 +453,7 @@ section[data-anchor="recruit"] {
             font-size: 1rem;
 
             &::after {
-                bottom: -15px;
+                bottom: -18px;
                 width: 58px;
                 height: 10px;
             }

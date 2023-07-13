@@ -300,8 +300,6 @@ $(function() {
             .setClassToggle(spyEl, 'show')
             .addTo(new ScrollMagic.Controller());
     });
-
-    floatingObject('.recruit__info .info', 1, 15);
 });
 
 /**
