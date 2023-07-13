@@ -44,30 +44,8 @@
     <!-- 2022.08.26 카카오 key 변경-->
     <!-- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=fe308caa8deac07c54341b42b78ba14d"></script>	-->
     <!-- <script defer src="http://jsgetip.appspot.com" type="text/javascript"></script> -->
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=fe308caa8deac07c54341b42b78ba14d"></script>
-
 </head>
 <body>
-    <script>
-        var container = document.getElementById('locationMap');
-        var options = {
-            center: new kakao.maps.LatLng(36.3629163, 127.333786),
-            level: 3
-        };
-        
-        var map = new kakao.maps.Map(container, options);
-        
-        // 마커가 표시될 위치입니다 
-        var markerPosition  = new kakao.maps.LatLng(36.3629163, 127.333786); 
-
-        // 마커를 생성합니다
-        var marker = new kakao.maps.Marker({
-            position: markerPosition
-        });
-        
-        // 마커가 지도 위에 표시되도록 설정합니다
-        marker.setMap(map);
-    </script>
     <div id="wrap" data-container>
         <!-- Header -->
         <header id="header">
@@ -82,7 +60,6 @@
                         <li><a href="#solution">solution</a></li>
                         <li><a href="#certification">certification</a></li>
                         <li><a href="#recruit">recruit</a></li>
-                        <li><a href="#together">together</a></li>
                         <li><a href="#contact">contact</a></li>
                     </ul>
                 </div>
@@ -665,7 +642,7 @@
                 <div class="inner">
                     <h1 class="inner__title back-to-position to-bottom delay-0">business</h6>
                     <div class="business">
-                        <ul class="nav business__model" role="tablist">
+                        <ul class="nav common__model" role="tablist">
                             <li class="active" role="presentation" data-tabnum="0">
                                 <a class="model__tab" href="#field" aria-controls="field" role="tab" aria-expanded="true">
                                     <span>사업 수행</span>
@@ -964,86 +941,212 @@
                 <span class="sc bg-circle-sky"></span>
                 <div class="inner">
                     <h1 class="inner__title back-to-position to-bottom delay-0">recruit</h6>
-                    <h6 class="inner__subtitle back-to-position to-bottom delay-1">채용 정보</h6>
-                    <p class="inner__expl back-to-position to-bottom delay-3">
-                        (주)지플러스는 사람이 우선이라는 마인드로 직원의 자기개발과 복지를 생각합니다.
-                        급속도로 변화와 혁신을 거듭하는 IT 세상에서 발빠르게 대응하고 성장 할 수 있도록 직원의 자기개발 기회를 전폭적으로 지원하고 있으며,
-                        매년 진행되는 워크샵을 통해 친목을 도모하고, 매월 진행되는 월례회와 체육행사는 직원들에게 정보의 공유 및 문화적 소통의 기회를 제공합니다.
-                    </p>
-                    <div class="welfare">
-                        <span class="welfare__circle back-to-position to-bottom delay-3"></span>
-                        <h6 class="welfare__title back-to-position to-bottom delay-3">복리후생</h6>
-                        <div class="welfare__wrap">
-                            <div class="welfare__item back-to-position to-top delay-3">
-                                <div class="item__wrap">
-                                    <div class="item__head">
-                                        <img src="./images/main/insurance.svg" alt="insurance">
-                                        <h6>연금 · 보험</h6>
-                                    </div>
-                                    <div class="item__content">
-                                        <p class="custom-text-center">
-                                            국민연금, 고용보험, 산재보험
-                                            건강보험, 퇴직연금, 상해보험
-                                        </p>
+                    <div class="recruit">
+                        <ul class="nav common__model" role="tablist">
+                            <li class="active" role="presentation" data-tabnum="0">
+                                <a class="model__tab" href="javascript:void(0);" aria-controls="field" role="tab" aria-expanded="true">
+                                    <span>채용 정보</span>
+                                    <i class="material-icons">arrow_right</i>
+                                </a>
+                            </li>
+                            <li role="presentation" data-tabnum="1">
+                                <a class="model__tab" href="javascript:void(0);" aria-controls="performance" role="tab" aria-expanded="false">
+                                    <span>사내 문화</span>
+                                    <i class="material-icons">arrow_right</i>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane" role="tabpanel">
+                                <p class="inner__expl back-to-position to-bottom delay-3">
+                                    (주)지플러스는 사람이 우선이라는 마인드로 직원의 자기개발과 복지를 생각합니다.
+                                    급속도로 변화와 혁신을 거듭하는 IT 세상에서 발빠르게 대응하고 성장 할 수 있도록 직원의 자기개발 기회를 전폭적으로 지원하고 있으며,
+                                    매년 진행되는 워크샵을 통해 친목을 도모하고, 매월 진행되는 월례회와 체육행사는 직원들에게 정보의 공유 및 문화적 소통의 기회를 제공합니다.
+                                </p>
+                                <div class="welfare">
+                                    <span class="welfare__circle back-to-position to-bottom delay-3"></span>
+                                    <h6 class="welfare__title back-to-position to-bottom delay-3">복리후생</h6>
+                                    <div class="welfare__wrap">
+                                        <div class="welfare__item back-to-position to-top delay-3">
+                                            <div class="item__wrap">
+                                                <div class="item__head">
+                                                    <img src="./images/main/insurance.svg" alt="insurance">
+                                                    <h6>연금 · 보험</h6>
+                                                </div>
+                                                <div class="item__content">
+                                                    <p class="custom-text-center">
+                                                        국민연금, 고용보험, 산재보험
+                                                        건강보험, 퇴직연금, 상해보험
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="welfare__item back-to-position to-top delay-4">
+                                            <div class="item__wrap">
+                                                <div class="item__head" data-name="rest">
+                                                    <img src="./images/main/um.svg" alt="um">
+                                                    <h6>휴무 · 휴가 · 행사</h6>
+                                                </div>
+                                                <div class="item__content">
+                                                    <p>
+                                                        주5일근무, 시차출퇴근제, 
+                                                        연차, 경조휴가, 반차, 육아휴직,
+                                                        산전/산후 휴가, 남성출산휴가, 
+                                                        노동절휴무, 워크샵/MT, 
+                                                        문화/체육의날(매월)
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="welfare__item back-to-position to-top delay-5">
+                                            <div class="item__wrap">
+                                                <div class="item__head" data-name="money">
+                                                    <img src="./images/main/money.svg" alt="money">
+                                                    <h6>보상 · 수당 지원</h6>
+                                                </div>
+                                                <div class="item__content">
+                                                    <p class="custom-text-center">
+                                                        우수사원 포상,
+                                                        도서구입 지원,
+                                                        성과급
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="welfare__item back-to-position to-top delay-6">
+                                            <div class="item__wrap">
+                                                <div class="item__head" data-name="education">
+                                                    <img src="./images/main/edu.svg" alt="education">
+                                                    <h6>교육 · 연수</h6>
+                                                </div>
+                                                <div class="item__content">
+                                                    <p class="custom-text-center">
+                                                        신입직원 멘토링제 운영,
+                                                        직무능력향상 교육
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="welfare__item back-to-position to-top delay-7">
+                                            <div class="item__wrap">
+                                                <div class="item__head" data-name="company">
+                                                    <img src="./images/main/company.svg" alt="company">
+                                                    <h6>사내시설</h6>
+                                                </div>
+                                                <div class="item__content">
+                                                    <p class="custom-text-center">
+                                                        사내식당, 주차장
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="welfare__item back-to-position to-top delay-4">
-                                <div class="item__wrap">
-                                    <div class="item__head" data-name="rest">
-                                        <img src="./images/main/um.svg" alt="um">
-                                        <h6>휴무 · 휴가 · 행사</h6>
+                            <div class="tab-pane" role="tabpanel">
+                                <div class="together__row">
+                                    <div class="together__item">
+                                        <div class="item__project">
+                                            <h6 class="project__title">함께가기 프로젝트</h6>
+                                            <div data-slick-wrap="project">
+                                                <div class="project__contents" data-image="culture">
+                                                    <ul>
+                                                        <li>
+                                                            <strong>문화 · 체육의 날</strong>
+                                                            <span>[ 매 월 마지막 주 수요일의 문화 및 체육활동 ]</span>
+                                                        </li>
+                                                        <li>
+                                                            <strong>징검다리 모임</strong>
+                                                            <span> [ 체육의 날에 일부 소그룹별 행사 ]</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="project__contents" data-image="think">
+                                                    <ul>
+                                                        <li>
+                                                            <strong>제안 및 건의함 운영</strong>
+                                                            <span>[ 우수제안 시상 ]</span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="item__content">
-                                        <p>
-                                            주5일근무, 시차출퇴근제, 
-                                            연차, 경조휴가, 반차, 육아휴직,
-                                            산전/산후 휴가, 남성출산휴가, 
-                                            노동절휴무, 워크샵/MT, 
-                                            문화/체육의날(매월)
-                                        </p>
+                                    <div class="together__item">
+                                        <div class="item__project item--orange">
+                                            <h6 class="project__title">수습사원 운영방침</h6>
+                                            <div class="project__contents">
+                                                <ul>
+                                                    <li>
+                                                        <strong>수습 기간</strong>
+                                                        <span>[ 3개월 ]</span>
+                                                    </li>
+                                                    <li>
+                                                        <strong>수습 기간 지원</strong>
+                                                        <span>[ 멘토 선임 및 멘토링 맞춤교육 운영 ]</span>
+                                                    </li>
+                                                    <li>
+                                                        <strong>수습 월간 평가</strong>
+                                                        <span>[ 수습 기간 중 월 단위 과업 평가 3회 실시 ]</span>
+                                                    </li>
+                                                    <li>
+                                                        <strong>수습 근로 규칙</strong>
+                                                        <span>[ 수습 기간 중 추가 근로 금지 ]</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="welfare__item back-to-position to-top delay-5">
-                                <div class="item__wrap">
-                                    <div class="item__head" data-name="money">
-                                        <img src="./images/main/money.svg" alt="money">
-                                        <h6>보상 · 수당 지원</h6>
-                                    </div>
-                                    <div class="item__content">
-                                        <p class="custom-text-center">
-                                            우수사원 포상,
-                                            도서구입 지원,
-                                            성과급
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="welfare__item back-to-position to-top delay-6">
-                                <div class="item__wrap">
-                                    <div class="item__head" data-name="education">
-                                        <img src="./images/main/edu.svg" alt="education">
-                                        <h6>교육 · 연수</h6>
-                                    </div>
-                                    <div class="item__content">
-                                        <p class="custom-text-center">
-                                            신입직원 멘토링제 운영,
-                                            직무능력향상 교육
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="welfare__item back-to-position to-top delay-7">
-                                <div class="item__wrap">
-                                    <div class="item__head" data-name="company">
-                                        <img src="./images/main/company.svg" alt="company">
-                                        <h6>사내시설</h6>
-                                    </div>
-                                    <div class="item__content">
-                                        <p class="custom-text-center">
-                                            사내식당, 주차장
-                                        </p>
+                                <!-- Together footer -->
+                                <div class="together__footer">
+                                    <div class="together__footer__wrap">
+                                        <img src="./images/together/toge_bg.jpg" alt="" class="footer__main__img">
+                                        <div class="inner">
+                                            <h6 class="together__description">"지플러스는 함께 비상할 인재를 기다리고 있습니다."</h6>
+                                            <a type="button" href="./file/company_application.hwp" class="together__btn" download="company_application.hwp">
+                                                <svg id="그룹_7688" data-name="그룹 7688" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="52.433" viewBox="0 0 50 52.433">
+                                                <defs>
+                                                    <clipPath id="clip-path">
+                                                    <rect id="사각형_3404" data-name="사각형 3404" width="50" height="52.433" fill="#362f2f"/>
+                                                    </clipPath>
+                                                </defs>
+                                                <g id="그룹_7687" data-name="그룹 7687" clip-path="url(#clip-path)">
+                                                    <g id="그룹_7686" data-name="그룹 7686">
+                                                    <g id="그룹_7685" data-name="그룹 7685" clip-path="url(#clip-path)">
+                                                        <path id="패스_8479" data-name="패스 8479" d="M53.223,15.524a1.481,1.481,0,0,1,1.483,1.484v1.44h4.4a1.413,1.413,0,0,1,1.408,1.407V52.592A1.414,1.414,0,0,1,59.107,54H30.976a1.413,1.413,0,0,1-1.408-1.408V19.855a1.412,1.412,0,0,1,1.408-1.407h4.4v-1.44a1.483,1.483,0,1,1,2.966,0v1.44h5.217v-1.44a1.483,1.483,0,1,1,2.966,0v1.44h5.215v-1.44a1.483,1.483,0,0,1,1.484-1.484m0-2.426a3.917,3.917,0,0,0-3.784,2.923h-.615a3.909,3.909,0,0,0-7.566,0h-.617a3.91,3.91,0,0,0-7.566,0h-2.1a3.838,3.838,0,0,0-3.834,3.834V52.592a3.838,3.838,0,0,0,3.834,3.834H59.107a3.838,3.838,0,0,0,3.835-3.834V19.855a3.838,3.838,0,0,0-3.835-3.834h-2.1A3.916,3.916,0,0,0,53.223,13.1" transform="translate(-19.208 -9.269)" fill="#362f2f"/>
+                                                        <path id="패스_8480" data-name="패스 8480" d="M72.319,109.771a1.213,1.213,0,0,1-1.213-1.213v-3.566a8.019,8.019,0,0,0-16.037,0v3.566a1.213,1.213,0,1,1-2.426,0v-3.566a10.445,10.445,0,0,1,20.89,0v3.566a1.213,1.213,0,0,1-1.213,1.213" transform="translate(-37.254 -66.908)" fill="#362f2f"/>
+                                                        <path id="패스_8481" data-name="패스 8481" d="M68.814,63.735a8.078,8.078,0,1,1,8.079-8.078,8.087,8.087,0,0,1-8.079,8.078m0-13.731a5.652,5.652,0,1,0,5.653,5.653A5.659,5.659,0,0,0,68.814,50" transform="translate(-42.981 -33.669)" fill="#362f2f"/>
+                                                        <path id="패스_8482" data-name="패스 8482" d="M85.433,104.334a1.213,1.213,0,0,1-1.213-1.213V95.76a1.213,1.213,0,1,1,2.426,0v7.361a1.213,1.213,0,0,1-1.213,1.213" transform="translate(-59.6 -66.908)" fill="#362f2f"/>
+                                                    </g>
+                                                    </g>
+                                                </g>
+                                                </svg>
+                                                입사 지원하기
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="36.356" height="10.755" viewBox="0 0 36.356 10.755" class="arrow">
+                                                    <g id="그룹_7691" data-name="그룹 7691" transform="translate(-1050.5 -1407.086)">
+                                                    <line id="선_80" data-name="선 80" x2="33.941" transform="translate(1051.5 1416.427)" fill="none" stroke="#362F2F" stroke-linecap="round" stroke-width="2"/>
+                                                    <line id="선_81" data-name="선 81" x2="7.927" y2="7.927" transform="translate(1077.515 1408.5)" fill="none" stroke="#362F2F" stroke-linecap="round" stroke-width="2"/>
+                                                    </g>
+                                                </svg>                                  
+                                            </a>
+                                            <div class="together__contact">
+                                                <ul>
+                                                    <li>
+                                                        <img src="./images/together/person.svg" alt="person">
+                                                        <span>채용 담당자 정보</span>
+                                                    </li>
+                                                    <li>
+                                                        <img src="./images/together/telephone.svg" alt="telephone">
+                                                        <span>042-823-0038</span>
+                                                    </li>
+                                                    <li>
+                                                        <img src="./images/together/envelope.svg" alt="envelope">
+                                                        <span><a href="mailto:gplus@gplusit.co.kr">gplus@gplusit.co.kr</a></span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -1056,119 +1159,6 @@
                             <span class="scroll-icon__wheel-inner"></span>
                         </span>
                     </span>
-                </div>
-            </section>
-            <!-- Together Area -->
-            <section class="section scroll-spy" data-anchor="together">
-                <span class="fc bg-circle-lg-sky"></span>
-                <div class="inner">
-                    <div class="together__row">
-                        <div class="together__item">
-                            <div class="item__project">
-                                <h6 class="project__title">함께가기 프로젝트</h6>
-                                <div data-slick-wrap="project">
-                                    <div class="project__contents" data-image="culture">
-                                        <ul>
-                                            <li>
-                                                <strong>문화 · 체육의 날</strong>
-                                                <span>[ 매 월 마지막 주 수요일의 문화 및 체육활동 ]</span>
-                                            </li>
-                                            <li>
-                                                <strong>징검다리 모임</strong>
-                                                <span> [ 체육의 날에 일부 소그룹별 행사 ]</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="project__contents" data-image="think">
-                                        <ul>
-                                            <li>
-                                                <strong>제안 및 건의함 운영</strong>
-                                                <span>[ 우수제안 시상 ]</span>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="together__item">
-                            <div class="item__project item--orange">
-                                <h6 class="project__title">수습사원 운영방침</h6>
-                                <div class="project__contents">
-                                    <ul>
-                                        <li>
-                                            <strong>수습 기간</strong>
-                                            <span>[ 3개월 ]</span>
-                                        </li>
-                                        <li>
-                                            <strong>수습 기간 지원</strong>
-                                            <span>[ 멘토 선임 및 멘토링 맞춤교육 운영 ]</span>
-                                        </li>
-                                        <li>
-                                            <strong>수습 월간 평가</strong>
-                                            <span>[ 수습 기간 중 월 단위 과업 평가 3회 실시 ]</span>
-                                        </li>
-                                        <li>
-                                            <strong>수습 근로 규칙</strong>
-                                            <span>[ 수습 기간 중 추가 근로 금지 ]</span>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <span class="sc bg-circle-sm-sky"></span>
-                <span class="tc bg-circle-sky"></span>
-                <!-- Together footer -->
-                <div class="together__footer">
-                    <div class="together__footer__wrap">
-                        <img src="./images/together/toge_bg.jpg" alt="" class="footer__main__img">
-                        <div class="inner">
-                            <h6 class="together__description">"지플러스는 함께 비상할 인재를 기다리고 있습니다."</h6>
-                            <a type="button" href="./file/company_application.hwp" class="together__btn" download="company_application.hwp">
-                                <svg id="그룹_7688" data-name="그룹 7688" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="52.433" viewBox="0 0 50 52.433">
-                                  <defs>
-                                    <clipPath id="clip-path">
-                                      <rect id="사각형_3404" data-name="사각형 3404" width="50" height="52.433" fill="#362f2f"/>
-                                    </clipPath>
-                                  </defs>
-                                  <g id="그룹_7687" data-name="그룹 7687" clip-path="url(#clip-path)">
-                                    <g id="그룹_7686" data-name="그룹 7686">
-                                      <g id="그룹_7685" data-name="그룹 7685" clip-path="url(#clip-path)">
-                                        <path id="패스_8479" data-name="패스 8479" d="M53.223,15.524a1.481,1.481,0,0,1,1.483,1.484v1.44h4.4a1.413,1.413,0,0,1,1.408,1.407V52.592A1.414,1.414,0,0,1,59.107,54H30.976a1.413,1.413,0,0,1-1.408-1.408V19.855a1.412,1.412,0,0,1,1.408-1.407h4.4v-1.44a1.483,1.483,0,1,1,2.966,0v1.44h5.217v-1.44a1.483,1.483,0,1,1,2.966,0v1.44h5.215v-1.44a1.483,1.483,0,0,1,1.484-1.484m0-2.426a3.917,3.917,0,0,0-3.784,2.923h-.615a3.909,3.909,0,0,0-7.566,0h-.617a3.91,3.91,0,0,0-7.566,0h-2.1a3.838,3.838,0,0,0-3.834,3.834V52.592a3.838,3.838,0,0,0,3.834,3.834H59.107a3.838,3.838,0,0,0,3.835-3.834V19.855a3.838,3.838,0,0,0-3.835-3.834h-2.1A3.916,3.916,0,0,0,53.223,13.1" transform="translate(-19.208 -9.269)" fill="#362f2f"/>
-                                        <path id="패스_8480" data-name="패스 8480" d="M72.319,109.771a1.213,1.213,0,0,1-1.213-1.213v-3.566a8.019,8.019,0,0,0-16.037,0v3.566a1.213,1.213,0,1,1-2.426,0v-3.566a10.445,10.445,0,0,1,20.89,0v3.566a1.213,1.213,0,0,1-1.213,1.213" transform="translate(-37.254 -66.908)" fill="#362f2f"/>
-                                        <path id="패스_8481" data-name="패스 8481" d="M68.814,63.735a8.078,8.078,0,1,1,8.079-8.078,8.087,8.087,0,0,1-8.079,8.078m0-13.731a5.652,5.652,0,1,0,5.653,5.653A5.659,5.659,0,0,0,68.814,50" transform="translate(-42.981 -33.669)" fill="#362f2f"/>
-                                        <path id="패스_8482" data-name="패스 8482" d="M85.433,104.334a1.213,1.213,0,0,1-1.213-1.213V95.76a1.213,1.213,0,1,1,2.426,0v7.361a1.213,1.213,0,0,1-1.213,1.213" transform="translate(-59.6 -66.908)" fill="#362f2f"/>
-                                      </g>
-                                    </g>
-                                  </g>
-                                </svg>
-                                입사 지원하기
-                                <svg xmlns="http://www.w3.org/2000/svg" width="36.356" height="10.755" viewBox="0 0 36.356 10.755" class="arrow">
-                                    <g id="그룹_7691" data-name="그룹 7691" transform="translate(-1050.5 -1407.086)">
-                                      <line id="선_80" data-name="선 80" x2="33.941" transform="translate(1051.5 1416.427)" fill="none" stroke="#362F2F" stroke-linecap="round" stroke-width="2"/>
-                                      <line id="선_81" data-name="선 81" x2="7.927" y2="7.927" transform="translate(1077.515 1408.5)" fill="none" stroke="#362F2F" stroke-linecap="round" stroke-width="2"/>
-                                    </g>
-                                </svg>                                  
-                            </a>
-                            <div class="together__contact">
-                                <ul>
-                                    <li>
-                                        <img src="./images/together/person.svg" alt="person">
-                                        <span>채용 담당자 정보</span>
-                                    </li>
-                                    <li>
-                                        <img src="./images/together/telephone.svg" alt="telephone">
-                                        <span>042-823-0038</span>
-                                    </li>
-                                    <li>
-                                        <img src="./images/together/envelope.svg" alt="envelope">
-                                        <span><a href="mailto:gplus@gplusit.co.kr">gplus@gplusit.co.kr</a></span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </section>
             <!-- Contact Area -->

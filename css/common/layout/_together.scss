@@ -89,8 +89,6 @@ section[data-anchor="together"] {
 @media all and (min-width: 1441px) {
     .together__row {
         margin: 0;
-        top: 50%;
-        transform: translateY(-50%);
     }
 }
 
@@ -477,8 +475,8 @@ section[data-anchor="together"] {
     position: relative;
     width: 100%;
     max-width: 294px;
-    margin: 0 auto;
-    min-height: 509px;
+    margin: 40px auto 0;
+    max-height: 535px;
     text-align: center;
     padding: 9.23vw 0;
 
@@ -542,11 +540,6 @@ section[data-anchor="together"] {
 }
 
 @media all and (min-width: 1441px) {
-    .together__footer {
-        position: absolute;
-        bottom: 0;
-    }
-
     .together__footer__wrap {
         height: 275px;
         padding: 60px 0 0;

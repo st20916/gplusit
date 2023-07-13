@@ -392,10 +392,10 @@ body {
 /** Scroll Icon */
 .scroll {
     position: absolute;
+    display: none;
     left: 50%;
-    bottom: 5rem;
+    bottom: 0;
     transform: translateX(-50%);
-    display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -407,6 +407,15 @@ body {
         color: #999;
     }
 }
+
+@media all and (min-width: 1025px) {
+    .scroll {
+        display: flex;
+        bottom: 5rem;
+    }
+}
+
+
 .scroll-icon__wheel-outer {
     display: block;
     position: absolute;
@@ -448,9 +457,145 @@ body {
 .scroll-icon {
     display: block;
     position: relative;
-    height: 3em;
+    height: 2.5em;
     width: 1.5em;
     border: .25em solid #999;
     border-radius: 1em;
     z-index: 5;
+}
+
+@media all and (min-width: 1025px) {
+    .scroll-icon {
+        height: 3em;
+    }
+}
+
+.business {
+    position: relative;
+}
+
+.common__model {
+    position: relative;
+    max-width: 300px;
+    margin: 20px auto;
+    border: none;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+
+    &::before {
+        display: table;
+        content: '';
+    }
+
+    > li {
+        position: relative;
+        display: inline-block;
+        float: none;
+        text-align: center;
+        width: 25%;
+
+        &.active {
+            i {
+                background-color: #F99B2E;
+                transform: rotate(90deg);
+            }
+        }
+
+        &::after {
+            position: absolute;
+            content: '';
+            top: 37px;
+            right: -30px;
+            display: block;
+            margin: auto;
+            width: 85%;
+            height: 1px;
+            z-index: -1;
+            background-color: #CCCCCC;
+        }
+
+        &:last-child {
+            &::after {
+                width: 0;
+            }
+        }
+
+        a,
+        span {
+            display: block;
+        }
+
+        span {
+            margin-bottom: 6px;
+            font-size: .875rem;
+            font-weight: 400;
+            color: #333333;
+        }
+
+        i {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 20px;
+            height: 20px;
+            margin: 0 auto;
+            background-color: #fff;
+            border: 1px solid #F9E581;
+            border-radius: 100%;
+            font-size: 1rem;
+            color: #000000;
+            transform: rotate(0);
+            transition: all .25s;
+        }
+    }
+}
+
+@media all and (min-width: 1025px) {
+    .common__model {
+        max-width: 600px;
+
+        > li {
+            &::after {
+                width: 100%;
+                top: 46px;
+                right: -77px;
+            }
+
+            span {
+                font-size: 1.25rem;
+            }
+        }
+    }
+}
+
+@media all and (min-width: 1441px) {
+    .common__model {
+        > li {
+            &::after {
+                top: 47px;
+                right: -76px;
+            }
+            
+            span {
+                font-size: 1.375rem;
+            }
+
+            i {
+                font-size: 1.25rem;
+            }
+        }
+    }
+}
+
+
+.tab-content {
+    .tab-pane {
+        position: relative;
+        display: none;
+
+        &:first-child {
+            display: block;
+        }
+    }
 }

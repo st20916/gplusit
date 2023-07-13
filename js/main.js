@@ -316,18 +316,44 @@ new Swiper('.news .swiper', {
     }
 });
 
-const businessTabList = document.querySelectorAll('.business__model li'); 
+/**
+ *  Stepper
+ * 
+ */
+const businessTabList = document.querySelectorAll('.business .common__model li'); 
 
 Array.prototype.forEach.call(businessTabList, function(listEl) {
     listEl.children[0].addEventListener('click', function(e) {
         e.preventDefault();
 
-        const tabContent = document.querySelectorAll('.tab-pane');
+        const tabContent = document.querySelectorAll('.business .tab-pane');
         const tabNum = this.parentElement.getAttribute('data-tabnum');
 
         Array.prototype.forEach.call(tabContent, function(cont, i) {
             cont.style.display = 'none';
             businessTabList[i].className = '';
+        });
+
+        tabContent[tabNum].style.display = 'block';
+
+        if (listEl.className.indexOf('active') == -1) {
+            listEl.className = 'active';
+        }
+    });
+});
+
+const recuritTabList = document.querySelectorAll('.recruit .common__model li'); 
+
+Array.prototype.forEach.call(recuritTabList, function(listEl) {
+    listEl.children[0].addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const tabContent = document.querySelectorAll('.recruit .tab-pane');
+        const tabNum = this.parentElement.getAttribute('data-tabnum');
+
+        Array.prototype.forEach.call(tabContent, function(cont, i) {
+            cont.style.display = 'none';
+            recuritTabList[i].className = '';
         });
 
         tabContent[tabNum].style.display = 'block';
