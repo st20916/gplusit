@@ -616,6 +616,22 @@
         color: #ffffff;
         line-height: 24px;
     }
+
+    &.item--customer {
+        background-color: #EF7A21;
+    }
+
+    &.item--person {
+        background-color: #2185AB;
+    }
+
+    &.item--part {
+        background-color: #3671EE;
+    }
+
+    &.item--program {
+        background-color: #9952D1;
+    }
 }
 
 @media all and (min-width: 768px) {

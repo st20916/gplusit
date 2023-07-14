@@ -73,6 +73,28 @@ section[data-anchor="together"] {
     flex: 0 0 auto;
     width: 100%;
     max-width: 100%;
+
+    .swiper-prev,
+    .swiper-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 16px;
+        height: 29px;
+        cursor: pointer;
+    }
+
+    .swiper-prev {
+        left: 4px;
+        background-image: url('../../../images/together/prev_arrow.svg');
+    }
+
+    .swiper-next {
+        right: 4px;
+        background-image: url('../../../images/together/next_arrow.svg');
+    }
 }
 
 @media all and (min-width: 1025px) {
@@ -83,12 +105,30 @@ section[data-anchor="together"] {
     .together__item {
         max-width: 50%;
         padding: 0 10px;
+
+        .swiper-prev {
+            left: 8px;
+        }
+    
+        .swiper-next {
+            right: 8px;
+        }
     }
 }
 
 @media all and (min-width: 1441px) {
     .together__row {
         margin: 0;
+    }
+
+    .together__item {
+        .swiper-prev {
+            left: 13px;
+        }
+    
+        .swiper-next {
+            right: 13px;
+        }
     }
 }
 
@@ -102,22 +142,6 @@ section[data-anchor="together"] {
     &.item--orange {
         background-color: #E89633;
         margin: 0;
-    }
-
-    .slick-prev {
-        left: -23px;
-
-        &::before {
-            content: url('../../../images/together/prev_arrow.svg');
-        }
-    }
-
-    .slick-next {
-        right: -23px;
-
-        &::before {
-            content: url('../../../images/together/next_arrow.svg');
-        }
     }
 
     .project__title {
@@ -134,14 +158,6 @@ section[data-anchor="together"] {
     .item__project {
         padding: 33px 43px;
         margin: 0 0 30px;
-        
-        .slick-prev {
-            left: -33px;
-        }
-    
-        .slick-next {
-            right: -33px;
-        }
 
         .project__title {
             font-size: 1.625rem;
@@ -154,14 +170,6 @@ section[data-anchor="together"] {
         margin: 0;
         padding: 30px 35px;
 
-        .slick-prev {
-            left: -27px;
-        }
-
-        .slick-next {
-            right: -27px;
-        }
-
         .project__title {
             font-size: 1.8125rem;
         }
@@ -171,14 +179,6 @@ section[data-anchor="together"] {
 @media all and (min-width: 1441px) {
     .item__project {
         padding: 30px 47px;
-
-        .slick-prev {
-            left: -33px;
-        }
-
-        .slick-next {
-            right: -35px;
-        }
 
         .project__title {
             font-size: 1.875rem;
@@ -329,7 +329,8 @@ section[data-anchor="together"] {
 
 @media all and (min-width: 1441px) {
     .project__contents {
-        height: 280px;
+        min-height: 280px;
+        max-height: 280px;
         padding: 30px;
 
         &[data-image="culture"] {

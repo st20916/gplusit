@@ -165,25 +165,6 @@ $(function() {
      * Slick
      * 
      */
-    $('[data-slick-wrap="about"]').slick({
-        infinite: false,
-        draggable: false,
-        cssEase: 'linear',
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        draggable: true,
-        responsive: [
-            {
-                breakpoint: 1025,
-                settings: {
-                    arrows: false
-                }
-            }
-        ],
-        nextArrow: $('.about__next'),
-        prevArrow: $('.about__prev'),
-    });
-
     $('[data-slick-wrap="cert"]').slick({
         centerMode: true,
         centerPadding: '0px',
@@ -217,43 +198,6 @@ $(function() {
         cssEase: 'linear'
     });
 
-    $('[data-slick-wrap="box"]').each(function (i, el) {
-        i++;
-
-        var slickFor = $(el).find('.slide-for').addClass('for' + i),
-            slickNav = $(el).find('.slide-nav').addClass('nav' + i);
-
-        sliderSet(slickFor, slickNav);
-    });
-
-    /**
-     * Multi Slick 
-     * 
-     * @param {*} slickFor 
-     * @param {*} slickNav 
-     */
-    function sliderSet(slickFor, slickNav) {
-        slickFor.slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            draggable: false,
-            cssEase: 'linear',
-            arrows: true,
-            asNavFor: slickNav,
-            prevArrow: $('.history__prev'),
-            nextArrow: $('.history__next')
-        });
-
-        slickNav.slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            cssEase: 'linear',
-            arrows: false,
-            draggable: false,
-            asNavFor: slickFor
-        });
-    }
-
     /**
      * Splide JS
      * 
@@ -284,26 +228,26 @@ $(function() {
     });
 
     splide.mount(window.splide.Extensions);
-
-    /**
-     *  Scroll Magic
-     * 
-     */
-    const spyEls = document.querySelectorAll('section.scroll-spy');
-
-    spyEls.forEach(function (spyEl) {
-        new ScrollMagic
-            .Scene({
-                triggerElement: spyEl,
-                triggerHook: .5
-            })
-            .setClassToggle(spyEl, 'show')
-            .addTo(new ScrollMagic.Controller());
-    });
 });
 
 /**
- *  공지사항
+ *  Scroll Magic
+ * 
+ */
+const spyEls = document.querySelectorAll('section.scroll-spy');
+
+spyEls.forEach(function (spyEl) {
+    new ScrollMagic
+        .Scene({
+            triggerElement: spyEl,
+            triggerHook: .5
+        })
+        .setClassToggle(spyEl, 'show')
+        .addTo(new ScrollMagic.Controller());
+});
+
+/**
+ *  Swiper
  * 
  */
 new Swiper('.news .swiper', {
@@ -316,10 +260,61 @@ new Swiper('.news .swiper', {
     }
 });
 
+new Swiper('.item__project .swiper', {
+    speed: 2000,
+    autoplay: true,
+    loop: true,
+    navigation: {
+        nextEl: '.item__project .swiper-next',
+        prevEl: '.item__project .swiper-prev',
+    }
+});
+
+const dateSwiper = new Swiper('.about__date .swiper', {
+    speed: 1000,
+    autoplay: false,
+    loop: true,
+    navigation: {
+        nextEl: '.about__date .swiper-next',
+        prevEl: '.about__date .swiper-prev',
+    }
+});
+
+const contentsSwiper = new Swiper('.about__contents .swiper', {
+    speed: 1000,
+    autoplay: false,
+    loop: true,
+});
+
+dateSwiper.controller.control = contentsSwiper;
+contentsSwiper.controller.control = dateSwiper;
+
 /**
  *  Stepper
  * 
  */
+const aboutTabList = document.querySelectorAll('.about .common__model li'); 
+
+Array.prototype.forEach.call(aboutTabList, function(listEl) {
+    listEl.children[0].addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const tabContent = document.querySelectorAll('.about .tab-pane');
+        const tabNum = this.parentElement.getAttribute('data-tabnum');
+
+        Array.prototype.forEach.call(tabContent, function(cont, i) {
+            cont.style.display = 'none';
+            aboutTabList[i].className = '';
+        });
+
+        tabContent[tabNum].style.display = 'block';
+
+        if (listEl.className.indexOf('active') == -1) {
+            listEl.className = 'active';
+        }
+    });
+});
+
 const businessTabList = document.querySelectorAll('.business .common__model li'); 
 
 Array.prototype.forEach.call(businessTabList, function(listEl) {

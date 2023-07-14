@@ -188,7 +188,7 @@ section[data-anchor="business"] {
         a {
             position: relative;
             display: block;
-            width: 80px;
+            width: 95px;
             height: 30px;
             line-height: 30px;
             border-radius: 20px;
@@ -385,6 +385,10 @@ section[data-anchor="business"] {
     }
 
     select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -o-appearance: none;
         display: inline-block;
         width: 120px;
         height: 34px;
@@ -393,6 +397,18 @@ section[data-anchor="business"] {
         margin-left: 5px;
         padding: 0 10px;
         font-family: 'Noto Sans KR', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+}
+
+.select__box {
+    position: relative;
+
+    .material-symbols-rounded {
+        position: absolute;
+        top: 50%;
+        right: 5px;
+        transform: translateY(-50%);
+        color: #000;
     }
 }
 
@@ -413,6 +429,7 @@ section[data-anchor="business"] {
         }
 
         select {
+            padding: 0 20px;
             width: 159px;
             font-size: .9375rem;
         }
