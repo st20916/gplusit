@@ -62,12 +62,12 @@ button {
     display: inline-block;
     vertical-align: middle;
     background: transparent; 
-    border:none; 
-    box-shadow:none; 
-    border-radius:0; 
-    padding:0; 
-    overflow:visible; 
-    cursor:pointer;
+    border: none; 
+    box-shadow: none; 
+    border-radius: 0; 
+    padding: 0; 
+    overflow: visible; 
+    cursor: pointer;
     transition: background-color .25s ease-in-out, color .25s ease-in-out;
     
     &:focus-visible {
@@ -412,6 +412,12 @@ body {
     .scroll {
         display: flex;
         bottom: 5rem;
+    }
+}
+
+@media all and (min-width: 1025px) and (max-height: 1000px) {
+    .scroll {
+        bottom: 1rem;
     }
 }
 
