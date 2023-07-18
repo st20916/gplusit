@@ -580,6 +580,10 @@
         overflow-y: auto;
     }
 
+    .detail__img {
+        text-align: center;
+    }
+
     img {
         margin: 0 auto;
         max-width: 141.79vw;
@@ -626,11 +630,11 @@
     }
 
     &.item--part {
-        background-color: #3671EE;
+        background-color: #1EB5A6;
     }
 
     &.item--program {
-        background-color: #9952D1;
+        background-color: #F16082;
     }
 }
 
