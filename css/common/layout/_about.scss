@@ -109,6 +109,7 @@ section[data-anchor="about"] {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
+        background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         width: 40px;
@@ -202,23 +203,23 @@ section[data-anchor="about"] {
     .about__date {
         .swiper-prev,
         .swiper-next {
-            width: 75px;
-            height: 26px;
+            width: 56px;
+            height: 17px;
         }
 
         .swiper-prev {
-            left: 22vw;
+            left: 23vw;
             background-image: url('../../../images/about/prev_arrow.svg');
         }
     
         .swiper-next {
-            right: 22vw;
+            right: 23vw;
             background-image: url('../../../images/about/next_arrow.svg');
         }
 
         .swiper-slide {
             span {
-                font-size: 3.125rem;
+                font-size: 2.375rem;
             }
         }
     }
@@ -227,11 +228,11 @@ section[data-anchor="about"] {
 @media all and (min-width: 1920px) {
     .about__date {
         .swiper-prev {
-            left: 18vw;
+            left: 19vw;
         }
 
         .swiper-next {
-            right: 18vw;
+            right: 19vw;
         }
     }
 }
@@ -682,7 +683,7 @@ section[data-anchor="about"] {
     }
 
     .direction__map {
-        width: calc(100% - 307px);
+        width: calc(100vw - 1000px);
         height: 484px;
     }
 

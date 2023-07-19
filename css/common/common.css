@@ -2597,6 +2597,9 @@ video {
   }
 }
 @media all and (min-width: 1441px) {
+  .business__modal {
+    padding: 45px;
+  }
   .business__modal .modal__timg {
     margin: 0 38px;
   }
@@ -2702,6 +2705,7 @@ section[data-anchor=about] .inner {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   width: 40px;
@@ -2771,27 +2775,27 @@ section[data-anchor=about] .inner {
   }
   .about__date .swiper-prev,
   .about__date .swiper-next {
-    width: 75px;
-    height: 26px;
+    width: 56px;
+    height: 17px;
   }
   .about__date .swiper-prev {
-    left: 22vw;
+    left: 23vw;
     background-image: url("../../../images/about/prev_arrow.svg");
   }
   .about__date .swiper-next {
-    right: 22vw;
+    right: 23vw;
     background-image: url("../../../images/about/next_arrow.svg");
   }
   .about__date .swiper-slide span {
-    font-size: 3.125rem;
+    font-size: 2.375rem;
   }
 }
 @media all and (min-width: 1920px) {
   .about__date .swiper-prev {
-    left: 18vw;
+    left: 19vw;
   }
   .about__date .swiper-next {
-    right: 18vw;
+    right: 19vw;
   }
 }
 .contents__flex {
@@ -3177,7 +3181,7 @@ section[data-anchor=about] .inner {
     column-gap: 32px;
   }
   .direction__map {
-    width: calc(100% - 307px);
+    width: calc(100vw - 1000px);
     height: 484px;
   }
   .direction__info li {
@@ -3266,6 +3270,9 @@ section[data-anchor=business] .inner {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background-size: 380px 380px;
+  background-repeat: no-repeat;
+  background-position: center;
   width: 220px;
   height: 220px;
   border-radius: 100%;
