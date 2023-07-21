@@ -2621,6 +2621,7 @@ video {
 */
 section[data-anchor=about] {
   background-color: #F5F5F5;
+  overflow: hidden;
 }
 section[data-anchor=about] .fc {
   position: absolute;
@@ -2684,16 +2685,16 @@ section[data-anchor=about] .inner {
   margin: 0 0 0 3.05vw;
 }
 .about__item.item--customer {
-  background: linear-gradient(to bottom, #F5B82B, #F2860B);
+  background: linear-gradient(to bottom, #EEB020, #E87B00);
 }
 .about__item.item--person {
   background: linear-gradient(to bottom, #19AEF1, #0A8ADF);
 }
 .about__item.item--part {
-  background: linear-gradient(to bottom, #0BD2A9, #35BF83);
+  background: linear-gradient(to bottom, #20CC8D, #1EB5A6);
 }
 .about__item.item--program {
-  background: linear-gradient(to bottom, #FF754A, #F8688A);
+  background: linear-gradient(to bottom, #FB7171, #EF4971);
 }
 
 .about__date {
@@ -3181,11 +3182,14 @@ section[data-anchor=about] .inner {
     column-gap: 32px;
   }
   .direction__map {
-    width: calc(100vw - 1000px);
+    width: 1200px;
     height: 484px;
   }
+  .direction__info {
+    margin-top: 0;
+  }
   .direction__info li {
-    margin-bottom: 37px;
+    margin-bottom: 19px;
     column-gap: 31px;
   }
   .direction__info .info__title {
@@ -3196,7 +3200,7 @@ section[data-anchor=about] .inner {
     font-size: 1.0625rem;
   }
   .direction__info p {
-    font-size: 1.0625rem;
+    font-size: 1rem;
     margin-bottom: 15px;
   }
 }
@@ -3570,6 +3574,7 @@ section[data-anchor=business] .inner {
 }
 section[data-anchor=solution] {
   background-color: #E4F0FF;
+  overflow: hidden;
 }
 section[data-anchor=solution] .inner {
   padding: 40px 5.13vw;

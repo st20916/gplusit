@@ -4,6 +4,7 @@
 */
 section[data-anchor="about"] {
     background-color: #F5F5F5;
+    overflow: hidden;
 
     .fc {
         position: absolute;
@@ -84,7 +85,7 @@ section[data-anchor="about"] {
     }
 
     &.item--customer {
-        background: linear-gradient(to bottom, #F5B82B, #F2860B);
+        background: linear-gradient(to bottom, #EEB020, #E87B00);
     }
 
     &.item--person {
@@ -92,11 +93,11 @@ section[data-anchor="about"] {
     }
 
     &.item--part {
-        background: linear-gradient(to bottom, #0BD2A9, #35BF83);
+        background: linear-gradient(to bottom, #20CC8D, #1EB5A6);
     }
 
     &.item--program {
-        background: linear-gradient(to bottom, #FF754A, #F8688A);
+        background: linear-gradient(to bottom, #FB7171, #EF4971);
     }
 }
 
@@ -683,13 +684,15 @@ section[data-anchor="about"] {
     }
 
     .direction__map {
-        width: calc(100vw - 1000px);
+        width: 1200px;
         height: 484px;
     }
 
     .direction__info {
+        margin-top: 0;
+
         li {
-            margin-bottom: 37px;
+            margin-bottom: 19px;
             column-gap: 31px;
         }
         
@@ -703,7 +706,7 @@ section[data-anchor="about"] {
         }
     
         p {
-            font-size: 1.0625rem;
+            font-size: 1rem;
             margin-bottom: 15px;
         }
     }
