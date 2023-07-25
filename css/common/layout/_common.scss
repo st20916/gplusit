@@ -255,7 +255,8 @@ body {
         }
 
         .inner__expl {
-            margin: 15px auto 86px;
+            // margin: 15px auto 86px;
+            margin: 15px auto 47px;
             font-size: 1.0625rem;
             line-height: 1.6;
 
@@ -575,9 +576,15 @@ body {
     }
 }
 
+@media all and (min-width: 1025px) and (max-height: 800px) {
+    .common__model {
+        margin: 0 auto 20px;
+    }
+}
+
 @media all and (min-width: 1441px) {
     .common__model {
-        margin: 20px auto 37px;
+        margin: 0 auto 20px;
 
         > li {
             &::after {
