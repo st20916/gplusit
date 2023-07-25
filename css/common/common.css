@@ -482,6 +482,20 @@
     opacity: 0;
   }
 }
+@keyframes scroll_ani {
+  0% {
+    top: -5px;
+    opacity: 0.5;
+  }
+  50% {
+    top: 5px;
+    opacity: 1;
+  }
+  100% {
+    top: -5px;
+    opacity: 0.5;
+  }
+}
 @font-face {
   font-family: "Noto Sans KR";
   font-style: normal;
@@ -836,86 +850,34 @@ body {
 }
 
 /** Scroll Icon */
-.scroll {
+.scrollbar {
   position: absolute;
-  display: none;
   left: 50%;
-  bottom: 0;
   transform: translateX(-50%);
+  bottom: 90px;
+  z-index: 5;
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  z-index: 5;
+  column-gap: 8px;
 }
-.scroll h2 {
-  font-size: 0.875rem;
-  font-weight: 200;
-  color: #999;
-}
-
-@media all and (min-width: 1025px) {
-  .scroll {
-    display: flex;
-    bottom: 5rem;
-  }
-}
-@media all and (min-width: 1025px) and (max-height: 1000px) {
-  .scroll {
-    bottom: 1rem;
-  }
-}
-.scroll-icon__wheel-outer {
-  display: block;
-  position: absolute;
-  left: 50%;
-  top: 0.6em;
-  height: 1em;
-  width: 0.4em;
-  margin-left: -0.2em;
-  border-radius: 0.4em;
-  overflow: hidden;
-}
-
-.scroll-icon__wheel-inner {
-  display: block;
-  height: 100%;
-  width: 100%;
-  border-radius: inherit;
-  background: #999;
-  animation: scroll_1 2.75s ease-in-out infinite;
-}
-
-.scroll-icon__dot {
-  position: absolute;
-  display: block;
-  top: 0.6em;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #999;
-  height: 0.5em;
-  width: 0.5em;
-  margin-left: -0.25em;
-  border-radius: 50%;
-  transform-origin: top center;
-  backface-visibility: hidden;
-  animation: scroll_2 2s ease-out infinite;
-}
-
-.scroll-icon {
-  display: block;
+.scrollbar > * {
   position: relative;
-  height: 2.5em;
-  width: 1.5em;
-  border: 0.25em solid #999;
-  border-radius: 1em;
-  z-index: 5;
+  color: #fff;
+}
+.scrollbar .title {
+  font-size: 0.75rem;
+  font-weight: 200;
+}
+.scrollbar .material-icons {
+  font-size: 1rem;
+}
+.scrollbar .double__arrow {
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  animation: scroll_ani 1.3s linear infinite;
 }
 
-@media all and (min-width: 1025px) {
-  .scroll-icon {
-    height: 3em;
-  }
-}
 .business {
   position: relative;
 }
@@ -2392,7 +2354,7 @@ video {
   background-color: #1EB5A6;
 }
 .about__modal.item--program {
-  background-color: #F16082;
+  background-color: #DE5475;
 }
 
 @media all and (min-width: 768px) {
@@ -2437,6 +2399,12 @@ video {
   .about__modal {
     padding: 50px 52px 28px;
   }
+  .about__modal.item--program {
+    padding: 35px 52px 28px;
+  }
+  .about__modal.item--program p {
+    line-height: 20px;
+  }
   .about__modal .modal__main__title {
     margin: 16px 0;
     font-size: 1.5rem;
@@ -2468,7 +2436,7 @@ video {
   z-index: 2;
   box-shadow: 0 3px 30px rgba(0, 0, 0, 0.16);
   padding: 5.12vw 10.25vw;
-  transition: height 0.3s;
+  transition: 0.3s;
 }
 .business__modal.on {
   height: 54vh;
@@ -2548,7 +2516,7 @@ video {
     width: 0;
     height: 100%;
     padding: 20px;
-    transition: all 0.3s linear;
+    transition: 0.3s linear;
   }
   .business__modal.on {
     width: 100%;
@@ -3122,6 +3090,7 @@ section[data-anchor=about] .inner {
   position: relative;
   width: 100%;
   height: 350px;
+  border: 2px solid #C0C3C5;
 }
 
 .direction__info {
@@ -4427,10 +4396,10 @@ section[data-anchor=together] .inner {
 @media all and (min-width: 1025px) {
   .together__row {
     margin: 0 0 5vh;
+    column-gap: 20px;
   }
   .together__item {
-    max-width: 50%;
-    padding: 0 10px;
+    max-width: 49%;
   }
   .together__item .swiper-prev {
     left: 8px;
@@ -4761,6 +4730,9 @@ section[data-anchor=together] .inner {
   }
 }
 @media all and (min-width: 1025px) {
+  .together__footer {
+    border-radius: 15px 54px 54px 15px;
+  }
   .together__footer__wrap {
     max-width: none;
     min-height: 210px;
@@ -4781,6 +4753,9 @@ section[data-anchor=together] .inner {
   }
 }
 @media all and (min-width: 1025px) and (max-height: 800px) {
+  .together__footer {
+    border-radius: 15px 54px 54px 15px;
+  }
   .together__footer__wrap {
     height: 80px;
     min-height: auto;
@@ -4796,9 +4771,9 @@ section[data-anchor=together] .inner {
 }
 @media all and (min-width: 1441px) {
   .together__footer__wrap {
-    height: 124px;
+    height: 108px;
     min-height: auto;
-    padding: 15px 0 0;
+    padding: 6px 0 0;
   }
   .together__footer__wrap .inner {
     height: auto !important;
@@ -4910,8 +4885,8 @@ section[data-anchor=together] .inner {
 @media all and (min-width: 1441px) {
   .together__btn {
     position: absolute;
-    bottom: 25px;
-    right: 40px;
+    bottom: 16px;
+    right: 16px;
     max-width: 284px;
     height: 76px;
     font-size: 1.375rem;

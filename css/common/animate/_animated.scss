@@ -573,3 +573,20 @@
                 opacity: 0; 
         }
 }
+
+@keyframes scroll_ani {
+        0% {
+                top: -5px;
+                opacity: .5;
+        }
+
+        50% {
+                top: 5px;
+                opacity: 1;
+        }
+
+        100% {
+                top: -5px;
+                opacity: .5;
+        }
+}

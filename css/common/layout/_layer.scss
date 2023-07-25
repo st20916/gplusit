@@ -634,7 +634,7 @@
     }
 
     &.item--program {
-        background-color: #F16082;
+        background-color: #DE5475;
     }
 }
 
@@ -691,6 +691,14 @@
     .about__modal {
         padding: 50px 52px 28px;
 
+        &.item--program {
+            padding: 35px 52px 28px;
+
+            p {
+                line-height: 20px;
+            }
+        }
+
         .modal__main__title {
             margin: 16px 0;
             font-size: 1.5rem;
@@ -728,7 +736,7 @@
     z-index: 2;
     box-shadow: 0 3px 30px rgba(0, 0, 0, .16);
     padding: 5.12vw 10.25vw;
-    transition: height .3s;
+    transition: .3s;
 
     &.on {
         height: 54vh;
@@ -819,7 +827,7 @@
         width: 0;
         height: 100%;
         padding: 20px;
-        transition: all .3s linear;
+        transition: .3s linear;
 
         &.on {
             width: 100%;
