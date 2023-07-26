@@ -121,7 +121,7 @@ $(function() {
         }
     });
 
-    /* #################  */
+    /* #################  body 스크롤 금지 */
     $('[data-about-item]').on('mouseover', function() {
         if ($(window).outerWidth() >= 1026) {
             // Full Page로 열릴 시, Body Scroll 금지
@@ -138,6 +138,19 @@ $(function() {
     });
 
     $('[data-about-item]').on('mouseleave', function() {
+        $('body').off('scroll touchmove mousewheel');
+    });
+
+    $('#kakaoMap').on('mouseover', function() {
+       $('body').on('scroll touchmove mousewheel', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            return false;
+        });
+    });
+
+    $('#kakaoMap').on('mouseleave', function() {
         $('body').off('scroll touchmove mousewheel');
     });
 
@@ -403,4 +416,71 @@ function floatingObject(selector, dly, size) {
             delay: random(0, dly)
         }
     );
+}
+
+/* include html */
+function includeHTML(){
+    let z, elmnt, file, xhttp;
+ 
+    z = document.getElementsByTagName("*");
+    
+    for (let i = 0; i < z.length; i++) {
+      elmnt = z[i];
+      file = elmnt.getAttribute("data-include");
+      
+      if (file) {
+        xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4) {
+            if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+            if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+            /* Remove the attribute, and call this function once more: */
+            elmnt.removeAttribute("data-include");
+            includeHTML();
+          } //if
+        } //onreadystatechange
+ 
+        xhttp.open("GET", file, true);
+        xhttp.send();
+        
+        return;
+      } //if - file
+    } //for
+} //includeHTML
+ 
+ 
+/* ✨ 실행 */
+window.addEventListener('DOMContentLoaded',()=>{
+    includeHTML();
+});
+
+/**
+ *  검색
+ * 
+ */
+const searchInput = document.getElementById('searchInput');
+
+searchInput.addEventListener('keyup', (e) => {
+    searchFilter();
+})
+
+/**
+ *  키 입력 시 검색 결과 동적
+ */
+function searchFilter() {
+    let items = document.querySelectorAll('.perform__content li');
+
+    for (let i = 0; i < items.length; i++) {
+        let nameEl = items[i].getElementsByClassName('content'),
+            dateEl = items[i].getElementsByClassName('content__date'),
+            orgEl = items[i].getElementsByClassName('content__org');
+
+        if (nameEl[0].innerHTML.toLowerCase().indexOf(searchInput.value) != -1 ||
+            dateEl[0].innerHTML.toLowerCase().indexOf(searchInput.value) != -1 ||
+            orgEl[0].innerHTML.toLowerCase().indexOf(searchInput.value) != -1) {
+                items[i].style.display = 'flex';
+        } else {
+            items[i].style.display = 'none';
+        }
+    }
 }

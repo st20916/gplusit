@@ -242,11 +242,13 @@ section[data-anchor="business"] {
         display: block;
     }
 
-    > li {
-        display: flex;
-        padding: 10px 0;
-        border-bottom: 1px solid #DDDDDD;
-        column-gap: 10px;
+    ul {
+        > li {
+            display: flex;
+            padding: 10px 0;
+            border-bottom: 1px solid #DDDDDD;
+            column-gap: 10px;
+        }
     }
 
     .content__tag {
@@ -290,8 +292,10 @@ section[data-anchor="business"] {
 
 @media all and (min-width: 768px) {
     .perform__content {
-        > li {
-            padding: 27px 0;
+        ul {
+            > li {
+                padding: 27px 0;
+            }
         }
 
         .content__tag {
@@ -310,8 +314,10 @@ section[data-anchor="business"] {
     .perform__content {
         max-height: 242px;
 
-        > li {
-            column-gap: 22px;
+        ul {
+            > li {
+                column-gap: 22px;
+            }
         }
 
         .content__tag {
@@ -347,7 +353,7 @@ section[data-anchor="business"] {
         height: 34px;
     
         input {
-            width: 40px;
+            width: 190px;
             height: 34px;
             outline: none;
             border: 0;
@@ -355,26 +361,16 @@ section[data-anchor="business"] {
             background-color: transparent;
             font-size: .8125rem;
             color: #BBB9B8;
-            transition: width .4s;
+            transition: .4s;
             
             &::placeholder {
-                opacity: 0;
-                visibility: hidden;
-                transition: all .4s;
                 font-family: 'Noto Sans KR', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
                 color: #BBB9B8;
             }
 
             &:focus {
-                width: 190px;
                 border-color: #BBB9B8;
-
-                &::placeholder {
-                    opacity: 1;
-                    visibility: visible;
-                }
             }
-
         }
 
         i {
@@ -422,12 +418,8 @@ section[data-anchor="business"] {
 
         .search__box {
             input {
-                width: 50px;
+                width: 331px;
                 font-size: .9375rem;
-
-                &:focus {
-                    width: 331px;
-                }
             }
         }
 

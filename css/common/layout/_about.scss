@@ -229,11 +229,11 @@ section[data-anchor="about"] {
 @media all and (min-width: 1920px) {
     .about__date {
         .swiper-prev {
-            left: 19vw;
+            left: 520px;
         }
 
         .swiper-next {
-            right: 19vw;
+            right: 520px;
         }
     }
 }
@@ -605,8 +605,6 @@ section[data-anchor="about"] {
 
 .direction__map {
     position: relative;
-    width: 100%;
-    height: 350px;
     border: 2px solid #C0C3C5;
 }
 
@@ -653,6 +651,14 @@ section[data-anchor="about"] {
             margin-bottom: 0;
         }
     }
+}
+
+.direction__btn {
+    padding: 7px 12px;
+    margin: 5px 0 5px auto;
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .04);
 }
 
 @media all and (min-width: 1025px) and (max-height: 800px) {
