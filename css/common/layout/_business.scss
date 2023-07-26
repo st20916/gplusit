@@ -248,6 +248,10 @@ section[data-anchor="business"] {
             padding: 10px 0;
             border-bottom: 1px solid #DDDDDD;
             column-gap: 10px;
+            
+            div {
+                width: calc(100% - 74px);
+            }
         }
     }
 

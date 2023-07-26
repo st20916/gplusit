@@ -3392,6 +3392,9 @@ section[data-anchor=business] .inner {
   border-bottom: 1px solid #DDDDDD;
   column-gap: 10px;
 }
+.perform__content ul > li div {
+  width: calc(100% - 74px);
+}
 .perform__content .content__tag {
   position: relative;
   width: 74px;
