@@ -3771,31 +3771,13 @@ section[data-anchor=solution] .inner {
 /* ####################### certification */
 section[data-anchor=certification] {
   background-color: #FFFFF9;
-  /* ################### Slick Override */
 }
 section[data-anchor=certification] .inner {
   min-height: auto;
 }
-section[data-anchor=certification] .slick-slide {
-  text-align: center;
-}
-section[data-anchor=certification] .slick-prev {
-  left: 0;
-}
-section[data-anchor=certification] .slick-prev::before {
-  content: url("../../../images/certification/arrow_sm_left_back.svg");
-}
-section[data-anchor=certification] .slick-next {
-  right: 0;
-}
-section[data-anchor=certification] .slick-next::before {
-  content: url("../../../images/certification/arrow_sm_right_back.svg");
-}
 
 .cert__item {
   position: relative;
-  max-width: 225px;
-  margin: 0 auto;
 }
 .cert__item .cert__title {
   position: relative;
@@ -3806,15 +3788,17 @@ section[data-anchor=certification] .slick-next::before {
   margin: 0 0 19px;
 }
 .cert__item img {
+  display: block;
   margin: 0 auto;
 }
 
 .cert__circle {
   position: relative;
-  display: inline-block;
+  display: block;
   width: 100%;
+  max-width: 225px;
   height: 50px;
-  margin: 19px 0 0;
+  margin: 19px auto 0;
   background-color: #E9E9E9;
   border-radius: 50%;
 }

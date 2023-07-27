@@ -178,31 +178,6 @@ $(function() {
      * Slick
      * 
      */
-    $('[data-slick-wrap="cert"]').slick({
-        centerMode: true,
-        centerPadding: '0px',
-        slidesToShow: 4,
-        cssEase: 'linear',
-        responsive: [
-            {
-                breakpoint: 1025,
-                settings: {
-                    arrows: true,
-                    centerPadding: '0px',
-                    centerMode: false,
-                    slidesToShow: 2
-                }
-            },
-            {
-                breakpoint: 769,
-                settings: {
-                    centerPadding: '0px',
-                    slidesToShow: 1
-                }
-            },
-          ]
-    });
-
     $('[data-slick-wrap="project"]').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -302,6 +277,30 @@ const contentsSwiper = new Swiper('.about__contents .swiper', {
 dateSwiper.controller.control = contentsSwiper;
 contentsSwiper.controller.control = dateSwiper;
 
+new Swiper('.cert .swiper', {
+    slidesPerView: 4,
+    spaceBetween: 10,
+    speed: 2000,
+    autoplay: true,
+    loop: true,
+    breakpoints: {
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 2,
+        },
+        1025: {
+            slidesPerView: 3,
+        }
+    },
+    navigation: {
+        nextEl: '.cert .swiper-button-next',
+        prevEl: '.cert .swiper-button-prev',
+    }
+});
+
 /**
  *  Stepper
  * 
@@ -362,6 +361,28 @@ Array.prototype.forEach.call(recuritTabList, function(listEl) {
         Array.prototype.forEach.call(tabContent, function(cont, i) {
             cont.style.display = 'none';
             recuritTabList[i].className = '';
+        });
+
+        tabContent[tabNum].style.display = 'block';
+
+        if (listEl.className.indexOf('active') == -1) {
+            listEl.className = 'active';
+        }
+    });
+});
+
+const certTabList = document.querySelectorAll('.certification .common__model li'); 
+
+Array.prototype.forEach.call(certTabList, function(listEl) {
+    listEl.children[0].addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const tabContent = document.querySelectorAll('.certification .tab-pane');
+        const tabNum = this.parentElement.getAttribute('data-tabnum');
+
+        Array.prototype.forEach.call(tabContent, function(cont, i) {
+            cont.style.display = 'none';
+            certTabList[i].className = '';
         });
 
         tabContent[tabNum].style.display = 'block';
