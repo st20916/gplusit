@@ -175,18 +175,6 @@ $(function() {
     });
 
     /**
-     * Slick
-     * 
-     */
-    $('[data-slick-wrap="project"]').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        cssEase: 'linear'
-    });
-
-    /**
      * Splide JS
      * 
      */
@@ -245,16 +233,6 @@ new Swiper('.news .swiper', {
     navigation: {
         nextEl: '.news .swiper-next',
         prevEl: '.news .swiper-prev',
-    }
-});
-
-new Swiper('.item__project .swiper', {
-    speed: 2000,
-    autoplay: true,
-    loop: true,
-    navigation: {
-        nextEl: '.item__project .swiper-next',
-        prevEl: '.item__project .swiper-prev',
     }
 });
 
