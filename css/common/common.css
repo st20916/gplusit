@@ -526,6 +526,12 @@
   font-weight: 700;
   src: url(./font/NotoSansKR-Bold.woff2) format("woff2"), url(./font/NotoSansKR-Bold.woff) format("woff"), url(./font/NotoSansKR-Bold.otf) format("opentype");
 }
+@font-face {
+  font-family: "Noto Sans KR";
+  font-style: normal;
+  font-weight: 900;
+  src: url(./font/NotoSansKR-Black.woff2) format("woff2"), url(./font/NotoSansKR-Black.woff) format("woff"), url(./font/NotoSansKR-Black.otf) format("opentype");
+}
 /**
 *   Author : GPLUS
 *
@@ -4366,7 +4372,7 @@ section[data-anchor=recruit] .inner {
   border-radius: 100%;
   background-color: #9753F8;
   font-size: 1.25rem;
-  font-weight: 800;
+  font-weight: 900;
   color: #fff;
   text-align: right;
 }
