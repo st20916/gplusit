@@ -1108,7 +1108,36 @@
                             </li>
                         </ul>
                         <div class="tab-content">
-                            <div class="tab-pane" role="tabpanel"></div>
+                            <div class="tab-pane" role="tabpanel">
+                                <div class="certification__perform">
+                                    <div class="perform__head certification">
+                                        <ul>
+                                            <li class="selected" aria-selected="true" data-tabnum="0"><a href="javascript:void(0);" class="head__tab" role="button">All</a></li>
+                                            <li aria-selected="false" data-tabnum="1"><a href="javascript:void(0);" class="head__tab" role="button">특허</a></li>
+                                            <li aria-selected="false" data-tabnum="2"><a href="javascript:void(0);" class="head__tab" role="button">프로그램</a></li>
+                                        </ul>
+                                        <div class="search">
+                                            <div class="search__box">
+                                                <input type="text" id="certSearchInput" name="searchInput" placeholder="특허명 또는 프로젝트명을 입력하세요" />
+                                                <i class="material-icons">search</i>
+                                            </div>
+                                            <div class="select__box">
+                                                <select>
+                                                    <option value="all">전체</option>
+                                                    <option value="patent">특허</option>
+                                                    <option value="program">프로그램</option>
+                                                </select>
+                                                <span class="material-symbols-rounded">arrow_drop_down</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="perform__contents">
+                                        <div class="perform__content certification" data-include="./html/include/certification/all.html"></div>
+                                        <div class="perform__content certification" data-include="./html/include/certification/patent.html"></div>
+                                        <div class="perform__content certification" data-include="./html/include/certification/program.html"></div>
+                                    </div>
+                                </div>
+                            </div>
                             <div class="tab-pane" role="tabpanel">
                                 <div data-include="./html/include/certification/cert.html"></div>
                             </div>

@@ -167,6 +167,26 @@ section[data-anchor="business"] {
     padding: 0 0 22px;
     border-bottom: 1px solid #313131;
 
+    &.certification {
+        ul {
+            li {
+                &.selected {
+                    a {
+                        background-color: #3E9FF3;
+                        border-color: #3E9FF3;
+                    }
+                }
+            }
+
+            a {
+                &:hover {
+                    background-color: #3E9FF3;
+                    border-color: #3E9FF3;
+                }
+            }
+        }
+    }
+
     ul {
         position: relative;
         display: inline-flex;
@@ -240,6 +260,12 @@ section[data-anchor="business"] {
 
     &:first-child {
         display: block;
+    }
+
+    &.certification {
+        .content__tag {
+            border-color: #3E9FF3;
+        }
     }
 
     ul {

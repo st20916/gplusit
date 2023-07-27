@@ -3329,6 +3329,14 @@ section[data-anchor=business] .inner {
   padding: 0 0 22px;
   border-bottom: 1px solid #313131;
 }
+.perform__head.certification ul li.selected a {
+  background-color: #3E9FF3;
+  border-color: #3E9FF3;
+}
+.perform__head.certification ul a:hover {
+  background-color: #3E9FF3;
+  border-color: #3E9FF3;
+}
 .perform__head ul {
   position: relative;
   display: inline-flex;
@@ -3385,6 +3393,9 @@ section[data-anchor=business] .inner {
 }
 .perform__content:first-child {
   display: block;
+}
+.perform__content.certification .content__tag {
+  border-color: #3E9FF3;
 }
 .perform__content ul > li {
   display: flex;

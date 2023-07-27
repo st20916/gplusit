@@ -420,6 +420,28 @@ Array.prototype.forEach.call(tabList, function(list) {
     });
 });
 
+const patentTabList = document.querySelectorAll('.certification__perform .perform__head li');
+
+Array.prototype.forEach.call(patentTabList, function(list) {
+    list.children[0].addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const tabContent = document.querySelectorAll('.certification__perform .perform__content');
+        const tabNum = this.parentElement.getAttribute('data-tabnum');
+
+        Array.prototype.forEach.call(tabContent, function(cont, i) {
+            cont.style.display = 'none';
+            patentTabList[i].className = 'head__tab';
+        });
+
+        tabContent[tabNum].style.display = 'block';
+
+        if (list.className.indexOf('selected') == -1) {
+            list.className = 'head__tab selected';
+        }
+    });
+});
+
 // 범위 랜덤 함수
 function random(min, max) {
     return parseFloat((Math.random() * (max - min) + min).toFixed(2))
