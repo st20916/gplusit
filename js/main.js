@@ -258,6 +258,31 @@ new Swiper('.item__project .swiper', {
     }
 });
 
+new Swiper('.cert .swiper', {
+    spaceBetween: 10,
+    speed: 2000,
+    autoplay: true,
+    loop: true,
+    navigation: {
+        nextEl: '.cert .swiper-button-next',
+        prevEl: '.cert .swiper-button-prev',
+    },
+    breakpoints: {
+        320: {
+            slidesPerView: 1
+        },
+        768: {
+            slidesPerView: 2
+        },
+        1025: {
+            slidesPerView: 3
+        },
+        1441: {
+            slidesPerView: 4
+        }
+    }
+});
+
 const dateSwiper = new Swiper('.about__date .swiper', {
     speed: 1000,
     autoplay: false,
@@ -276,30 +301,6 @@ const contentsSwiper = new Swiper('.about__contents .swiper', {
 
 dateSwiper.controller.control = contentsSwiper;
 contentsSwiper.controller.control = dateSwiper;
-
-new Swiper('.cert .swiper', {
-    slidesPerView: 4,
-    spaceBetween: 10,
-    speed: 2000,
-    autoplay: true,
-    loop: true,
-    breakpoints: {
-        320: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-        },
-        768: {
-            slidesPerView: 2,
-        },
-        1025: {
-            slidesPerView: 3,
-        }
-    },
-    navigation: {
-        nextEl: '.cert .swiper-button-next',
-        prevEl: '.cert .swiper-button-prev',
-    }
-});
 
 /**
  *  Stepper
@@ -501,11 +502,16 @@ window.addEventListener('DOMContentLoaded',()=>{
  *  검색
  * 
  */
-const searchInput = document.getElementById('searchInput');
+const searchInput = document.getElementById('searchInput'),
+      certSerchInput = document.getElementById('certSearchInput');
 
 searchInput.addEventListener('keyup', (e) => {
     searchFilter();
-})
+});
+
+certSerchInput.addEventListener('keyup', (e) => {
+    certSearchFilter();
+});
 
 /**
  *  키 입력 시 검색 결과 동적
@@ -521,6 +527,22 @@ function searchFilter() {
         if (nameEl[0].innerHTML.toLowerCase().indexOf(searchInput.value) != -1 ||
             dateEl[0].innerHTML.toLowerCase().indexOf(searchInput.value) != -1 ||
             orgEl[0].innerHTML.toLowerCase().indexOf(searchInput.value) != -1) {
+                items[i].style.display = 'flex';
+        } else {
+            items[i].style.display = 'none';
+        }
+    }
+}
+
+function certSearchFilter() {
+    let items = document.querySelectorAll('.certification__perform .perform__content li');
+
+    for (let i = 0; i < items.length; i++) {
+        let nameEl = items[i].getElementsByClassName('content'),
+            dateEl = items[i].getElementsByClassName('content__date'),
+            orgEl = items[i].getElementsByClassName('content__org');
+
+        if (nameEl[0].innerHTML.toLowerCase().indexOf(certSerchInput.value) != -1) {
                 items[i].style.display = 'flex';
         } else {
             items[i].style.display = 'none';
