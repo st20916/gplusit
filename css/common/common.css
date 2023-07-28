@@ -2755,27 +2755,20 @@ section[data-anchor=about] .inner {
   }
   .about__date .swiper-prev,
   .about__date .swiper-next {
-    width: 56px;
-    height: 17px;
+    top: 60%;
+    width: 45px;
+    height: 14px;
   }
   .about__date .swiper-prev {
-    left: 23vw;
+    left: 550px;
     background-image: url("../../../images/about/prev_arrow.svg");
   }
   .about__date .swiper-next {
-    right: 23vw;
+    right: 550px;
     background-image: url("../../../images/about/next_arrow.svg");
   }
   .about__date .swiper-slide span {
-    font-size: 2.375rem;
-  }
-}
-@media all and (min-width: 1920px) {
-  .about__date .swiper-prev {
-    left: 520px;
-  }
-  .about__date .swiper-next {
-    right: 520px;
+    font-size: 2rem;
   }
 }
 .contents__flex {
@@ -3391,6 +3384,10 @@ section[data-anchor=business] .inner {
     padding: 0 0 38px;
   }
 }
+.perform__contents {
+  margin-top: 15px;
+}
+
 .perform__content {
   position: relative;
   display: none;
@@ -4583,6 +4580,7 @@ section[data-anchor=recruit] .inner {
     padding: 6px 0 0;
   }
   .together__footer__wrap .inner {
+    top: 0;
     height: auto !important;
   }
   .together__footer__wrap .footer__main__img {

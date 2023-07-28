@@ -737,13 +737,13 @@
                                 <!-- 2022.08.26 카카오 key 변경-->
                                 <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=fe308caa8deac07c54341b42b78ba14d"></script>
                                 <script>
-                                    var container = document.getElementById('kakaoMap'); //지도를 담을 영역의 DOM 레퍼런스
-                                    var options = { //지도를 생성할 때 필요한 기본 옵션
-                                        center: new kakao.maps.LatLng(36.3629163, 127.333786), //지도의 중심좌표.
+                                    var mapContainer = document.getElementById('kakaoMap'); //지도를 담을 영역의 DOM 레퍼런스
+                                    var mapOptions = { //지도를 생성할 때 필요한 기본 옵션
+                                        center: new kakao.maps.LatLng(36.36289957743254, 127.33351369217334), //지도의 중심좌표.
                                         level: 3 //지도의 레벨(확대, 축소 정도)
                                     };
 
-                                    var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴
+                                    var map = new kakao.maps.Map(mapContainer, mapOptions); //지도 생성 및 객체 리턴
                                     // 마커가 표시될 위치입니다 
                                     var markerPosition  = new kakao.maps.LatLng(36.3629163, 127.333786); 
                                     // 마커를 생성합니다
@@ -1096,48 +1096,18 @@
                         <ul class="nav common__model" role="tablist">
                             <li class="active" role="presentation" data-tabnum="0">
                                 <a class="model__tab" href="javascript:void(0);" role="tab">
-                                    <span>특허</span>
+                                    <span>대외인증</span>
                                     <i class="material-symbols-rounded">arrow_right</i>
                                 </a>
                             </li>
-                            <li role="presentation" data-tabnum="1">
+                            <li role="presentation" data-tabnum="1" >
                                 <a class="model__tab" href="javascript:void(0);" role="tab">
-                                    <span>대외인증</span>
+                                    <span>특허</span>
                                     <i class="material-symbols-rounded">arrow_right</i>
                                 </a>
                             </li>
                         </ul>
                         <div class="tab-content">
-                            <div class="tab-pane" role="tabpanel">
-                                <div class="certification__perform">
-                                    <div class="perform__head certification">
-                                        <ul>
-                                            <li class="selected" aria-selected="true" data-tabnum="0"><a href="javascript:void(0);" class="head__tab" role="button">All</a></li>
-                                            <li aria-selected="false" data-tabnum="1"><a href="javascript:void(0);" class="head__tab" role="button">특허</a></li>
-                                            <li aria-selected="false" data-tabnum="2"><a href="javascript:void(0);" class="head__tab" role="button">프로그램</a></li>
-                                        </ul>
-                                        <div class="search">
-                                            <div class="search__box">
-                                                <input type="text" id="certSearchInput" name="searchInput" placeholder="특허명 또는 프로젝트명을 입력하세요" />
-                                                <i class="material-icons">search</i>
-                                            </div>
-                                            <div class="select__box">
-                                                <select>
-                                                    <option value="all">전체</option>
-                                                    <option value="patent">특허</option>
-                                                    <option value="program">프로그램</option>
-                                                </select>
-                                                <span class="material-symbols-rounded">arrow_drop_down</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="perform__contents">
-                                        <div class="perform__content certification" data-include="./html/include/certification/all.html"></div>
-                                        <div class="perform__content certification" data-include="./html/include/certification/patent.html"></div>
-                                        <div class="perform__content certification" data-include="./html/include/certification/program.html"></div>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="tab-pane" role="tabpanel">
                                 <p class="inner__expl back-to-position to-bottom delay-3">(주)지플러스는 IT분야 특허 5건 및 등록 프로그램 16건을 보유하고 있으며, 가족친화기업, ISO-9001, INNO-BIZ등의 인증을 받은 신뢰할 수 있는 기업입니다.</p>
                                 <div class="cert">
@@ -1166,6 +1136,36 @@
                                         </div>
                                         <div class="swiper-button-prev"></div>
                                         <div class="swiper-button-next"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" role="tabpanel">
+                                <div class="certification__perform">
+                                    <div class="perform__head certification">
+                                        <ul>
+                                            <li class="selected" aria-selected="true" data-tabnum="0"><a href="javascript:void(0);" class="head__tab" role="button">All</a></li>
+                                            <li aria-selected="false" data-tabnum="1"><a href="javascript:void(0);" class="head__tab" role="button">특허</a></li>
+                                            <li aria-selected="false" data-tabnum="2"><a href="javascript:void(0);" class="head__tab" role="button">프로그램</a></li>
+                                        </ul>
+                                        <div class="search">
+                                            <div class="search__box">
+                                                <input type="text" id="certSearchInput" name="searchInput" placeholder="특허명 또는 프로젝트명을 입력하세요" />
+                                                <i class="material-icons">search</i>
+                                            </div>
+                                            <div class="select__box">
+                                                <select>
+                                                    <option value="all">전체</option>
+                                                    <option value="patent">특허</option>
+                                                    <option value="program">프로그램</option>
+                                                </select>
+                                                <span class="material-symbols-rounded">arrow_drop_down</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="perform__contents">
+                                        <div class="perform__content certification" data-include="./html/include/certification/all.html"></div>
+                                        <div class="perform__content certification" data-include="./html/include/certification/patent.html"></div>
+                                        <div class="perform__content certification" data-include="./html/include/certification/program.html"></div>
                                     </div>
                                 </div>
                             </div>

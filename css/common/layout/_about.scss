@@ -204,36 +204,25 @@ section[data-anchor="about"] {
     .about__date {
         .swiper-prev,
         .swiper-next {
-            width: 56px;
-            height: 17px;
+            top: 60%;
+            width: 45px;
+            height: 14px;
         }
 
         .swiper-prev {
-            left: 23vw;
+            left: 550px;
             background-image: url('../../../images/about/prev_arrow.svg');
         }
     
         .swiper-next {
-            right: 23vw;
+            right: 550px;
             background-image: url('../../../images/about/next_arrow.svg');
         }
 
         .swiper-slide {
             span {
-                font-size: 2.375rem;
+                font-size: 2rem;
             }
-        }
-    }
-}
-
-@media all and (min-width: 1920px) {
-    .about__date {
-        .swiper-prev {
-            left: 520px;
-        }
-
-        .swiper-next {
-            right: 520px;
         }
     }
 }

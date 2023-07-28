@@ -377,13 +377,13 @@ Array.prototype.forEach.call(certTabList, function(listEl) {
  *  Tab 구현
  * 
  */
-const tabList = document.querySelectorAll('.perform__head li');
+const tabList = document.querySelectorAll('.business__perform .perform__head li');
 
 Array.prototype.forEach.call(tabList, function(list) {
     list.children[0].addEventListener('click', function(e) {
         e.preventDefault();
 
-        const tabContent = document.querySelectorAll('.perform__content');
+        const tabContent = document.querySelectorAll('.business__perform .perform__content');
         const tabNum = this.parentElement.getAttribute('data-tabnum');
 
         Array.prototype.forEach.call(tabContent, function(cont, i) {
