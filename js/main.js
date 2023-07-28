@@ -495,13 +495,13 @@ certSerchInput.addEventListener('keyup', (e) => {
  *  키 입력 시 검색 결과 동적
  */
 function searchFilter() {
-    let items = document.querySelectorAll('.perform__content li');
+    let items = document.querySelectorAll('.business .perform__content li');
 
     for (let i = 0; i < items.length; i++) {
         let nameEl = items[i].getElementsByClassName('content'),
             dateEl = items[i].getElementsByClassName('content__date'),
             orgEl = items[i].getElementsByClassName('content__org');
-
+            
         if (nameEl[0].innerHTML.toLowerCase().indexOf(searchInput.value) != -1 ||
             dateEl[0].innerHTML.toLowerCase().indexOf(searchInput.value) != -1 ||
             orgEl[0].innerHTML.toLowerCase().indexOf(searchInput.value) != -1) {
