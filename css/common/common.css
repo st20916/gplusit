@@ -4294,6 +4294,10 @@ section[data-anchor=recruit] .inner {
   .talented__item img {
     margin: 25px auto;
   }
+  .talented__item img.talent01 {
+    height: 174px;
+    margin: 13px 0 0 auto;
+  }
   .talented__item p {
     font-size: 1rem;
   }
@@ -4319,13 +4323,9 @@ section[data-anchor=recruit] .inner {
   border-color: #16B8A0;
 }
 .together__item.together--law ul > li {
-  padding: 8px 0 8px 40px;
   background-color: rgba(176, 177, 177, 0.07);
-  border-radius: 31px;
 }
 .together__item.together--law .num {
-  width: 32px;
-  height: 32px;
   background-color: #FFB636;
 }
 .together__item .item__header {
@@ -4352,8 +4352,8 @@ section[data-anchor=recruit] .inner {
   align-items: center;
   column-gap: 5px;
   background-color: rgba(154, 85, 248, 0.05);
-  border-radius: 25px;
-  padding: 5px 0 5px 40px;
+  border-radius: 31px;
+  padding: 8px 0 8px 40px;
   margin-bottom: 4px;
 }
 .together__item ul > li:last-child {
@@ -4364,8 +4364,8 @@ section[data-anchor=recruit] .inner {
   top: 50%;
   transform: translate(0, -50%);
   left: 0;
-  width: 29px;
-  height: 29px;
+  width: 32px;
+  height: 32px;
   border-radius: 100%;
   background-color: #9753F8;
   font-size: 1.25rem;
@@ -4394,24 +4394,16 @@ section[data-anchor=recruit] .inner {
   .together__item {
     padding: 28px 39px;
   }
-  .together__item.together--law ul > li {
-    padding: 10px 0 10px 60px;
-  }
-  .together__item.together--law .num {
-    width: 43px;
-    height: 43px;
-    font-size: 1.75rem;
-  }
   .together__item .item__header strong {
     font-size: 1.25rem;
   }
   .together__item ul > li {
-    padding: 10px 0 10px 50px;
+    padding: 10px 0 10px 60px;
   }
   .together__item .num {
-    width: 39px;
-    height: 39px;
-    font-size: 1.5rem;
+    width: 43px;
+    height: 43px;
+    font-size: 1.75rem;
   }
   .together__item .tit {
     font-size: 0.875rem;
@@ -4431,7 +4423,7 @@ section[data-anchor=recruit] .inner {
     align-items: center;
     flex-direction: column;
     max-width: 49%;
-    height: 328px;
+    height: auto;
     row-gap: 10px;
   }
   .together__item .item__header {
@@ -4456,17 +4448,6 @@ section[data-anchor=recruit] .inner {
   .together__row {
     margin: 0;
   }
-  .together__item {
-    height: 406px;
-  }
-  .together__item.together--law ul > li {
-    padding: 17px 0 17px 80px;
-  }
-  .together__item.together--law .num {
-    width: 62px;
-    height: 62px;
-    font-size: 2.5rem;
-  }
   .together__item .item__header strong {
     font-size: 1.75rem;
   }
@@ -4474,12 +4455,12 @@ section[data-anchor=recruit] .inner {
     max-width: none;
   }
   .together__item ul > li {
-    padding: 13px 0 13px 70px;
+    padding: 17px 0 17px 80px;
   }
   .together__item .num {
-    width: 49px;
-    height: 49px;
-    font-size: 2.1875rem;
+    width: 62px;
+    height: 62px;
+    font-size: 2.5rem;
   }
   .together__item .tit {
     font-size: 1.125rem;

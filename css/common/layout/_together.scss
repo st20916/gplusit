@@ -20,15 +20,11 @@
 
         ul {
             > li {
-                padding: 8px 0 8px 40px;
                 background-color: rgba(176, 177, 177, .07);
-                border-radius: 31px;
             }
         }
 
         .num {
-            width: 32px;
-            height: 32px;
             background-color: #FFB636;
         }
     }
@@ -60,8 +56,8 @@
             align-items: center;
             column-gap: 5px;
             background-color: rgba(154, 85, 248, .05);
-            border-radius: 25px;
-            padding: 5px 0 5px 40px;
+            border-radius: 31px;
+            padding: 8px 0 8px 40px;
             margin-bottom: 4px;
 
             &:last-child {
@@ -75,8 +71,8 @@
         top: 50%;
         transform: translate(0, -50%);
         left: 0;
-        width: 29px;
-        height: 29px;
+        width: 32px;
+        height: 32px;
         border-radius: 100%;
         background-color: #9753F8;
         font-size: 1.25rem;
@@ -110,20 +106,6 @@
     .together__item {
         padding: 28px 39px;
 
-        &.together--law {    
-            ul {
-                > li {
-                    padding: 10px 0 10px 60px;
-                }
-            }
-    
-            .num {
-                width: 43px;
-                height: 43px;
-                font-size: 1.75rem;
-            }
-        }
-
         .item__header {    
             strong {
                 font-size: 1.25rem;
@@ -132,14 +114,14 @@
 
         ul {
             > li {
-                padding: 10px 0 10px 50px;
+                padding: 10px 0 10px 60px;
             }
         }
 
         .num {
-            width: 39px;
-            height: 39px;
-            font-size: 1.5rem;
+            width: 43px;
+            height: 43px;
+            font-size: 1.75rem;
         }
 
         .tit {
@@ -164,7 +146,7 @@
         align-items: center;
         flex-direction: column;
         max-width: 49%;
-        height: 328px;
+        height: auto;
         row-gap: 10px;
 
         .item__header {    
@@ -196,22 +178,6 @@
     }
 
     .together__item {
-        height: 406px;
-
-        &.together--law {    
-            ul {
-                > li {
-                    padding: 17px 0 17px 80px;
-                }
-            }
-    
-            .num {
-                width: 62px;
-                height: 62px;
-                font-size: 2.5rem;
-            }
-        }
-
         .item__header {    
             strong {
                 font-size: 1.75rem;
@@ -224,14 +190,14 @@
 
         ul {
             > li {
-                padding: 13px 0 13px 70px;
+                padding: 17px 0 17px 80px;
             }
         }
 
         .num {
-            width: 49px;
-            height: 49px;
-            font-size: 2.1875rem;
+            width: 62px;
+            height: 62px;
+            font-size: 2.5rem;
         }
 
         .tit {

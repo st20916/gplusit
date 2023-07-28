@@ -618,6 +618,11 @@ section[data-anchor="recruit"] {
 
         img {
             margin: 25px auto;
+
+            &.talent01 {
+                height: 174px;
+                margin: 13px 0 0 auto;
+            }
         }
 
         p {
