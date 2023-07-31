@@ -172,6 +172,12 @@ section[data-anchor="about"] {
     }
 }
 
+.about__contents {
+    .swiper {
+        padding: 20px;
+    }
+}
+
 @media all and (min-width: 1025px) {
     .about__item {
         padding: 0 50px;
@@ -182,11 +188,11 @@ section[data-anchor="about"] {
 
     .about__date {
         .swiper-prev {
-            left: 30vw;
+            left: 28vw;
         }
     
         .swiper-next {
-            right: 30vw;
+            right: 28vw;
         }
     }
 }

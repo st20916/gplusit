@@ -275,6 +275,7 @@ const contentsSwiper = new Swiper('.about__contents .swiper', {
     speed: 1000,
     autoplay: false,
     loop: true,
+    spaceBetween: 20
 });
 
 dateSwiper.controller.control = contentsSwiper;
