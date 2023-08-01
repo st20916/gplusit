@@ -190,6 +190,14 @@ section[data-anchor="solution"] {
         .item__content {
             color: var(--white-color);
         }
+        
+        .circle {
+            background-color: #E0EBFB;
+        }
+
+        img {
+            animation: right_arrow .6s infinite;
+        }
     }
 
     .item__title,
@@ -222,9 +230,11 @@ section[data-anchor="solution"] {
         border-radius: 100%;
         margin: 8.2vw auto;
         padding: 5px 0 0 8px;
+        cursor: pointer;
+        transition: .4s;
 
-        &:hover {
-            cursor: pointer;
+        img {
+            position: relative;
         }
     }
 }

@@ -590,3 +590,14 @@
                 opacity: .5;
         }
 }
+
+@keyframes right_arrow {
+        0%,
+        100% {
+                left: -.5rem;
+        }
+
+        50% {
+                left: .5rem;
+        }
+}
