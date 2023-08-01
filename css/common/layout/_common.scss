@@ -480,7 +480,7 @@ body {
         }
 
         span {
-            margin-bottom: 6px;
+            margin: 5px 0;
             font-size: .875rem;
             font-weight: 400;
             color: #333333;
@@ -534,7 +534,7 @@ body {
 
         > li {
             &::after {
-                top: 47px;
+                top: 53px;
                 right: -55px;
             }
             

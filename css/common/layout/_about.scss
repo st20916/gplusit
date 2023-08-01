@@ -61,10 +61,14 @@ section[data-anchor="about"] {
     display: inline-flex;
     align-items: center;
     width: 100%;
+    background-color: #fff;
     border: 1px solid #DDDDDD;
     border-radius: 25px;
     padding: 8vw;
     margin: 0 0 4.615vmin;
+    overflow: hidden;
+    box-shadow: 0 0.3rem 1.7rem rgba(58, 109, 161, .1);
+    z-index: 2;
 
     &:hover {
         cursor: pointer;
@@ -78,32 +82,67 @@ section[data-anchor="about"] {
         position: relative;
         font-size: 1.0625rem;
         font-weight: 400;
-        color: #ffffff;
+        color: #333;
         word-break: keep-all;
         max-width: calc(100vw - 54px);
         margin: 0 0 0 3.05vw;
+        transition: .4s;
+    }
+
+    &::before {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        top: 100%;
+        left: 0;
+        border-radius: 25px;
+        opacity: 0;
+        visibility: hidden;
+        transition: .4s;
+        z-index: -1;
+    }
+
+    &:hover {
+        &::before {
+            top: 0;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        p {
+            color: #fff;
+        }
     }
 
     &.item--customer {
-        background: linear-gradient(to bottom, #EEB020, #E87B00);
+        &::before {
+            background: linear-gradient(to bottom, #EEB020, #E87B00);
+        }
     }
 
     &.item--person {
-        background: linear-gradient(to bottom, #19AEF1, #0A8ADF);
+        &::before {
+            background: linear-gradient(to bottom, #19AEF1, #0A8ADF);
+        }
     }
 
     &.item--part {
-        background: linear-gradient(to bottom, #20CC8D, #1EB5A6);
+        &::before {
+            background: linear-gradient(to bottom, #20CC8D, #1EB5A6);
+        }
     }
 
     &.item--program {
-        background: linear-gradient(to bottom, #FB7171, #EF4971);
+        &::before {
+            background: linear-gradient(to bottom, #FB7171, #EF4971);
+        }
     }
 }
 
 .about__date {
     position: relative;
-    margin-bottom: 23px;
 
     .swiper-prev,
     .swiper-next {
@@ -174,7 +213,7 @@ section[data-anchor="about"] {
 
 .about__contents {
     .swiper {
-        padding: 20px;
+        padding: 20px 30px;
     }
 }
 
