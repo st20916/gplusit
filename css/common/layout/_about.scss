@@ -487,8 +487,9 @@ section[data-anchor="about"] {
         height: 5.875rem;
         line-height: 5.875rem;
         background-color: #446DF3;
-        color: #FFFFFF;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, .16);
         font-size: 1.4375rem;
+        color: #FFFFFF;
     }
 
     &:last-child {
@@ -631,12 +632,12 @@ section[data-anchor="about"] {
             padding: 30px;
             
             &.departments--know {
-                left: -7rem;
+                left: -4rem;
             }
         
             &.departments--ebiz {
                 left: auto;
-                right: -7rem;
+                right: -4rem;
             }
         }
     }
