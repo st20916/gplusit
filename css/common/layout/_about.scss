@@ -82,7 +82,7 @@ section[data-anchor="about"] {
         position: relative;
         font-size: 1.0625rem;
         font-weight: 400;
-        color: #333;
+        color: #fff;
         word-break: keep-all;
         max-width: calc(100vw - 54px);
         margin: 0 0 0 3.05vw;
@@ -110,33 +110,37 @@ section[data-anchor="about"] {
             opacity: 1;
             visibility: visible;
         }
-
-        p {
-            color: #fff;
-        }
     }
 
     &.item--customer {
+        background: linear-gradient(to bottom, #EEB020, #E87B00);
+
         &::before {
-            background: linear-gradient(to bottom, #EEB020, #E87B00);
+            background-color: #EF7A21;
         }
     }
 
     &.item--person {
+        background: linear-gradient(to bottom, #19AEF1, #0A8ADF);
+
         &::before {
-            background: linear-gradient(to bottom, #19AEF1, #0A8ADF);
+            background-color: #2185AB;
         }
     }
 
     &.item--part {
+        background: linear-gradient(to bottom, #20CC8D, #1EB5A6);
+
         &::before {
-            background: linear-gradient(to bottom, #20CC8D, #1EB5A6);
+            background-color: #1EB5A6;
         }
     }
 
     &.item--program {
+        background: linear-gradient(to bottom, #FB7171, #EF4971);
+
         &::before {
-            background: linear-gradient(to bottom, #FB7171, #EF4971);
+            background-color: #DE5475;
         }
     }
 }
