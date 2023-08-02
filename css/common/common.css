@@ -1002,6 +1002,111 @@ body {
   display: block;
 }
 
+/* Modal */
+.fade:not(.show) {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.modal.fade .modal__dialog {
+  transition: transform 0.3s ease-out;
+  transform: translate(0, -50px);
+}
+.modal.show .modal__dialog {
+  transform: none;
+}
+
+.modal__dialog {
+  position: relative;
+  width: auto;
+  margin: 1.75rem;
+}
+
+.modal__dialog--centered {
+  display: flex;
+  align-items: center;
+  min-height: calc(100% - 3.5rem);
+}
+
+.modal__cont {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #FFFFFF;
+  background-clip: padding-box;
+  border-radius: 0.5rem;
+  outline: 0;
+}
+
+.modal__header {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid #DEE2E6;
+  border-top-left-radius: calc(0.5rem - 1px);
+  border-top-right-radius: calc(0.5rem - 1px);
+}
+.modal__header .material-icons {
+  cursor: pointer;
+}
+
+.modal__body {
+  position: relative;
+  flex: 1 1 auto;
+  padding: 1rem;
+}
+
+.modal__footer {
+  display: flex;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  padding: -1.5rem;
+  background-color: #FFFFFF;
+  border-top: 1px solid #DEE2E6;
+  border-bottom-left-radius: calc(0.5rem - 1px);
+  border-bottom-right-radius: calc(0.5rem - 1px);
+}
+
+@media all and (min-width: 576px) {
+  .modal__dialog {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 500px;
+  }
+}
+@media all and (min-width: 1025px) {
+  .modal__dialog {
+    max-width: 1100px;
+  }
+}
+@media all and (min-width: 1200px) {
+  .modal__dialog {
+    max-width: 1280px;
+  }
+}
+@media all and (min-width: 1441px) {
+  .modal__dialog {
+    max-width: 1440px;
+  }
+}
 /*
 *   header
 *
@@ -4721,11 +4826,11 @@ section[data-anchor=recruit] .inner {
   width: 100%;
   background-color: #FBE417;
   border-radius: 50px;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 600;
   color: #362F2F;
   letter-spacing: -1px;
-  transition: all 0.3s;
+  transition: 0.3s;
   z-index: 5;
   margin-top: 10px;
 }
@@ -4746,6 +4851,9 @@ section[data-anchor=recruit] .inner {
 }
 .together__btn svg.arrow {
   margin: 0 0 0 15px;
+}
+.together__btn .material-symbols-rounded {
+  margin-left: 15px;
 }
 
 .together__contact {

@@ -86,9 +86,10 @@ $(function() {
                 break;
             // Close
             case 'close':
-                var $target = $this.data('target') || '';
+                var $target = $this.data('target') || '',
+                    $clazz = $this.data('clazz') || '';
                 
-                $($target).removeClass('on');
+                $($target).removeClass($clazz);
 
                 if ($(window).outerWidth() >= 1026) {
                     $('body').off('scroll touchmove mousewheel');
@@ -116,6 +117,13 @@ $(function() {
                         });
                     }
                 }
+
+                break;
+            // modal
+            case 'modal':
+                var $target = $this.data('target') || '';
+
+                $($target).addClass('show');
 
                 break;
         }

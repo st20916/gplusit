@@ -340,11 +340,11 @@
     width: 100%;
     background-color: #FBE417;
     border-radius: 50px;
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 600;
     color: #362F2F;
     letter-spacing: -1px;
-    transition: all .3s;
+    transition: .3s;
     z-index: 5;
     margin-top: 10px;
 
@@ -369,6 +369,10 @@
         &.arrow {
             margin: 0 0 0 15px;
         }
+    }
+
+    .material-symbols-rounded {
+        margin-left: 15px;
     }
 }
 
