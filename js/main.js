@@ -430,6 +430,34 @@ Array.prototype.forEach.call(patentTabList, function(list) {
     });
 });
 
+/* Culture */
+const cultureTabList = document.querySelectorAll('.culture__tab > li');
+console.log('list :: ', cultureTabList);
+
+Array.prototype.forEach.call(cultureTabList, function(list) {
+    list.children[0].addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const tabContent = document.querySelectorAll('.culture__contents .culture__pane');
+        const tabNum = this.parentElement.getAttribute('data-tabnum');
+
+        Array.prototype.forEach.call(tabContent, function(cont, i) {
+            cont.style.position = 'absolute';
+            cont.style.opacity = 0;
+            cont.style.visibility = 'hidden';
+            cultureTabList[i].className = '';
+        });
+
+        tabContent[tabNum].style.position = 'relative';
+        tabContent[tabNum].style.opacity = 1;
+        tabContent[tabNum].style.visibility = 'visible';
+
+        if (list.className.indexOf('active') == -1) {
+            list.className = 'active';
+        }
+    });
+});
+
 // 범위 랜덤 함수
 function random(min, max) {
     return parseFloat((Math.random() * (max - min) + min).toFixed(2))

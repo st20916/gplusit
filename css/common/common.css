@@ -4714,6 +4714,119 @@ section[data-anchor=recruit] .inner {
     font-size: 1rem;
   }
 }
+/* ############################# Together */
+.culture__title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 45px;
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: #3A2A50;
+}
+.culture__title img {
+  position: absolute;
+  left: 0;
+  max-width: 35px;
+}
+
+.culture__tab {
+  position: relative;
+  display: flex;
+  margin-top: 20px;
+  column-gap: 5px;
+  z-index: 2;
+}
+.culture__tab > li {
+  height: 5rem;
+  flex: 1 0 15%;
+  transition: 0.4s;
+  margin: 0 0 1rem;
+}
+.culture__tab > li.active {
+  height: 6rem;
+  margin: 0;
+}
+.culture__tab > li.active a {
+  background-color: rgba(154, 85, 248, 0.7);
+}
+.culture__tab > li.active .nav__num {
+  background-color: #9753F8;
+}
+.culture__tab a {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: #F9F5FB;
+  border-radius: 31px 31px 0 0;
+}
+.culture__tab .nav__title {
+  display: none;
+}
+.culture__tab .nav__num {
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: #D0B4F9;
+  margin: auto auto 5px;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #FFFFFF;
+}
+.culture__tab .nav__num.num--right {
+  text-align: right;
+}
+
+.culture__contents {
+  position: relative;
+}
+
+.culture__pane {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.4s;
+}
+.culture__pane:first-child {
+  position: relative;
+  opacity: 1;
+  visibility: visible;
+}
+
+.culture__content {
+  position: relative;
+  width: 100%;
+  padding: 1rem;
+  background-color: #FFFFFF;
+  border: 1px solid #9A55F8;
+}
+.culture__content p {
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: #666666;
+  word-break: keep-all;
+  margin-top: 11px;
+}
+
+.culture__content__title {
+  position: relative;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #362F2F;
+}
+
+@media all and (min-width: 1025px) {
+  .culture__content {
+    border-radius: 25px;
+  }
+}
 /* ############################# Together footer */
 .together__footer {
   position: relative;
