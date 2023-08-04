@@ -1040,6 +1040,13 @@ body {
   min-height: calc(100% - 3.5rem);
 }
 
+.modal__dialog--scrollable {
+  height: calc(100% - 3.5rem);
+}
+.modal__dialog--scrollable .modal__body {
+  overflow-y: auto;
+}
+
 .modal__cont {
   position: relative;
   display: flex;
@@ -1050,6 +1057,7 @@ body {
   background-clip: padding-box;
   border-radius: 0.5rem;
   outline: 0;
+  box-shadow: 0 0 20px rgba(154, 154, 154, 0.16);
 }
 
 .modal__header {
@@ -1058,12 +1066,19 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 1rem;
-  border-bottom: 1px solid #DEE2E6;
   border-top-left-radius: calc(0.5rem - 1px);
   border-top-right-radius: calc(0.5rem - 1px);
 }
 .modal__header .material-icons {
+  margin-left: auto;
+  border: 1px solid #B9B2AC;
+  border-radius: 100%;
+  color: #F46424;
   cursor: pointer;
+  transition: 0.4s;
+}
+.modal__header .material-icons:hover {
+  transform: rotate(90deg);
 }
 
 .modal__body {
@@ -1099,12 +1114,20 @@ body {
 }
 @media all and (min-width: 1200px) {
   .modal__dialog {
-    max-width: 1280px;
+    max-width: 1200px;
   }
 }
 @media all and (min-width: 1441px) {
   .modal__dialog {
     max-width: 1440px;
+  }
+  .modal__header .material-icons {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 43px;
+    height: 43px;
+    font-size: 1.875rem;
   }
 }
 /*
@@ -3394,6 +3417,128 @@ section[data-anchor=about] .inner {
     margin-bottom: 7px;
   }
 }
+/* interview ... */
+.interview {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+}
+
+.interview__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+}
+.interview__title img {
+  max-width: 52px;
+}
+.interview__title h6 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #444444;
+}
+
+.person {
+  text-align: center;
+}
+.person strong,
+.person span {
+  font-size: 0.875rem;
+  color: #444444;
+}
+.person strong {
+  display: inline-block;
+  font-weight: 600;
+}
+.person strong span {
+  display: inline-block;
+  margin-left: 5px;
+}
+.person span {
+  display: block;
+  font-weight: 400;
+}
+.person img {
+  display: block;
+  max-width: 107px;
+  margin: 0 auto 11px;
+}
+
+.interview__content {
+  position: relative;
+  width: 100%;
+}
+.interview__content .content__title {
+  position: relative;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #DDDDDD;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #2D58E6;
+}
+.interview__content .content__title strong {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.interview__content ul {
+  position: relative;
+  margin-top: 14px;
+}
+.interview__content ul a {
+  position: relative;
+  display: block;
+  font-size: 1rem;
+  color: #444444;
+}
+.interview__content ul a::after {
+  position: absolute;
+  content: "expand_more";
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+  font-family: "Material Icons";
+  font-weight: normal;
+  font-size: 30px;
+  color: #000;
+}
+
+@media all and (min-width: 1025px) {
+  .interview {
+    flex-direction: row;
+    row-gap: 0;
+    column-gap: 100px;
+    justify-content: center;
+  }
+  .interview__title h6 {
+    font-size: 1.4375rem;
+  }
+  .interview__title img {
+    max-width: none;
+  }
+  .person strong,
+  .person span {
+    font-size: 1rem;
+  }
+  .person img {
+    max-width: none;
+    margin: 0 auto 22px;
+  }
+  .interview__content {
+    max-width: 813px;
+  }
+  .interview__content .content__title {
+    padding-bottom: 2rem;
+    font-size: 1.375rem;
+  }
+  .interview__content .content__title strong {
+    font-size: 1.625rem;
+  }
+  .interview__content ul {
+    margin-top: 28px;
+  }
+}
 section[data-anchor=business] {
   background-color: #F9F9F9;
 }
@@ -4753,6 +4898,7 @@ section[data-anchor=recruit] .inner {
 }
 .culture__tab > li.active a {
   background-color: rgba(154, 85, 248, 0.7);
+  border-color: #707070;
 }
 .culture__tab > li.active .nav__num {
   background-color: #9753F8;
@@ -4765,6 +4911,7 @@ section[data-anchor=recruit] .inner {
   width: 100%;
   height: 100%;
   background-color: #F9F5FB;
+  border: 1px solid #D0B4F9;
   border-radius: 31px 31px 0 0;
   cursor: pointer;
   transition: 0.4s;
@@ -4817,7 +4964,7 @@ section[data-anchor=recruit] .inner {
 .culture__content p {
   font-size: 0.8125rem;
   font-weight: 400;
-  color: #666666;
+  color: #333;
   word-break: keep-all;
   margin-top: 11px;
 }
@@ -4951,6 +5098,12 @@ section[data-anchor=recruit] .inner {
   .culture__tab > li.active a {
     width: 339px;
   }
+  .culture__tab > li.active .nav__title {
+    width: 174px;
+  }
+  .culture__tab > li.active .nav__num {
+    right: 4rem;
+  }
   .culture__tab a {
     height: 61px;
   }
@@ -4969,7 +5122,7 @@ section[data-anchor=recruit] .inner {
   }
   .culture__content p {
     max-width: 490px;
-    font-size: 1.125rem;
+    font-weight: 300;
   }
   .culture__content img {
     max-width: none;
@@ -5031,6 +5184,7 @@ section[data-anchor=recruit] .inner {
     border-radius: 54px;
   }
   .together__footer__wrap {
+    padding: 15px 0 0;
     max-width: none;
   }
   .together__footer__wrap .inner {
@@ -5053,7 +5207,6 @@ section[data-anchor=recruit] .inner {
   .together__footer__wrap {
     height: 80px;
     min-height: auto;
-    padding: 0;
     margin: 20px auto 0;
   }
   .together__footer__wrap .inner {
@@ -5064,6 +5217,10 @@ section[data-anchor=recruit] .inner {
   }
 }
 @media all and (min-width: 1441px) {
+  .together__footer {
+    width: calc(100% - 340px);
+    margin-left: auto;
+  }
   .together__footer__wrap {
     height: 108px;
     min-height: auto;
@@ -5161,13 +5318,13 @@ section[data-anchor=recruit] .inner {
     position: absolute;
     top: 30px;
     right: 25px;
-    max-width: 200px;
+    max-width: 250px;
     font-size: 1rem;
   }
   .together__contact {
-    padding: 11px 43px;
+    padding: 11px 22px;
     max-width: 600px;
-    margin: 0 auto;
+    margin: auto auto auto 10rem;
   }
   .together__contact ul {
     display: flex;
@@ -5200,8 +5357,15 @@ section[data-anchor=recruit] .inner {
   .together__btn svg.arrow {
     margin: 0 0 0 15px;
   }
+  .together__btn .material-symbols-rounded {
+    font-size: 2.1875rem;
+  }
   .together__contact {
     max-width: 684px;
+    margin: auto auto auto 2rem;
+  }
+  .together__contact ul {
+    justify-content: center;
   }
   .together__contact li span,
   .together__contact li a {

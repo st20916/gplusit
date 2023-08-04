@@ -250,6 +250,7 @@
 
             a {
                 background-color: rgba(154, 85, 248, .7);
+                border-color: #707070;
             }
             
             .nav__num {
@@ -266,6 +267,7 @@
         width: 100%;
         height: 100%;
         background-color: #F9F5FB;
+        border: 1px solid #D0B4F9;
         border-radius: 31px 31px 0 0;
         cursor: pointer;
         transition: .4s;
@@ -323,7 +325,7 @@
     p {
         font-size: .8125rem;
         font-weight: 400;
-        color: #666666;
+        color: #333;
         word-break: keep-all;
         margin-top: 11px;
     }
@@ -485,6 +487,15 @@
                 a {
                     width: 339px;
                 }
+
+                .nav__title {
+                    width: 174px;
+                    // width: calc(100% - 165px);
+                }
+
+                .nav__num {
+                    right: 4rem;
+                }
             }
         }
 
@@ -511,7 +522,7 @@
 
         p {
             max-width: 490px;
-            font-size: 1.125rem;
+            font-weight: 300;
         }
 
         img {
@@ -583,6 +594,7 @@
     }
 
     .together__footer__wrap {
+        padding: 15px 0 0;
         max-width: none;
 
         .inner {
@@ -609,7 +621,6 @@
     .together__footer__wrap {
         height: 80px;
         min-height: auto;
-        padding: 0;
         margin: 20px auto 0;
 
         .inner {
@@ -623,6 +634,11 @@
 }
 
 @media all and (min-width: 1441px) {
+    .together__footer {
+        width: calc(100% - 340px);
+        margin-left: auto;
+    }
+
     .together__footer__wrap {
         height: 108px;
         min-height: auto;
@@ -738,14 +754,14 @@
         position: absolute;
         top: 30px;
         right: 25px;
-        max-width: 200px;
+        max-width: 250px;
         font-size: 1rem;
     }
 
     .together__contact {
-        padding: 11px 43px;
+        padding: 11px 22px;
         max-width: 600px;
-        margin: 0 auto;
+        margin: auto auto auto 10rem;
 
         ul {
             display: flex;
@@ -783,10 +799,19 @@
                 margin: 0 0 0 15px;
             }
         }
+
+        .material-symbols-rounded {
+            font-size: 2.1875rem;
+        }
     }
     
     .together__contact {
         max-width: 684px;
+        margin: auto auto auto 2rem;
+
+        ul {
+            justify-content: center;
+        }
 
         li {
             span,
