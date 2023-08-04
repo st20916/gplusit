@@ -4715,6 +4715,10 @@ section[data-anchor=recruit] .inner {
   }
 }
 /* ############################# Together */
+.culture {
+  position: relative;
+}
+
 .culture__title {
   position: relative;
   display: flex;
@@ -4763,6 +4767,7 @@ section[data-anchor=recruit] .inner {
   background-color: #F9F5FB;
   border-radius: 31px 31px 0 0;
   cursor: pointer;
+  transition: 0.4s;
 }
 .culture__tab .nav__title {
   display: none;
@@ -4851,22 +4856,72 @@ section[data-anchor=recruit] .inner {
   }
 }
 @media all and (min-width: 1025px) {
+  .culture__pane {
+    left: auto;
+    right: 0;
+  }
   .culture__tab {
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
     flex-direction: column;
+    column-gap: 0;
+    row-gap: 5px;
+    margin-top: 0;
+  }
+  .culture__tab > li {
+    height: auto;
+    margin: 0;
+  }
+  .culture__tab > li.active {
+    height: auto;
+  }
+  .culture__tab > li.active a {
+    width: 309px;
+    border-radius: 31px 0 0 31px;
+  }
+  .culture__tab > li.active .nav__title {
+    font-weight: 600;
+    color: #FFFFFF;
+  }
+  .culture__tab > li.active .nav__num {
+    right: 2rem;
+  }
+  .culture__tab a {
+    flex-direction: row;
+    width: 274px;
+    height: 50px;
+    border-radius: 31px;
+  }
+  .culture__tab .nav__title {
+    display: block;
+    width: calc(100% - 100px);
+    font-size: 1rem;
+    color: #444444;
+    text-align: right;
+  }
+  .culture__tab .nav__num {
+    position: absolute;
+    right: 0;
+    margin: auto;
+  }
+  .culture__title {
+    position: absolute;
+    top: -0.5rem;
   }
   .culture__content {
-    max-width: 753px;
+    width: 790px;
     height: 18.75rem;
     padding: 30px;
     margin-left: auto;
     border-radius: 25px;
+    z-index: 2;
   }
   .culture__content p {
     max-width: 25rem;
+    margin-top: 1rem;
     font-size: 1rem;
+    line-height: 30px;
   }
   .culture__content img {
     position: absolute;
@@ -4881,8 +4936,43 @@ section[data-anchor=recruit] .inner {
   }
 }
 @media all and (min-width: 1441px) {
-  .culture__content p {
+  .culture__title {
+    padding-left: 70px;
+    font-size: 1.75rem;
+  }
+  .culture__title img {
+    max-width: none;
+  }
+  .culture__tab {
+    top: 80%;
+    transform: translate(0, -80%);
+    bottom: auto;
+  }
+  .culture__tab > li.active a {
+    width: 339px;
+  }
+  .culture__tab a {
+    height: 61px;
+  }
+  .culture__tab .nav__num {
+    width: 59px;
+    height: 59px;
+    font-size: 2.5rem;
+  }
+  .culture__tab .nav__title {
     font-size: 1.125rem;
+  }
+  .culture__content {
+    width: 1061px;
+    height: 24.3125rem;
+    padding: 53px;
+  }
+  .culture__content p {
+    max-width: 490px;
+    font-size: 1.125rem;
+  }
+  .culture__content img {
+    max-width: none;
   }
   .culture__content__title {
     font-size: 1.5625rem;
