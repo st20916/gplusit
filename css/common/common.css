@@ -4762,6 +4762,7 @@ section[data-anchor=recruit] .inner {
   height: 100%;
   background-color: #F9F5FB;
   border-radius: 31px 31px 0 0;
+  cursor: pointer;
 }
 .culture__tab .nav__title {
   display: none;
@@ -4803,6 +4804,7 @@ section[data-anchor=recruit] .inner {
 .culture__content {
   position: relative;
   width: 100%;
+  height: 29.75rem;
   padding: 1rem;
   background-color: #FFFFFF;
   border: 1px solid #9A55F8;
@@ -4814,17 +4816,76 @@ section[data-anchor=recruit] .inner {
   word-break: keep-all;
   margin-top: 11px;
 }
+.culture__content img {
+  position: relative;
+  display: block;
+  max-width: 100%;
+  margin: 11px 0 0;
+}
 
 .culture__content__title {
   position: relative;
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 600;
   color: #362F2F;
 }
 
-@media all and (min-width: 1025px) {
+@media all and (min-width: 768px) {
+  .culture__tab .nav__num {
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+  }
   .culture__content {
+    padding: 1.25rem;
+    border-radius: 0 0 25px 25px;
+  }
+  .culture__content p {
+    font-size: 0.875rem;
+  }
+  .culture__content img {
+    margin: 20px auto 0;
+  }
+  .culture__content__title {
+    font-size: 1.25rem;
+  }
+}
+@media all and (min-width: 1025px) {
+  .culture__tab {
+    position: absolute;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+  }
+  .culture__content {
+    max-width: 753px;
+    height: 18.75rem;
+    padding: 30px;
+    margin-left: auto;
     border-radius: 25px;
+  }
+  .culture__content p {
+    max-width: 25rem;
+    font-size: 1rem;
+  }
+  .culture__content img {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 30px;
+    max-width: 250px;
+    margin: 0;
+  }
+  .culture__content__title {
+    font-size: 1.4375rem;
+  }
+}
+@media all and (min-width: 1441px) {
+  .culture__content p {
+    font-size: 1.125rem;
+  }
+  .culture__content__title {
+    font-size: 1.5625rem;
   }
 }
 /* ############################# Together footer */
@@ -4887,6 +4948,7 @@ section[data-anchor=recruit] .inner {
     height: 100%;
   }
   .together__footer__wrap .footer__main__img {
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -4901,7 +4963,7 @@ section[data-anchor=recruit] .inner {
   .together__footer__wrap {
     height: 80px;
     min-height: auto;
-    padding: 17px 0 0;
+    padding: 0;
     margin: 20px auto 0;
   }
   .together__footer__wrap .inner {
