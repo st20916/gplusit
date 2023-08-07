@@ -1040,6 +1040,9 @@ body {
   z-index: 9999;
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.4);
+  visibility: visible;
+  opacity: 1;
+  transition: 0.3s;
 }
 .modal.fade .modal__dialog {
   transition: transform 0.3s ease-out;
@@ -3564,6 +3567,7 @@ section[data-anchor=about] .inner {
   font-weight: 400;
   color: #666666;
   line-height: 22px;
+  word-break: keep-all;
 }
 
 @media all and (min-width: 768px) {

@@ -611,6 +611,9 @@ body {
     z-index: 9999;
     overflow: hidden;
     background-color: rgba(0, 0, 0, .4);
+    visibility: visible;
+    opacity: 1;
+    transition: .3s;
 
     &.fade {
         .modal__dialog {
