@@ -448,6 +448,17 @@ section[data-anchor="about"] {
     }
 }
 
+@media all and (min-width: 1441px) {
+    .history__item {
+        min-height: 350px;
+        max-height: 350px;
+
+        ul {
+            max-height: 285px;
+        }
+    }
+}
+
 /* ####################### About - Organization */
 .organization {
     position: relative;
