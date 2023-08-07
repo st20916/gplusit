@@ -578,6 +578,9 @@ body {
 body {
   overflow-x: hidden;
 }
+body.no--scroll {
+  overflow: hidden !important;
+}
 
 li {
   list-style: none;
@@ -3577,6 +3580,9 @@ section[data-anchor=about] .inner {
   .interview__content ul a {
     padding: 28px 0;
     font-size: 1.25rem;
+  }
+  .interview__content ul a.active + p {
+    padding: 25px;
   }
   .interview__content ul a + p {
     font-size: 0.9375rem;

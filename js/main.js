@@ -125,6 +125,13 @@ $(function() {
 
                 $($target).addClass('show');
 
+                $('body').on('scroll touchmove mousewheel', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    return false;
+                });
+
                 break;
         }
     });
@@ -432,7 +439,6 @@ Array.prototype.forEach.call(patentTabList, function(list) {
 
 /* Culture */
 const cultureTabList = document.querySelectorAll('.culture__tab > li');
-console.log('list :: ', cultureTabList);
 
 Array.prototype.forEach.call(cultureTabList, function(list) {
     list.children[0].addEventListener('click', function(e) {
@@ -565,12 +571,19 @@ function certSearchFilter() {
     }
 }
 
+/** Modal 관련 Script */
 const modalContentEls = document.querySelectorAll('.modal .interview__content');
+const modalEls = document.querySelectorAll('.modal');
 
 modalContentEls.forEach((modalContentEl) => {
     const accordianEls = modalContentEl.querySelectorAll('ul > li a');
 
     accordianEls.forEach((accordianEl) => {
+        // accordianEl에 active 클래스가 있을 시
+        if (accordianEl.classList.contains('active')) {
+            accordianEl.setAttribute('aria-expanded', 'true');
+        }
+        // accordianEl click event
         accordianEl.addEventListener('click', function() {
             accordianEl.classList.toggle('active');
 

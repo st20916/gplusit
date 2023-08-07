@@ -1006,6 +1006,12 @@ section[data-anchor="about"] {
                 padding: 28px 0;
                 font-size: 1.25rem;
 
+                &.active {
+                    + p {
+                        padding: 25px;
+                    }
+                }
+
                 + p {
                     font-size: .9375rem;
                 }
