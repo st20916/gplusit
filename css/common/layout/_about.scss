@@ -690,6 +690,12 @@ section[data-anchor="about"] {
     .support {
         bottom: -12rem;
     }
+
+    .company__lab {
+        top: auto;
+        left: 35%;
+        bottom: -4rem;
+    }
 }
 
 /* ############# location Map */
@@ -948,7 +954,6 @@ section[data-anchor="about"] {
                 background-color: #F8F8F8;
                 overflow-y: auto;
                 transition: .4s;
-                font-family: Arial, Helvetica, sans-serif;
                 font-size: .8125rem;
                 font-weight: 400;
                 color: #666666;

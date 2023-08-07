@@ -987,11 +987,17 @@ body {
   .common__model {
     margin: 0 auto 20px;
   }
-  .common__model.aboutList > li {
-    width: 15%;
-  }
   .common__model.certiList > li {
-    width: 20%;
+    width: 25%;
+  }
+  .common__model.certiList > li::after {
+    right: -77px;
+  }
+  .common__model.recrList > li {
+    width: 22%;
+  }
+  .common__model.recrList > li::after {
+    right: -69px;
   }
   .common__model > li::after {
     top: 53px;
@@ -3326,6 +3332,11 @@ section[data-anchor=about] .inner {
   .support {
     bottom: -12rem;
   }
+  .company__lab {
+    top: auto;
+    left: 35%;
+    bottom: -4rem;
+  }
 }
 /* ############# location Map */
 .direction {
@@ -3549,7 +3560,6 @@ section[data-anchor=about] .inner {
   background-color: #F8F8F8;
   overflow-y: auto;
   transition: 0.4s;
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 0.8125rem;
   font-weight: 400;
   color: #666666;
@@ -5013,7 +5023,7 @@ section[data-anchor=recruit] .inner {
   height: 45px;
   border-radius: 100%;
   background-color: #D0B4F9;
-  font-size: 1.5rem;
+  font-size: 1.875rem;
   font-weight: 900;
   color: #FFFFFF;
 }
@@ -5043,15 +5053,15 @@ section[data-anchor=recruit] .inner {
   position: relative;
   width: 100%;
   height: 29.75rem;
-  padding: 1rem;
+  padding: 1.5rem;
   background-color: #FFFFFF;
   border: 1px solid #9A55F8;
   border-radius: 25px;
 }
 .culture__content p {
-  font-size: 0.8125rem;
-  font-weight: 400;
-  color: #333;
+  font-size: 0.9375rem;
+  font-weight: 200;
+  color: #666;
   word-break: keep-all;
   margin-top: 11px;
 }
@@ -5064,7 +5074,7 @@ section[data-anchor=recruit] .inner {
 
 .culture__content__title {
   position: relative;
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 600;
   color: #362F2F;
 }
@@ -5086,9 +5096,6 @@ section[data-anchor=recruit] .inner {
   }
   .culture__content img {
     margin: 20px auto 0;
-  }
-  .culture__content__title {
-    font-size: 1.25rem;
   }
 }
 @media all and (min-width: 1025px) {

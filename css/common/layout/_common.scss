@@ -537,15 +537,23 @@ body {
     .common__model {
         margin: 0 auto 20px;
 
-        &.aboutList {
+        &.certiList {
             > li {
-                width: 15%;
+                width: 25%;
+
+                &::after {
+                    right: -77px;
+                }
             }
         }
 
-        &.certiList {
+        &.recrList {
             > li {
-                width: 20%;
+                width: 22%;
+
+                &::after {
+                    right: -69px;
+                }
             }
         }
 
