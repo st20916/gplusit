@@ -564,3 +564,21 @@ function certSearchFilter() {
         }
     }
 }
+
+const modalContentEls = document.querySelectorAll('.modal .interview__content');
+
+modalContentEls.forEach((modalContentEl) => {
+    const accordianEls = modalContentEl.querySelectorAll('ul > li a');
+
+    accordianEls.forEach((accordianEl) => {
+        accordianEl.addEventListener('click', function() {
+            accordianEl.classList.toggle('active');
+
+            if (accordianEl.classList.contains('active')) {
+                accordianEl.setAttribute('aria-expanded', 'true');
+            } else {
+                accordianEl.setAttribute('aria-expanded', 'false');
+            }
+        });
+    });
+});

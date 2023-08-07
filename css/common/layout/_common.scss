@@ -613,6 +613,11 @@ body {
     .modal__body {
         overflow-y: auto;
     }
+
+    .modal__cont {
+        max-height: 100%;
+        overflow: hidden;
+    }
 }
 
 .modal__cont {

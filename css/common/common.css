@@ -1046,6 +1046,10 @@ body {
 .modal__dialog--scrollable .modal__body {
   overflow-y: auto;
 }
+.modal__dialog--scrollable .modal__cont {
+  max-height: 100%;
+  overflow: hidden;
+}
 
 .modal__cont {
   position: relative;
@@ -3480,17 +3484,19 @@ section[data-anchor=about] .inner {
 }
 .interview__content .content__title strong {
   font-size: 1.25rem;
-  font-weight: 600;
+  font-weight: 400;
 }
 .interview__content ul {
   position: relative;
-  margin-top: 14px;
 }
 .interview__content ul a {
   position: relative;
   display: block;
   font-size: 1rem;
+  padding: 14px 0;
+  border-bottom: 1px solid #DDDDDD;
   color: #444444;
+  transition: 0.4s;
 }
 .interview__content ul a::after {
   position: absolute;
@@ -3502,8 +3508,38 @@ section[data-anchor=about] .inner {
   font-weight: normal;
   font-size: 30px;
   color: #000;
+  transition: 0.4s;
+}
+.interview__content ul a.active {
+  border-bottom: 0;
+}
+.interview__content ul a.active::after {
+  transform: translate(0, -50%) rotate(180deg);
+}
+.interview__content ul a.active + p {
+  display: block;
+  padding: 1rem;
+  height: auto;
+  max-height: 146px;
+}
+.interview__content ul a + p {
+  position: relative;
+  height: 0;
+  background-color: #F8F8F8;
+  overflow-y: auto;
+  transition: 0.4s;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: #666666;
+  line-height: 22px;
 }
 
+@media all and (min-width: 768px) {
+  .interview__content ul a {
+    font-size: 1.125rem;
+  }
+}
 @media all and (min-width: 1025px) {
   .interview {
     flex-direction: row;
@@ -3523,7 +3559,7 @@ section[data-anchor=about] .inner {
   }
   .person img {
     max-width: none;
-    margin: 0 auto 22px;
+    margin: 22px auto;
   }
   .interview__content {
     max-width: 813px;
@@ -3537,6 +3573,31 @@ section[data-anchor=about] .inner {
   }
   .interview__content ul {
     margin-top: 28px;
+  }
+  .interview__content ul a {
+    padding: 28px 0;
+    font-size: 1.25rem;
+  }
+  .interview__content ul a + p {
+    font-size: 0.9375rem;
+  }
+}
+@media all and (min-width: 1441px) {
+  .interview {
+    padding-bottom: 100px;
+  }
+  .interview__title h6 {
+    font-size: 1.5625rem;
+  }
+  .person strong,
+  .person span {
+    font-size: 1.125rem;
+  }
+  .interview__content .content__title strong {
+    font-size: 1.875rem;
+  }
+  .interview__content ul a {
+    font-size: 1.375rem;
   }
 }
 section[data-anchor=business] {
