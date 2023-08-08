@@ -3538,8 +3538,7 @@ section[data-anchor=about] .inner {
 .interview__content ul > li.active a + p {
   display: block;
   padding: 1rem;
-  height: auto;
-  max-height: 146px;
+  height: 146px;
 }
 .interview__content ul a {
   position: relative;
