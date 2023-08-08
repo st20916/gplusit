@@ -911,6 +911,25 @@ section[data-anchor="about"] {
     ul {
         position: relative;
 
+        > li {
+            &.active {
+                a {
+                    border-bottom: 0;
+
+                    &::after {
+                        transform: translate(0, -50%) rotate(180deg);
+                    }
+    
+                    + p {
+                        display: block;
+                        padding: 1rem;
+                        height: auto;
+                        max-height: 146px;
+                    }
+                }
+            }
+        }
+
         a {
             position: relative;
             display: block;
@@ -931,21 +950,6 @@ section[data-anchor="about"] {
                 font-size: 30px;
                 color: #000;
                 transition: .4s;
-            }
-
-            &.active {
-                border-bottom: 0;
-
-                &::after {
-                    transform: translate(0, -50%) rotate(180deg);
-                }
-
-                + p {
-                    display: block;
-                    padding: 1rem;
-                    height: auto;
-                    max-height: 146px;
-                }
             }
 
             + p {
@@ -1019,15 +1023,19 @@ section[data-anchor="about"] {
         ul {
             margin-top: 28px;
 
+            > li {
+                &.active {
+                    a {
+                        + p {
+                            padding: 25px;
+                        }
+                    }
+                }
+            }
+
             a {
                 padding: 28px 0;
                 font-size: 1.25rem;
-
-                &.active {
-                    + p {
-                        padding: 25px;
-                    }
-                }
 
                 + p {
                     font-size: .9375rem;

@@ -572,26 +572,33 @@ function certSearchFilter() {
 }
 
 /** Modal 관련 Script */
-const modalContentEls = document.querySelectorAll('.modal .interview__content');
-const modalEls = document.querySelectorAll('.modal');
+// variables
+var accordionBtn = document.querySelectorAll('.interview__content ul > li a');
+var allTexts = document.querySelectorAll('.interview__content ul > li p');
 
-modalContentEls.forEach((modalContentEl) => {
-    const accordianEls = modalContentEl.querySelectorAll('ul > li a');
-
-    accordianEls.forEach((accordianEl) => {
-        // accordianEl에 active 클래스가 있을 시
-        if (accordianEl.classList.contains('active')) {
-            accordianEl.setAttribute('aria-expanded', 'true');
-        }
-        // accordianEl click event
-        accordianEl.addEventListener('click', function() {
-            accordianEl.classList.toggle('active');
-
-            if (accordianEl.classList.contains('active')) {
-                accordianEl.setAttribute('aria-expanded', 'true');
-            } else {
-                accordianEl.setAttribute('aria-expanded', 'false');
-            }
-        });
-    });
+// event listener
+accordionBtn.forEach(function (el) {
+    el.addEventListener('click', toggleAccordion)
 });
+
+// function toggleAccordian
+function toggleAccordion(el) {
+   const targetText = el.currentTarget.nextElementSibling.classList;
+   const targetAccIcon = el.currentTarget.children[0];
+   const target = el.currentTarget;
+   
+   if (targetText.contains('active')) {
+       target.classList.remove('active');
+   }
+
+   else {
+        accordionBtn.forEach(function (el) {
+            el.parentElement.classList.remove('active');
+         
+            allTexts.forEach(function (el) {
+                el.parentElement.classList.remove('active');
+            });
+        })
+        target.parentElement.classList.add('active');
+   }  
+}

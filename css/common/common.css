@@ -1023,6 +1023,11 @@ body {
     min-height: 612px;
   }
 }
+@media all and (min-width: 1441px) and (max-height: 1000px) {
+  .tab-content {
+    min-height: auto;
+  }
+}
 /* Modal */
 .fade:not(.show) {
   opacity: 0;
@@ -1039,7 +1044,7 @@ body {
   height: 100%;
   z-index: 9999;
   overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.75);
   visibility: visible;
   opacity: 1;
   transition: 0.3s;
@@ -3524,6 +3529,18 @@ section[data-anchor=about] .inner {
 .interview__content ul {
   position: relative;
 }
+.interview__content ul > li.active a {
+  border-bottom: 0;
+}
+.interview__content ul > li.active a::after {
+  transform: translate(0, -50%) rotate(180deg);
+}
+.interview__content ul > li.active a + p {
+  display: block;
+  padding: 1rem;
+  height: auto;
+  max-height: 146px;
+}
 .interview__content ul a {
   position: relative;
   display: block;
@@ -3544,18 +3561,6 @@ section[data-anchor=about] .inner {
   font-size: 30px;
   color: #000;
   transition: 0.4s;
-}
-.interview__content ul a.active {
-  border-bottom: 0;
-}
-.interview__content ul a.active::after {
-  transform: translate(0, -50%) rotate(180deg);
-}
-.interview__content ul a.active + p {
-  display: block;
-  padding: 1rem;
-  height: auto;
-  max-height: 146px;
 }
 .interview__content ul a + p {
   position: relative;
@@ -3609,12 +3614,12 @@ section[data-anchor=about] .inner {
   .interview__content ul {
     margin-top: 28px;
   }
+  .interview__content ul > li.active a + p {
+    padding: 25px;
+  }
   .interview__content ul a {
     padding: 28px 0;
     font-size: 1.25rem;
-  }
-  .interview__content ul a.active + p {
-    padding: 25px;
   }
   .interview__content ul a + p {
     font-size: 0.9375rem;
