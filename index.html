@@ -30,17 +30,18 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
 
     <!-- JS -->
+    <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=ldhr67v1q3"></script>
     <script src="./js/jquery-3.6.4.min.js"></script>
     <!-- <script src="js/fullPage/fullpage.js"></script> -->
-    <script defer src="./js/plugin/gsap/gsap.min.js"></script>
-    <script defer src="./js/plugin/gsap/ScrollMagic.min.js"></script>
-    <script defer src="./js/fullPage/jquery.fullpage.js"></script>
-    <script defer src="./js/slick/slick.js"></script>
-    <script defer src="./js/plugin/splide/splide.min.js"></script>
-    <script defer src="./js/plugin/splide/splide-extension-auto-scroll.min.js"></script>
-    <script defer src="./js/plugin/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/plugin/gsap/gsap.min.js"></script>
+    <script src="./js/plugin/gsap/ScrollMagic.min.js"></script>
+    <script src="./js/fullPage/jquery.fullpage.js"></script>
+    <script src="./js/slick/slick.js"></script>
+    <script src="./js/plugin/splide/splide.min.js"></script>
+    <script src="./js/plugin/splide/splide-extension-auto-scroll.min.js"></script>
+    <script src="./js/plugin/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
     <!-- Script -->
-    <script defer src="./js/main.js"></script>
 
     <!-- <script defer src="http://jsgetip.appspot.com" type="text/javascript"></script> -->
 </head>
@@ -607,9 +608,26 @@
                                 <div class="organization" data-include="./html/include/about/organization.html"></div>
                             </div>
                             <div class="tab-pane" role="tabpanel">
-                                <button type="button" class="direction__btn" onclick="relayout()">지도 다시 호출</button>
                                 <div class="direction">
-                                    <div id="kakaoMap" class="direction__map" style="width: 100%; max-width: 1200px; height: 484px;"></div>
+                                    <div id="map"></div>
+                                    <script>
+                                        var mapOptions = {
+                                            center: new naver.maps.LatLng(36.3629163, 127.333786),
+                                            zoom: 18,
+                                            minZoom: 7, //지도의 최소 줌 레벨
+                                            zoomControl: true, //줌 컨트롤의 표시 여부
+                                            zoomControlOptions: { //줌 컨트롤의 옵션
+                                                position: naver.maps.Position.TOP_RIGHT
+                                            }
+                                        };
+                                        
+                                        var map = new naver.maps.Map('map', mapOptions);
+
+                                        var marker = new naver.maps.Marker({
+                                            position: new naver.maps.LatLng(36.3629163, 127.333786),
+                                            map: map
+                                        });
+                                    </script>
                                     <ul class="direction__info">
                                         <li>
                                             <i><img src="./images/about/addr_icon.png" alt="direction" /></i>
@@ -643,35 +661,6 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <!-- 2022.08.26 카카오 key 변경-->
-                                <script src="//dapi.kakao.com/v2/maps/sdk.js?appkey=fe308caa8deac07c54341b42b78ba14d"></script>
-                                <script>
-                                    var mapContainer = document.getElementById('kakaoMap'); //지도를 담을 영역의 DOM 레퍼런스
-                                    var mapOptions = { //지도를 생성할 때 필요한 기본 옵션
-                                        center: new kakao.maps.LatLng(36.3629163, 127.333786), //지도의 중심좌표.
-                                        level: 3 //지도의 레벨(확대, 축소 정도)
-                                    };
-
-                                    var map = new kakao.maps.Map(mapContainer, mapOptions); //지도 생성 및 객체 리턴
-                                    // 마커가 표시될 위치입니다 
-                                    var markerPosition  = new kakao.maps.LatLng(36.3629163, 127.333786); 
-                                    // 마커를 생성합니다
-                                    var marker = new kakao.maps.Marker({
-                                        position: markerPosition
-                                    });
-                                    // 마커가 지도 위에 표시되도록 설정합니다
-                                    marker.setMap(map);
-                                    // 지도에 교통정보를 표시하도록 지도타입을 추가합니다
-                                    map.addOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC);
-                                    // 일반 지도와 스카이뷰로 지도 타입을 전환할 수 있는 지도타입 컨트롤을 생성합니다
-                                    var mapTypeControl = new kakao.maps.MapTypeControl();
-                                    // 지도 타입 컨트롤을 지도에 표시합니다
-                                    map.addControl(mapTypeControl, kakao.maps.ControlPosition.TOPRIGHT);
-
-                                    function relayout() {
-                                        map.relayout();
-                                    }
-                                </script>
                             </div>
                         </div>
                     </div>

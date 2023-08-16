@@ -221,268 +221,6 @@ $(function() {
     splide.mount(window.splide.Extensions);
 });
 
-/**
- *  Scroll Magic
- * 
- */
-const spyEls = document.querySelectorAll('section.scroll-spy');
-
-spyEls.forEach(function (spyEl) {
-    new ScrollMagic
-        .Scene({
-            triggerElement: spyEl,
-            triggerHook: .5
-        })
-        .setClassToggle(spyEl, 'show')
-        .addTo(new ScrollMagic.Controller());
-});
-
-/**
- *  Swiper
- * 
- */
-new Swiper('.news .swiper', {
-    direction: 'vertical',
-    autoplay: true,
-    loop: true,
-    navigation: {
-        nextEl: '.news .swiper-next',
-        prevEl: '.news .swiper-prev',
-    }
-});
-
-new Swiper('.cert .swiper', {
-    spaceBetween: 10,
-    speed: 2000,
-    autoplay: true,
-    loop: true,
-    navigation: {
-        nextEl: '.cert .swiper-button-next',
-        prevEl: '.cert .swiper-button-prev',
-    },
-    breakpoints: {
-        320: {
-            slidesPerView: 1
-        },
-        768: {
-            slidesPerView: 2
-        },
-        1025: {
-            slidesPerView: 3
-        },
-        1441: {
-            slidesPerView: 4
-        }
-    }
-});
-
-const dateSwiper = new Swiper('.about__date .swiper', {
-    speed: 1000,
-    autoplay: false,
-    loop: true,
-    navigation: {
-        nextEl: '.about__date .swiper-next',
-        prevEl: '.about__date .swiper-prev',
-    }
-});
-
-const contentsSwiper = new Swiper('.about__contents .swiper', {
-    speed: 1000,
-    autoplay: false,
-    loop: true,
-    spaceBetween: 50
-});
-
-dateSwiper.controller.control = contentsSwiper;
-contentsSwiper.controller.control = dateSwiper;
-
-/**
- *  Stepper
- * 
- */
-const aboutTabList = document.querySelectorAll('.about .common__model li'); 
-
-Array.prototype.forEach.call(aboutTabList, function(listEl) {
-    listEl.children[0].addEventListener('click', function(e) {
-        e.preventDefault();
-
-        const tabContent = document.querySelectorAll('.about .tab-pane');
-        const tabNum = this.parentElement.getAttribute('data-tabnum');
-
-        Array.prototype.forEach.call(tabContent, function(cont, i) {
-            cont.style.display = 'none';
-            aboutTabList[i].className = '';
-        });
-
-        tabContent[tabNum].style.display = 'block';
-
-        if (listEl.className.indexOf('active') == -1) {
-            listEl.className = 'active';
-        }
-    });
-});
-
-const businessTabList = document.querySelectorAll('.business .common__model li'); 
-
-Array.prototype.forEach.call(businessTabList, function(listEl) {
-    listEl.children[0].addEventListener('click', function(e) {
-        e.preventDefault();
-
-        const tabContent = document.querySelectorAll('.business .tab-pane');
-        const tabNum = this.parentElement.getAttribute('data-tabnum');
-
-        Array.prototype.forEach.call(tabContent, function(cont, i) {
-            cont.style.display = 'none';
-            businessTabList[i].className = '';
-        });
-
-        tabContent[tabNum].style.display = 'block';
-
-        if (listEl.className.indexOf('active') == -1) {
-            listEl.className = 'active';
-        }
-    });
-});
-
-const recuritTabList = document.querySelectorAll('.recruit .common__model li'); 
-
-Array.prototype.forEach.call(recuritTabList, function(listEl) {
-    listEl.children[0].addEventListener('click', function(e) {
-        e.preventDefault();
-
-        const tabContent = document.querySelectorAll('.recruit .tab-pane');
-        const tabNum = this.parentElement.getAttribute('data-tabnum');
-
-        Array.prototype.forEach.call(tabContent, function(cont, i) {
-            cont.style.display = 'none';
-            recuritTabList[i].className = '';
-        });
-
-        tabContent[tabNum].style.display = 'block';
-
-        if (listEl.className.indexOf('active') == -1) {
-            listEl.className = 'active';
-        }
-    });
-});
-
-const certTabList = document.querySelectorAll('.certification .common__model li'); 
-
-Array.prototype.forEach.call(certTabList, function(listEl) {
-    listEl.children[0].addEventListener('click', function(e) {
-        e.preventDefault();
-
-        const tabContent = document.querySelectorAll('.certification .tab-pane');
-        const tabNum = this.parentElement.getAttribute('data-tabnum');
-
-        Array.prototype.forEach.call(tabContent, function(cont, i) {
-            cont.style.display = 'none';
-            certTabList[i].className = '';
-        });
-
-        tabContent[tabNum].style.display = 'block';
-
-        if (listEl.className.indexOf('active') == -1) {
-            listEl.className = 'active';
-        }
-    });
-});
-
-
-/**
- *  Tab 구현
- * 
- */
-const tabList = document.querySelectorAll('.business__perform .perform__head li');
-
-Array.prototype.forEach.call(tabList, function(list) {
-    list.children[0].addEventListener('click', function(e) {
-        e.preventDefault();
-
-        const tabContent = document.querySelectorAll('.business__perform .perform__content');
-        const tabNum = this.parentElement.getAttribute('data-tabnum');
-
-        Array.prototype.forEach.call(tabContent, function(cont, i) {
-            cont.style.display = 'none';
-            tabList[i].className = 'head__tab';
-        });
-
-        tabContent[tabNum].style.display = 'block';
-
-        if (list.className.indexOf('selected') == -1) {
-            list.className = 'head__tab selected';
-        }
-    });
-});
-
-const patentTabList = document.querySelectorAll('.certification__perform .perform__head li');
-
-Array.prototype.forEach.call(patentTabList, function(list) {
-    list.children[0].addEventListener('click', function(e) {
-        e.preventDefault();
-
-        const tabContent = document.querySelectorAll('.certification__perform .perform__content');
-        const tabNum = this.parentElement.getAttribute('data-tabnum');
-
-        Array.prototype.forEach.call(tabContent, function(cont, i) {
-            cont.style.display = 'none';
-            patentTabList[i].className = 'head__tab';
-        });
-
-        tabContent[tabNum].style.display = 'block';
-
-        if (list.className.indexOf('selected') == -1) {
-            list.className = 'head__tab selected';
-        }
-    });
-});
-
-/* Culture */
-const cultureTabList = document.querySelectorAll('.culture__tab > li');
-
-Array.prototype.forEach.call(cultureTabList, function(list) {
-    list.children[0].addEventListener('click', function(e) {
-        e.preventDefault();
-
-        const tabContent = document.querySelectorAll('.culture__contents .culture__pane');
-        const tabNum = this.parentElement.getAttribute('data-tabnum');
-
-        Array.prototype.forEach.call(tabContent, function(cont, i) {
-            cont.style.position = 'absolute';
-            cont.style.opacity = 0;
-            cont.style.visibility = 'hidden';
-            cultureTabList[i].className = '';
-        });
-
-        tabContent[tabNum].style.position = 'relative';
-        tabContent[tabNum].style.opacity = 1;
-        tabContent[tabNum].style.visibility = 'visible';
-
-        if (list.className.indexOf('active') == -1) {
-            list.className = 'active';
-        }
-    });
-});
-
-// 범위 랜덤 함수
-function random(min, max) {
-    return parseFloat((Math.random() * (max - min) + min).toFixed(2))
-}
-
-function floatingObject(selector, dly, size) {
-    gsap.to(
-        selector,               // 선택자
-        random(1.5, 2.5),       // 애니메이션 동작 시간
-        {                       // 옵션
-            y: size,
-            repeat: -1,
-            yoyo: true,
-            ease: Power1.easeInOut,
-            delay: random(0, dly)
-        }
-    );
-}
-
 /* include html */
 function includeHTML(){
     let z, elmnt, file, xhttp;
@@ -519,86 +257,349 @@ window.addEventListener('DOMContentLoaded',()=>{
     includeHTML();
 });
 
-/**
- *  검색
- * 
- */
-const searchInput = document.getElementById('searchInput'),
-      certSerchInput = document.getElementById('certSearchInput');
-
-searchInput.addEventListener('keyup', (e) => {
-    searchFilter();
-});
-
-certSerchInput.addEventListener('keyup', (e) => {
-    certSearchFilter();
-});
-
-/**
- *  키 입력 시 검색 결과 동적
- */
-function searchFilter() {
-    let items = document.querySelectorAll('.business .perform__content li');
-
-    for (let i = 0; i < items.length; i++) {
-        let nameEl = items[i].getElementsByClassName('content'),
-            dateEl = items[i].getElementsByClassName('content__date'),
-            orgEl = items[i].getElementsByClassName('content__org');
-            
-        if (nameEl[0].innerHTML.toLowerCase().indexOf(searchInput.value) != -1 ||
-            dateEl[0].innerHTML.toLowerCase().indexOf(searchInput.value) != -1 ||
-            orgEl[0].innerHTML.toLowerCase().indexOf(searchInput.value) != -1) {
-                items[i].style.display = 'flex';
-        } else {
-            items[i].style.display = 'none';
+window.addEventListener('load', function() {
+    /**
+     *  Scroll Magic
+     * 
+     */
+    const spyEls = document.querySelectorAll('section.scroll-spy');
+    
+    spyEls.forEach(function (spyEl) {
+        new ScrollMagic
+            .Scene({
+                triggerElement: spyEl,
+                triggerHook: .5
+            })
+            .setClassToggle(spyEl, 'show')
+            .addTo(new ScrollMagic.Controller());
+    });
+    
+    /**
+     *  Swiper
+     * 
+     */
+    new Swiper('.news .swiper', {
+        direction: 'vertical',
+        autoplay: true,
+        loop: true,
+        navigation: {
+            nextEl: '.news .swiper-next',
+            prevEl: '.news .swiper-prev',
         }
-    }
-}
-
-function certSearchFilter() {
-    let items = document.querySelectorAll('.certification__perform .perform__content li');
-
-    for (let i = 0; i < items.length; i++) {
-        let nameEl = items[i].getElementsByClassName('content'),
-            dateEl = items[i].getElementsByClassName('content__date'),
-            orgEl = items[i].getElementsByClassName('content__org');
-
-        if (nameEl[0].innerHTML.toLowerCase().indexOf(certSerchInput.value) != -1) {
-                items[i].style.display = 'flex';
-        } else {
-            items[i].style.display = 'none';
+    });
+    
+    new Swiper('.cert .swiper', {
+        spaceBetween: 10,
+        speed: 2000,
+        autoplay: true,
+        loop: true,
+        navigation: {
+            nextEl: '.cert .swiper-button-next',
+            prevEl: '.cert .swiper-button-prev',
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1
+            },
+            768: {
+                slidesPerView: 2
+            },
+            1025: {
+                slidesPerView: 3
+            },
+            1441: {
+                slidesPerView: 4
+            }
         }
-    }
-}
-
-/** Modal 관련 Script */
-// variables
-var accordionBtn = document.querySelectorAll('.interview__content ul > li a');
-var allTexts = document.querySelectorAll('.interview__content ul > li p');
-
-// event listener
-accordionBtn.forEach(function (el) {
-    el.addEventListener('click', toggleAccordion)
-});
-
-// function toggleAccordian
-function toggleAccordion(el) {
-   const targetText = el.currentTarget.nextElementSibling.classList;
-   const targetAccIcon = el.currentTarget.children[0];
-   const target = el.currentTarget;
-   
-   if (targetText.contains('active')) {
-       target.classList.remove('active');
-   }
-
-   else {
-        accordionBtn.forEach(function (el) {
-            el.parentElement.classList.remove('active');
-         
-            allTexts.forEach(function (el) {
-                el.parentElement.classList.remove('active');
+    });
+    
+    const dateSwiper = new Swiper('.about__date .swiper', {
+        speed: 1000,
+        autoplay: false,
+        loop: true,
+        navigation: {
+            nextEl: '.about__date .swiper-next',
+            prevEl: '.about__date .swiper-prev',
+        }
+    });
+    
+    const contentsSwiper = new Swiper('.about__contents .swiper', {
+        speed: 1000,
+        autoplay: false,
+        loop: true,
+        spaceBetween: 50
+    });
+    
+    dateSwiper.controller.control = contentsSwiper;
+    contentsSwiper.controller.control = dateSwiper;
+    
+    /**
+     *  Stepper
+     * 
+     */
+    const aboutTabList = document.querySelectorAll('.about .common__model li'); 
+    
+    Array.prototype.forEach.call(aboutTabList, function(listEl) {
+        listEl.children[0].addEventListener('click', function(e) {
+    
+            const tabContent = document.querySelectorAll('.about .tab-pane');
+            const tabNum = this.parentElement.getAttribute('data-tabnum');
+    
+            Array.prototype.forEach.call(tabContent, function(cont, i) {
+                cont.style.display = 'none';
+                aboutTabList[i].className = '';
             });
-        })
-        target.parentElement.classList.add('active');
-   }  
-}
+    
+            tabContent[tabNum].style.display = 'block';
+    
+            if (listEl.className.indexOf('active') == -1) {
+                listEl.className = 'active';
+            }
+        });
+    });
+    
+    const businessTabList = document.querySelectorAll('.business .common__model li'); 
+    
+    Array.prototype.forEach.call(businessTabList, function(listEl) {
+        listEl.children[0].addEventListener('click', function(e) {
+            e.preventDefault();
+    
+            const tabContent = document.querySelectorAll('.business .tab-pane');
+            const tabNum = this.parentElement.getAttribute('data-tabnum');
+    
+            Array.prototype.forEach.call(tabContent, function(cont, i) {
+                cont.style.display = 'none';
+                businessTabList[i].className = '';
+            });
+    
+            tabContent[tabNum].style.display = 'block';
+    
+            if (listEl.className.indexOf('active') == -1) {
+                listEl.className = 'active';
+            }
+        });
+    });
+    
+    const recuritTabList = document.querySelectorAll('.recruit .common__model li'); 
+    
+    Array.prototype.forEach.call(recuritTabList, function(listEl) {
+        listEl.children[0].addEventListener('click', function(e) {
+            e.preventDefault();
+    
+            const tabContent = document.querySelectorAll('.recruit .tab-pane');
+            const tabNum = this.parentElement.getAttribute('data-tabnum');
+    
+            Array.prototype.forEach.call(tabContent, function(cont, i) {
+                cont.style.display = 'none';
+                recuritTabList[i].className = '';
+            });
+    
+            tabContent[tabNum].style.display = 'block';
+    
+            if (listEl.className.indexOf('active') == -1) {
+                listEl.className = 'active';
+            }
+        });
+    });
+    
+    const certTabList = document.querySelectorAll('.certification .common__model li'); 
+    
+    Array.prototype.forEach.call(certTabList, function(listEl) {
+        listEl.children[0].addEventListener('click', function(e) {
+            e.preventDefault();
+    
+            const tabContent = document.querySelectorAll('.certification .tab-pane');
+            const tabNum = this.parentElement.getAttribute('data-tabnum');
+    
+            Array.prototype.forEach.call(tabContent, function(cont, i) {
+                cont.style.display = 'none';
+                certTabList[i].className = '';
+            });
+    
+            tabContent[tabNum].style.display = 'block';
+    
+            if (listEl.className.indexOf('active') == -1) {
+                listEl.className = 'active';
+            }
+        });
+    });
+    
+    
+    /**
+     *  Tab 구현
+     * 
+     */
+    const tabList = document.querySelectorAll('.business__perform .perform__head li');
+    
+    Array.prototype.forEach.call(tabList, function(list) {
+        list.children[0].addEventListener('click', function(e) {
+            e.preventDefault();
+    
+            const tabContent = document.querySelectorAll('.business__perform .perform__content');
+            const tabNum = this.parentElement.getAttribute('data-tabnum');
+    
+            Array.prototype.forEach.call(tabContent, function(cont, i) {
+                cont.style.display = 'none';
+                tabList[i].className = 'head__tab';
+            });
+    
+            tabContent[tabNum].style.display = 'block';
+    
+            if (list.className.indexOf('selected') == -1) {
+                list.className = 'head__tab selected';
+            }
+        });
+    });
+    
+    const patentTabList = document.querySelectorAll('.certification__perform .perform__head li');
+    
+    Array.prototype.forEach.call(patentTabList, function(list) {
+        list.children[0].addEventListener('click', function(e) {
+            e.preventDefault();
+    
+            const tabContent = document.querySelectorAll('.certification__perform .perform__content');
+            const tabNum = this.parentElement.getAttribute('data-tabnum');
+    
+            Array.prototype.forEach.call(tabContent, function(cont, i) {
+                cont.style.display = 'none';
+                patentTabList[i].className = 'head__tab';
+            });
+    
+            tabContent[tabNum].style.display = 'block';
+    
+            if (list.className.indexOf('selected') == -1) {
+                list.className = 'head__tab selected';
+            }
+        });
+    });
+    
+    /* Culture */
+    const cultureTabList = document.querySelectorAll('.culture__tab > li');
+    
+    Array.prototype.forEach.call(cultureTabList, function(list) {
+        list.children[0].addEventListener('click', function(e) {
+            e.preventDefault();
+    
+            const tabContent = document.querySelectorAll('.culture__contents .culture__pane');
+            const tabNum = this.parentElement.getAttribute('data-tabnum');
+    
+            Array.prototype.forEach.call(tabContent, function(cont, i) {
+                cont.style.position = 'absolute';
+                cont.style.opacity = 0;
+                cont.style.visibility = 'hidden';
+                cultureTabList[i].className = '';
+            });
+    
+            tabContent[tabNum].style.position = 'relative';
+            tabContent[tabNum].style.opacity = 1;
+            tabContent[tabNum].style.visibility = 'visible';
+    
+            if (list.className.indexOf('active') == -1) {
+                list.className = 'active';
+            }
+        });
+    });
+    
+    // 범위 랜덤 함수
+    function random(min, max) {
+        return parseFloat((Math.random() * (max - min) + min).toFixed(2))
+    }
+    
+    function floatingObject(selector, dly, size) {
+        gsap.to(
+            selector,               // 선택자
+            random(1.5, 2.5),       // 애니메이션 동작 시간
+            {                       // 옵션
+                y: size,
+                repeat: -1,
+                yoyo: true,
+                ease: Power1.easeInOut,
+                delay: random(0, dly)
+            }
+        );
+    }
+    
+    /**
+     *  검색
+     * 
+     */
+    const searchInput = document.getElementById('searchInput'),
+          certSerchInput = document.getElementById('certSearchInput');
+    
+    searchInput.addEventListener('keyup', (e) => {
+        searchFilter();
+    });
+    
+    certSerchInput.addEventListener('keyup', (e) => {
+        certSearchFilter();
+    });
+    
+    /**
+     *  키 입력 시 검색 결과 동적
+     */
+    function searchFilter() {
+        let items = document.querySelectorAll('.business .perform__content li');
+    
+        for (let i = 0; i < items.length; i++) {
+            let nameEl = items[i].getElementsByClassName('content'),
+                dateEl = items[i].getElementsByClassName('content__date'),
+                orgEl = items[i].getElementsByClassName('content__org');
+                
+            if (nameEl[0].innerHTML.toLowerCase().indexOf(searchInput.value) != -1 ||
+                dateEl[0].innerHTML.toLowerCase().indexOf(searchInput.value) != -1 ||
+                orgEl[0].innerHTML.toLowerCase().indexOf(searchInput.value) != -1) {
+                    items[i].style.display = 'flex';
+            } else {
+                items[i].style.display = 'none';
+            }
+        }
+    }
+    
+    function certSearchFilter() {
+        let items = document.querySelectorAll('.certification__perform .perform__content li');
+    
+        for (let i = 0; i < items.length; i++) {
+            let nameEl = items[i].getElementsByClassName('content'),
+                dateEl = items[i].getElementsByClassName('content__date'),
+                orgEl = items[i].getElementsByClassName('content__org');
+    
+            if (nameEl[0].innerHTML.toLowerCase().indexOf(certSerchInput.value) != -1) {
+                    items[i].style.display = 'flex';
+            } else {
+                items[i].style.display = 'none';
+            }
+        }
+    }
+    
+    /** Modal 관련 Script */
+    // variables
+    var accordionBtn = document.querySelectorAll('.interview__content ul > li a');
+    var allTexts = document.querySelectorAll('.interview__content ul > li p');
+    
+    // event listener
+    accordionBtn.forEach(function (el) {
+        el.addEventListener('click', toggleAccordion)
+    });
+    
+    // function toggleAccordian
+    function toggleAccordion(el) {
+       const targetText = el.currentTarget.nextElementSibling.classList;
+       const targetAccIcon = el.currentTarget.children[0];
+       const target = el.currentTarget;
+       
+       if (targetText.contains('active')) {
+           target.classList.remove('active');
+       }
+    
+       else {
+            accordionBtn.forEach(function (el) {
+                el.parentElement.classList.remove('active');
+             
+                allTexts.forEach(function (el) {
+                    el.parentElement.classList.remove('active');
+                });
+            })
+            target.parentElement.classList.add('active');
+       }  
+    }
+});

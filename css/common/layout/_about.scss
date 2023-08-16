@@ -1076,3 +1076,20 @@ section[data-anchor="about"] {
         }
     }
 }
+
+#map {
+    width: 350px;
+    height: 484px;
+}
+
+@media all and (min-width: 768px) {
+    #map {
+        width: 664px;
+    }
+}
+
+@media all and (min-width: 1441px) {
+    #map {
+        width: 938px;
+    }
+}
