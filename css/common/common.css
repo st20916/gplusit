@@ -540,6 +540,12 @@
   font-weight: 900;
   src: url(./font/NotoSansKR-Black.otf) format("opentype");
 }
+@font-face {
+  font-family: "NanumBrush";
+  font-style: normal;
+  font-weight: 400;
+  src: url(./font/NanumBrush.otf) format("opentype");
+}
 /**
 *   Author : GPLUS
 *
@@ -739,7 +745,7 @@ body {
   }
   .inner .inner__expl {
     max-width: 900px;
-    margin: 22px 0 51px;
+    margin: 22px auto 51px;
   }
   .inner .inner__expl.history__expl {
     margin: 24px auto 10px;
@@ -2942,10 +2948,23 @@ section[data-anchor=about] .inner {
 
 @media all and (min-width: 1025px) {
   .about__item {
-    padding: 0 50px;
-    height: 150px;
+    flex-direction: column;
+    height: 333px;
     min-height: auto;
     max-height: none;
+    padding: 50px;
+    margin: 0;
+  }
+  .about__item.item--person img {
+    height: 75px;
+    margin-bottom: 30px;
+  }
+  .about__item img {
+    max-width: fit-content;
+    height: 103px;
+  }
+  .about__item p {
+    margin: 23px 0 0;
   }
   .about__date .swiper-prev {
     left: 28vw;
@@ -2955,11 +2974,7 @@ section[data-anchor=about] .inner {
   }
 }
 @media all and (min-width: 1441px) {
-  .about__item {
-    margin: 0 0 33px;
-  }
   .about__item p {
-    margin: 0 0 0 1vw;
     font-size: 1.375rem;
   }
   .about__date .swiper-prev,
@@ -3642,9 +3657,47 @@ section[data-anchor=about] .inner {
     font-size: 1.375rem;
   }
 }
+/* ######################### 지도 */
 #map {
   width: 350px;
   height: 484px;
+}
+
+/* ######################### CEO 인사말 */
+.inner__ceo {
+  position: relative;
+  width: 100%;
+  background-color: #F3F3F3;
+  background-image: url("../../../images/about/ceo_bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 20px;
+  border-radius: 25px;
+}
+.inner__ceo h6 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #353536;
+}
+.inner__ceo h6 strong {
+  margin-right: 5px;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #555555;
+}
+.inner__ceo p {
+  text-align: right;
+  color: #362F2F;
+}
+.inner__ceo p span {
+  font-size: 0.8125rem;
+}
+.inner__ceo p strong {
+  font-family: "NanumBrush", "Pretendard", "Noto Sans KR";
+  font-size: 1.875rem;
+  font-weight: 400;
+  letter-spacing: 0.5rem;
 }
 
 @media all and (min-width: 768px) {
@@ -3655,6 +3708,24 @@ section[data-anchor=about] .inner {
 @media all and (min-width: 1441px) {
   #map {
     width: 938px;
+  }
+  .inner__ceo {
+    height: 8.3125rem;
+    padding: 30px 180px 10px 80px;
+    margin: 0 0 28px;
+  }
+  .inner__ceo h6 {
+    font-size: 1.25rem;
+  }
+  .inner__ceo h6 strong {
+    font-size: 1.625rem;
+  }
+  .inner__ceo p span {
+    font-size: 0.9375rem;
+  }
+  .inner__ceo p strong {
+    margin-left: 10px;
+    font-size: 2.5rem;
   }
 }
 section[data-anchor=business] {
