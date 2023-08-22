@@ -1963,6 +1963,44 @@ video {
   top: 25px;
 }
 
+/* #################### 메인 Floating */
+.main__floating {
+  position: absolute;
+  bottom: 100px;
+  right: 20px;
+  z-index: 6;
+}
+
+.floating__img {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(to bottom, #2F64BF, #25315F);
+  border-radius: 100%;
+  padding: 10px;
+}
+.floating__img img {
+  max-width: 100%;
+}
+.floating__img + .floating__shadow {
+  display: block;
+  width: 50px;
+  height: 10px;
+  margin: 10px auto 0;
+  background-color: #19213E;
+  border-radius: 50%;
+}
+
+@media all and (min-width: 768px) {
+  .floating__img {
+    width: 120px;
+    height: 120px;
+  }
+  .floating__img + .floating__shadow {
+    width: 60px;
+    height: 12px;
+  }
+}
 @media all and (min-width: 1025px) {
   .news {
     position: absolute;
@@ -1989,6 +2027,19 @@ video {
   .news {
     max-width: 1640px;
     right: 0;
+  }
+  .main__floating {
+    bottom: 130px;
+    right: 70px;
+  }
+  .floating__img {
+    width: 193px;
+    height: 193px;
+  }
+  .floating__img + .floating__shadow {
+    width: 100px;
+    height: 17px;
+    margin: 15px auto 0;
   }
 }
 @media all and (min-width: 1920px) {
@@ -3660,6 +3711,7 @@ section[data-anchor=about] .inner {
   }
   .interview__content ul > li.active a + p {
     padding: 25px;
+    height: 170px;
   }
   .interview__content ul a {
     padding: 28px 0;
@@ -3691,6 +3743,7 @@ section[data-anchor=about] .inner {
 #map {
   width: 350px;
   height: 484px;
+  border: 1px solid #C0C3C5;
 }
 
 /* ######################### CEO 인사말 */
@@ -3742,7 +3795,7 @@ section[data-anchor=about] .inner {
   .inner__ceo {
     height: 8.3125rem;
     padding: 30px 180px 10px 80px;
-    margin: 0 0 28px;
+    margin: 30px 0 28px;
   }
   .inner__ceo h6 {
     font-size: 1.25rem;
@@ -4789,7 +4842,7 @@ section[data-anchor=recruit] .inner {
 @media all and (min-width: 1441px) {
   .recruit__info {
     top: 18px;
-    right: 430px;
+    right: 400px;
   }
   .recruit__info .info {
     font-size: 1.25rem;
@@ -5458,7 +5511,7 @@ section[data-anchor=recruit] .inner {
 }
 @media all and (min-width: 1441px) {
   .together__footer {
-    width: calc(100% - 340px);
+    width: calc(100% - 315px);
     margin-left: auto;
   }
   .together__footer__wrap {

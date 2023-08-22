@@ -602,4 +602,26 @@ window.addEventListener('load', function() {
             target.parentElement.classList.add('active');
        }  
     }
+
+    // 범위 랜덤 함수(소수점 2자리까지)
+    function random(min, max) {
+        return parseFloat((Math.random() * (max - min) + min).toFixed(2))
+    }
+
+    // floatingObject Method
+    function floatingObject(selector, dly, size) {
+        gsap.to(
+            selector,               // 선택자
+            random(1.5, 2.5),       // 애니메이션 동작 시간
+            {                       // 옵션
+                y: size,
+                repeat: -1,
+                yoyo: true,
+                ease: Power1.easeInOut,
+                delay: random(0, dly)
+            }
+        );
+    }
+
+    floatingObject('.floating__img', 1, 15);
 });

@@ -422,6 +422,48 @@ video {
     }
 }
 
+/* #################### 메인 Floating */
+.main__floating {
+    position: absolute;
+    bottom: 100px;
+    right: 20px;
+    z-index: 6;
+}
+
+.floating__img {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(to bottom, #2F64BF, #25315F);
+    border-radius: 100%;
+    padding: 10px;
+
+    img {
+        max-width: 100%;
+    }
+
+    + .floating__shadow {
+        display: block;
+        width: 50px;
+        height: 10px;
+        margin: 10px auto 0;
+        background-color: #19213E;
+        border-radius: 50%;
+    }
+}
+
+@media all and (min-width: 768px) {
+    .floating__img {
+        width: 120px;
+        height: 120px;
+        
+        + .floating__shadow {
+            width: 60px;
+            height: 12px;
+        }
+    }
+}
+
 @media all and (min-width: 1025px) {
     .news {
         position: absolute;
@@ -453,6 +495,22 @@ video {
     .news {
         max-width: 1640px;
         right: 0;
+    }
+
+    .main__floating {
+        bottom: 130px;
+        right: 70px;
+    }
+
+    .floating__img {
+        width: 193px;
+        height: 193px;
+
+        + .floating__shadow {
+            width: 100px;
+            height: 17px;
+            margin: 15px auto 0;
+        }
     }
 }
 
