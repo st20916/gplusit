@@ -296,7 +296,9 @@ section[data-anchor="about"] {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     margin: 0 0 7.69vmin;
+    gap: 22px;
 
     &:last-child {
         margin: 0;
@@ -314,7 +316,7 @@ section[data-anchor="about"] {
     .contents__flex {
         flex-wrap: nowrap;
         flex-direction: row;
-        margin: 0 0 9px;
+        margin: 0 0 30px;
     }
 }
 
@@ -325,12 +327,44 @@ section[data-anchor="about"] {
     .expl__title {
         position: relative;
         font-size: 1rem;
-        font-weight: 300;
-        color: #F1E104;
+        font-weight: 600;
+        color: #fff;
         margin: 2.82vw 0;
         text-align: center;
         word-break: keep-all;
     }
+}
+
+.contents__img {
+    font-size: 2rem;
+    font-weight: 800;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+    transition: .4s;
+
+    &.culture {
+        color: rgba(255, 207, 3, .77);
+
+        + .contents__circle {
+            background-color: #FDCF03;
+        }
+    }
+
+    &.proposal {
+        color: rgba(83, 255, 235, .77);
+
+        + .contents__circle {
+            background-color: #74D8D1;
+        }
+    }
+}
+
+.contents__circle {
+    position: relative;
+    flex: 1 0 15px;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    transition: .4s;
 }
 
 @media all and (min-width: 768px) {
@@ -344,17 +378,18 @@ section[data-anchor="about"] {
 
 @media all and (min-width: 1025px) {
     .contents__expl {
-        padding: 0 0 0 32px;
-
         .expl__title {
-            margin: 12px 0 5px;
+            margin: 0 0 5px;
+            font-size: 1.125rem;
         }
     }
 }
 
 @media all and (min-width: 1441px) {
-    .contents__expl {
-        padding: 0 0 0 35px;
+    .contents__img {
+        flex: 1 0 200px;
+        font-size: 2.6875rem;
+        text-align: right;
     }
 }
 
@@ -804,6 +839,7 @@ section[data-anchor="about"] {
         align-items: center;
         flex-direction: row;
         column-gap: 32px;
+        margin-top: 30px;
     }
 
     .direction__map {
@@ -1109,6 +1145,7 @@ section[data-anchor="about"] {
     background-position: center;
     padding: 20px;
     border-radius: 25px;
+    margin: 0 0 18px;
 
     h6 {
         font-size: 1rem;
@@ -1124,7 +1161,6 @@ section[data-anchor="about"] {
     }
 
     p {
-        text-align: right;
         color: #362F2F;
 
         span {

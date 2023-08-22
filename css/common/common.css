@@ -1050,7 +1050,7 @@ body {
   height: 100%;
   z-index: 9999;
   overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.75);
+  background-color: rgba(0, 0, 0, 0.4);
   visibility: visible;
   opacity: 1;
   transition: 0.3s;
@@ -2513,7 +2513,7 @@ video {
 .about__modal .modal__main__title {
   position: relative;
   font-size: 1.125rem;
-  font-weight: 600;
+  font-weight: 400;
   color: #ffffff;
   text-align: center;
   margin: 6.92vmin 0;
@@ -2588,8 +2588,7 @@ video {
     line-height: 20px;
   }
   .about__modal .modal__main__title {
-    margin: 16px 0;
-    font-size: 1.5rem;
+    margin: 0 0 27px;
   }
   .about__modal p {
     font-size: 1rem;
@@ -3000,7 +2999,9 @@ section[data-anchor=about] .inner {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   margin: 0 0 7.69vmin;
+  gap: 22px;
 }
 .contents__flex:last-child {
   margin: 0;
@@ -3016,7 +3017,7 @@ section[data-anchor=about] .inner {
   .contents__flex {
     flex-wrap: nowrap;
     flex-direction: row;
-    margin: 0 0 9px;
+    margin: 0 0 30px;
   }
 }
 .contents__expl {
@@ -3026,11 +3027,39 @@ section[data-anchor=about] .inner {
 .contents__expl .expl__title {
   position: relative;
   font-size: 1rem;
-  font-weight: 300;
-  color: #F1E104;
+  font-weight: 600;
+  color: #fff;
   margin: 2.82vw 0;
   text-align: center;
   word-break: keep-all;
+}
+
+.contents__img {
+  font-size: 2rem;
+  font-weight: 800;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+  transition: 0.4s;
+}
+.contents__img.culture {
+  color: rgba(255, 207, 3, 0.77);
+}
+.contents__img.culture + .contents__circle {
+  background-color: #FDCF03;
+}
+.contents__img.proposal {
+  color: rgba(83, 255, 235, 0.77);
+}
+.contents__img.proposal + .contents__circle {
+  background-color: #74D8D1;
+}
+
+.contents__circle {
+  position: relative;
+  flex: 1 0 15px;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  transition: 0.4s;
 }
 
 @media all and (min-width: 768px) {
@@ -3040,16 +3069,16 @@ section[data-anchor=about] .inner {
   }
 }
 @media all and (min-width: 1025px) {
-  .contents__expl {
-    padding: 0 0 0 32px;
-  }
   .contents__expl .expl__title {
-    margin: 12px 0 5px;
+    margin: 0 0 5px;
+    font-size: 1.125rem;
   }
 }
 @media all and (min-width: 1441px) {
-  .contents__expl {
-    padding: 0 0 0 35px;
+  .contents__img {
+    flex: 1 0 200px;
+    font-size: 2.6875rem;
+    text-align: right;
   }
 }
 /* ######################### History Item */
@@ -3441,6 +3470,7 @@ section[data-anchor=about] .inner {
     align-items: center;
     flex-direction: row;
     column-gap: 32px;
+    margin-top: 30px;
   }
   .direction__map {
     width: 1200px;
@@ -3674,6 +3704,7 @@ section[data-anchor=about] .inner {
   background-position: center;
   padding: 20px;
   border-radius: 25px;
+  margin: 0 0 18px;
 }
 .inner__ceo h6 {
   font-size: 1rem;
@@ -3687,7 +3718,6 @@ section[data-anchor=about] .inner {
   color: #555555;
 }
 .inner__ceo p {
-  text-align: right;
   color: #362F2F;
 }
 .inner__ceo p span {
@@ -4443,7 +4473,9 @@ section[data-anchor=recruit] .inner {
     margin: 30px auto 25px;
   }
   section[data-anchor=recruit] .fc,
-  section[data-anchor=recruit] .sc {
+  section[data-anchor=recruit] .sc,
+  section[data-anchor=recruit] .tc,
+  section[data-anchor=recruit] .foc {
     position: absolute;
   }
   section[data-anchor=recruit] .fc {
@@ -4454,6 +4486,15 @@ section[data-anchor=recruit] .inner {
   section[data-anchor=recruit] .sc {
     top: 142px;
     right: 200px;
+  }
+  section[data-anchor=recruit] .tc {
+    bottom: 50px;
+    left: 50px;
+    background-color: #EBF2F9;
+  }
+  section[data-anchor=recruit] .foc {
+    bottom: 30px;
+    left: 300px;
   }
 }
 @media all and (min-width: 1025px) and (max-height: 800px) {
@@ -4471,6 +4512,13 @@ section[data-anchor=recruit] .inner {
   section[data-anchor=recruit] .sc {
     top: 157px;
     right: 250px;
+  }
+  section[data-anchor=recruit] .tc {
+    bottom: 100px;
+  }
+  section[data-anchor=recruit] .foc {
+    bottom: 50px;
+    left: 350px;
   }
 }
 .welfare__circle {

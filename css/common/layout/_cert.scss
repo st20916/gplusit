@@ -102,7 +102,9 @@ section[data-anchor="recruit"] {
         }
 
         .fc,
-        .sc {
+        .sc,
+        .tc,
+        .foc {
             position: absolute;
         }
 
@@ -115,6 +117,17 @@ section[data-anchor="recruit"] {
         .sc {
             top: 142px;
             right: 200px;
+        }
+        
+        .tc {
+            bottom: 50px;
+            left: 50px;
+            background-color: #EBF2F9;
+        }
+
+        .foc {
+            bottom: 30px;
+            left: 300px;
         }
     }
 }
@@ -144,6 +157,15 @@ section[data-anchor="recruit"] {
         .sc {
             top: 157px;
             right: 250px;
+        }
+
+        .tc {
+            bottom: 100px;
+        }
+
+        .foc {
+            bottom: 50px;
+            left: 350px;
         }
     }
 }
