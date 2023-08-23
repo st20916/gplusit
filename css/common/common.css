@@ -1024,7 +1024,7 @@ body {
   display: block;
 }
 
-@media all and (min-width: 1441px) {
+@media all and (min-width: 1025px) {
   .tab-content {
     min-height: 612px;
   }
@@ -3741,7 +3741,8 @@ section[data-anchor=about] .inner {
 }
 /* ######################### 지도 */
 #map {
-  width: 350px;
+  width: 100%;
+  min-width: 350px;
   height: 484px;
   border: 1px solid #C0C3C5;
 }
@@ -3786,6 +3787,11 @@ section[data-anchor=about] .inner {
 @media all and (min-width: 768px) {
   #map {
     width: 664px;
+  }
+}
+@media all and (min-width: 1025px) {
+  #map {
+    width: 900px;
   }
 }
 @media all and (min-width: 1441px) {
