@@ -771,6 +771,11 @@ body {
     margin: 15px auto 40px;
   }
 }
+@media all and (min-width: 1441px) and (max-height: 1000px) {
+  .inner .inner__expl {
+    margin: 15px auto 35px;
+  }
+}
 @media all and (min-width: 1920px) {
   .inner {
     top: 0;
@@ -924,7 +929,7 @@ body {
   display: inline-block;
   float: none;
   text-align: center;
-  width: 18%;
+  width: 22%;
 }
 .common__model > li.active i {
   background-color: #F99B2E;
@@ -934,7 +939,7 @@ body {
   position: absolute;
   content: "";
   top: 42px;
-  right: -25px;
+  right: -30px;
   display: block;
   margin: auto;
   width: 85%;
@@ -984,9 +989,13 @@ body {
     font-size: 1.25rem;
   }
 }
-@media all and (min-width: 1025px) and (max-height: 800px) {
+@media all and (min-width: 1025px) and (max-height: 1000px) {
   .common__model {
     margin: 0 auto 20px;
+  }
+  .common__model > li::after {
+    top: 50px;
+    right: -68px;
   }
 }
 @media all and (min-width: 1441px) {
@@ -1027,6 +1036,11 @@ body {
 @media all and (min-width: 1025px) {
   .tab-content {
     min-height: 612px;
+  }
+}
+@media all and (min-width: 1025px) and (max-height: 1000px) {
+  .tab-content {
+    min-height: auto;
   }
 }
 @media all and (min-width: 1441px) and (max-height: 1000px) {
@@ -1144,6 +1158,11 @@ body {
     margin-right: auto;
     margin-left: auto;
     max-width: 500px;
+  }
+}
+@media all and (min-width: 768px) {
+  .modal__dialog {
+    max-width: 700px;
   }
 }
 @media all and (min-width: 1025px) {
@@ -2633,7 +2652,7 @@ video {
     padding: 50px 52px 28px;
   }
   .about__modal.item--program {
-    padding: 35px 52px 28px;
+    padding: 28px 52px;
   }
   .about__modal.item--program p {
     line-height: 20px;
@@ -2642,7 +2661,7 @@ video {
     margin: 0 0 27px;
   }
   .about__modal p {
-    font-size: 1rem;
+    font-size: 1.0625rem;
   }
   .about__modal .close {
     top: 28px;
@@ -3343,6 +3362,7 @@ section[data-anchor=about] .inner {
   height: 40px;
   border-radius: 100%;
   cursor: pointer;
+  transition: 0.4s;
 }
 .floating.floating--yellow {
   background-color: #F9D02E;
@@ -3352,8 +3372,19 @@ section[data-anchor=about] .inner {
   background-color: #F4AD24;
   right: -1.25rem;
 }
+.floating.floating--orange .material-icons {
+  margin-left: 0;
+  margin-right: 5px;
+}
+.floating:hover.floating--yellow, .floating:hover.floating--orange {
+  background-color: #333333;
+}
 .floating .material-icons {
+  margin-left: 5px;
   color: #FFFFFF;
+}
+.floating .floating__name {
+  display: none;
 }
 
 @media all and (min-width: 1025px) {
@@ -3415,12 +3446,19 @@ section[data-anchor=about] .inner {
   }
   .floating {
     top: 3rem;
+    width: 126px;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    color: #fff;
   }
   .floating.floating--yellow {
-    left: -1rem;
+    left: -6rem;
   }
   .floating.floating--orange {
-    right: -1rem;
+    right: -6rem;
+  }
+  .floating .floating__name {
+    display: block;
   }
   .support {
     position: absolute;
@@ -3439,6 +3477,11 @@ section[data-anchor=about] .inner {
     top: auto;
     left: 35%;
     bottom: -4rem;
+  }
+}
+@media all and (min-width: 1441px) and (max-height: 1000px) {
+  .organization__wrap {
+    margin: 0 auto;
   }
 }
 /* ############# location Map */
@@ -3498,13 +3541,18 @@ section[data-anchor=about] .inner {
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
 }
 
-@media all and (min-width: 1025px) and (max-height: 800px) {
-  .direction__map {
-    height: 250px;
+@media all and (min-width: 1025px) and (max-height: 1000px) {
+  .direction {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    column-gap: 10px;
   }
   .direction__info {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    row-gap: 15px;
+    margin-top: 0;
   }
   .direction__info li {
     flex: 1 0 18%;
@@ -3546,15 +3594,13 @@ section[data-anchor=about] .inner {
     margin-bottom: 15px;
   }
 }
-@media all and (min-width: 1441px) and (max-height: 800px) {
+@media all and (min-width: 1441px) and (max-height: 1000px) {
   .direction__info {
     flex-direction: column;
   }
-  .direction__info li {
-    margin-bottom: 15px;
-  }
+  .direction__info li,
   .direction__info p {
-    margin-bottom: 7px;
+    margin-bottom: 0;
   }
 }
 /* interview ... */
@@ -3794,6 +3840,11 @@ section[data-anchor=about] .inner {
     width: 900px;
   }
 }
+@media all and (min-width: 1025px) and (max-height: 1000px) {
+  #map {
+    height: 350px;
+  }
+}
 @media all and (min-width: 1441px) {
   #map {
     width: 938px;
@@ -3815,6 +3866,11 @@ section[data-anchor=about] .inner {
   .inner__ceo p strong {
     margin-left: 10px;
     font-size: 2.5rem;
+  }
+}
+@media all and (min-width: 1441px) and (max-height: 1000px) {
+  #map {
+    height: 430px;
   }
 }
 section[data-anchor=business] {

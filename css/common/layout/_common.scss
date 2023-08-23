@@ -272,6 +272,14 @@ body {
     }
 }
 
+@media all and (min-width: 1441px) and (max-height: 1000px) {
+    .inner {
+        .inner__expl {
+            margin: 15px auto 35px;
+        }
+    }
+}
+
 @media all and (min-width: 1920px) {
     .inner {
         top: 0;
@@ -451,7 +459,7 @@ body {
         display: inline-block;
         float: none;
         text-align: center;
-        width: 18%;
+        width: 22%;
 
         &.active {
             i {
@@ -464,7 +472,7 @@ body {
             position: absolute;
             content: '';
             top: 42px;
-            right: -25px;
+            right: -30px;
             display: block;
             margin: auto;
             width: 85%;
@@ -527,9 +535,16 @@ body {
     }
 }
 
-@media all and (min-width: 1025px) and (max-height: 800px) {
+@media all and (min-width: 1025px) and (max-height: 1000px) {
     .common__model {
         margin: 0 auto 20px;
+
+        > li {
+            &::after {
+                top: 50px;
+                right: -68px;
+            }
+        }
     }
 }
 
@@ -589,6 +604,12 @@ body {
 @media all and (min-width: 1025px) {
     .tab-content {
         min-height: 612px;
+    }
+}
+
+@media all and (min-width: 1025px) and (max-height: 1000px) {
+    .tab-content {
+        min-height: auto;
     }
 }
 
@@ -721,6 +742,12 @@ body {
         margin-right: auto;
         margin-left: auto;
         max-width: 500px;
+    }
+}
+
+@media all and (min-width: 768px) {
+    .modal__dialog {
+        max-width: 700px;
     }
 }
 
