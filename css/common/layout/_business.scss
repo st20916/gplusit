@@ -335,6 +335,12 @@ section[data-anchor="business"] {
         font-size: .875rem;
         font-weight: 200;
         color: #777777;
+
+        &.full {
+            display: block;
+            margin-top: 10px;
+            word-break: keep-all;
+        }
     }
 }
 
@@ -381,6 +387,12 @@ section[data-anchor="business"] {
         .content,
         .content__org {
             margin-left: 10px;
+        }
+
+        .content__org {
+            &.full {
+                margin-left: 0;
+            }
         }
     }
 }

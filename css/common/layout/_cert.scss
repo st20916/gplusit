@@ -376,7 +376,6 @@ section[data-anchor="recruit"] {
         font-size: .875rem;
         font-weight: 600;
         color: #fff;
-        cursor: default;
         /* box-shadow: 2px 2px 8px rgba(0, 0, 0, .5); */
 
         &::after {
@@ -393,6 +392,8 @@ section[data-anchor="recruit"] {
         }
 
         &:hover {
+            color: #F7FF00;
+
             + .info__box {
                 opacity: 1;
                 visibility: visible;
@@ -415,7 +416,7 @@ section[data-anchor="recruit"] {
     font-size: .8375rem;
     font-weight: 600;
     color: #8493A7;
-    text-align: center;
+    word-break: keep-all;
     opacity: 0;
     visibility: hidden;
     transition: opacity .5s, visibility .5s;
@@ -430,6 +431,12 @@ section[data-anchor="recruit"] {
         height: 0;
         border: 6px solid transparent;
         border-left-color: #ccc;
+    }
+
+    small {
+        font-size: .8125rem;
+        font-weight: 400;
+        text-align: left;
     }
 }
 
@@ -494,14 +501,12 @@ section[data-anchor="recruit"] {
 
     .info__box {
         left: auto;
-        right: -500px;
-        width: 468px;
+        right: -520px;
+        width: 500px;
         height: 115px;
-        padding: 0;
+        padding: 10px 0 0 25px;
         border-radius: 21px;
         font-size: 1.25rem;
-        text-align: center;
-        line-height: 115px;
 
         &::after {
             left: -20px;
@@ -509,6 +514,10 @@ section[data-anchor="recruit"] {
             border-width: 10px;
             border-left-color: transparent;
             border-right-color: #ccc;
+        }
+
+        small {
+            font-size: .9375rem;
         }
     }
 }

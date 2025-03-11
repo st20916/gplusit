@@ -3242,7 +3242,7 @@ section[data-anchor=about] .inner {
   }
   .history__item li p {
     display: inline-block;
-    width: calc(100% - 90px);
+    width: calc(100% - 130px);
   }
 }
 @media all and (min-width: 1441px) {
@@ -4139,6 +4139,11 @@ section[data-anchor=business] .inner {
   font-weight: 200;
   color: #777777;
 }
+.perform__content .content__org.full {
+  display: block;
+  margin-top: 10px;
+  word-break: keep-all;
+}
 
 @media all and (min-width: 768px) {
   .perform__content ul > li {
@@ -4171,6 +4176,9 @@ section[data-anchor=business] .inner {
   .perform__content .content,
   .perform__content .content__org {
     margin-left: 10px;
+  }
+  .perform__content .content__org.full {
+    margin-left: 0;
   }
 }
 @media all and (min-width: 1441px) {
@@ -4815,7 +4823,6 @@ section[data-anchor=recruit] .inner {
   font-size: 0.875rem;
   font-weight: 600;
   color: #fff;
-  cursor: default;
   /* box-shadow: 2px 2px 8px rgba(0, 0, 0, .5); */
 }
 .recruit__info .info::after {
@@ -4829,6 +4836,9 @@ section[data-anchor=recruit] .inner {
   height: 5px;
   border-radius: 50%/50%;
   background-color: #E9E9E9;
+}
+.recruit__info .info:hover {
+  color: #F7FF00;
 }
 .recruit__info .info:hover + .info__box {
   opacity: 1;
@@ -4849,7 +4859,7 @@ section[data-anchor=recruit] .inner {
   font-size: 0.8375rem;
   font-weight: 600;
   color: #8493A7;
-  text-align: center;
+  word-break: keep-all;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.5s, visibility 0.5s;
@@ -4864,6 +4874,11 @@ section[data-anchor=recruit] .inner {
   height: 0;
   border: 6px solid transparent;
   border-left-color: #ccc;
+}
+.info__box small {
+  font-size: 0.8125rem;
+  font-weight: 400;
+  text-align: left;
 }
 
 @media all and (min-width: 768px) {
@@ -4917,14 +4932,12 @@ section[data-anchor=recruit] .inner {
   }
   .info__box {
     left: auto;
-    right: -500px;
-    width: 468px;
+    right: -520px;
+    width: 500px;
     height: 115px;
-    padding: 0;
+    padding: 10px 0 0 25px;
     border-radius: 21px;
     font-size: 1.25rem;
-    text-align: center;
-    line-height: 115px;
   }
   .info__box::after {
     left: -20px;
@@ -4932,6 +4945,9 @@ section[data-anchor=recruit] .inner {
     border-width: 10px;
     border-left-color: transparent;
     border-right-color: #ccc;
+  }
+  .info__box small {
+    font-size: 0.9375rem;
   }
 }
 /**
